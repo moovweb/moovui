@@ -1,0 +1,42 @@
+#footer {
+  background: #333;
+  color: #aaa;
+  padding: (2 * $line-height) 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  h4 {
+    color: $orange;
+    font-family: $brand-font;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  
+  a {
+    font-weight: normal;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+  
+  ul a {
+    color: #aaa;
+    display: block;
+  }
+  
+  nav {
+    color: #767579;
+    font-size: 13px;
+    margin-top: $line-height;
+    a {
+      color: inherit;
+    }
+  }
+  p {
+    display: inline;
+    span {
+      margin: 1em;
+    }
+  }
+}

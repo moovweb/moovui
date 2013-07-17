@@ -1,0 +1,16 @@
+code {
+  @include radius;
+  background: #eee;
+  border: 1px solid #ccc;
+  color: #555;
+  font-family: $code-font;
+  padding: 0 3px;
+}
+
+code, pre, samp {
+  font-size: 13px;
+}
+
+pre {
+  margin: 0;
+}

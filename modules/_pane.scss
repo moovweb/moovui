@@ -1,0 +1,17 @@
+@mixin pane() {
+  @include radius;
+  background: $palegray;
+  border: 1px solid #ccc;
+  padding: $sp/2 $sp;
+}
+
+.pane {
+  @include pane;
+}
+
+.subcontent {
+  @include clearfix;
+  @include pane;
+  margin: 0 0 $sp2;
+  padding: $sp2;
+}

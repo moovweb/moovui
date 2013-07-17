@@ -1,0 +1,109 @@
+#header {
+  @include box-shadow(rgba(#000, 0.2) 0 1px 3px);
+  background: #333;
+  font-family: $brand-font;
+  position: fixed;
+  top: 0;
+  min-width: $min-page-width;
+  width: 100%;
+  height: $nav-height;
+  z-index: 2;
+}
+
+#search_box {
+  @include appearance(none);
+  @include border-radius(14px);
+  background: #ebebeb image-url("icon-search.png") no-repeat 6px 50%;
+  border: 1px solid #d0d0d0;
+  color: #555;
+  float: left;
+  font-family: $font;
+  font-size: 12px;
+  margin: ($nav-height - 24px)/2 0 0 $line-height;
+  padding: 0px 0px 1px 24px;
+  width: 160px !important;
+  height: 24px;
+  &:focus, &:hover {
+    background-color: #fff;
+  }
+  // small
+  @media (max-width: 768px) {
+    margin-left: $sp;
+    max-width: 70px;
+  }
+}
+
+.logo {
+  float: left;
+  margin: 16px 0 0;
+}
+
+.user-bar {
+  float: right;
+  font-family: $brand-font;
+  .item {
+    display: inline;
+    &:not(.menu) > a:not([class]) {
+      color: #fff;
+      float: left;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: $nav-height + 2px;
+      padding: 0 17px;
+      text-align: center;
+      text-transform: uppercase;
+      height: $nav-height;
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
+}
+
+.menu {
+  float: left;
+  position: relative;
+  > a {
+    float: left;
+    margin: ($nav-height - 30px)/2 0 ($nav-height - 30px)/2 $sp;
+  }
+  img {
+    @include radius;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  ul {
+    @include box-shadow(rgba(#000, 0.2) 0 1px 4px);
+    background: #f9f9f9;
+    position: absolute;
+    top: $nav-height;
+    right: -8px;
+    min-width: 90px;
+    &:before {
+      border: 6px solid transparent;
+      border-bottom-color: #f9f9f9;
+      content: "";
+      margin: -11px 0 0;
+      position: absolute;
+      right: 17px;
+    }
+  }
+  li {
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+    a {
+      color: #555;
+      display: block;
+      font-family: $font;
+      font-size: 13px;
+      font-weight: normal;
+      padding: 5px $sp;
+      white-space: nowrap;
+      &:hover {
+        background: #f0f0f0;
+      }
+    }
+  }
+}

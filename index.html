@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Works</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.130/uranium-pretty.js"></script>
+    <script src="chosen.jquery.js"></script>
+    <script>
+      $(function() {$(".chzn-select").chosen();});
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      Header
+    </header>
+    <div class="notice info">Info</div>
+    <div class="notice warning">Warning</div>
+    <div class="notice error">Error</div>
+    <div id="page">
+      <div id="context">
+        Contextual area
+      </div>
+      <div class="content">
+        <span class="text-success">Success: ...</span>
+        <br>
+        <span class="text-error">Error: ...</span>
+      </div>
+      <br>
+      <div class="content" data-ur-set="tabs">
+        <div class="sidebar">
+          <a data-ur-tab-id="1" data-ur-tabs-component="button" data-ur-state="enabled">Tab 1</a>
+          <a data-ur-tab-id="2" data-ur-tabs-component="button">Tab 2</a>
+          <a data-ur-tab-id="3" data-ur-tabs-component="button">Tab 3</a>
+          <hr>
+          <a>Link 1</a>
+          <a>Link 2</a>
+        </div>
+        <section data-ur-tab-id="1" data-ur-tabs-component="content" data-ur-state="enabled">
+          <h2>Section 1</h2>
+          <div class="subcontent">Subcontent</div>
+        </section>
+        <section data-ur-tab-id="2" data-ur-tabs-component="content">
+          <div class="subcontent">Section 2</div>
+        </section>
+        <section data-ur-tab-id="3" data-ur-tabs-component="content">
+          <div class="subcontent">Section 3</div>
+        </section>
+      </div>
+      <br>
+      <div class="copy">
+        <h1>Text</h1>
+        <div class="content">
+          <h1>Header 1</h1>
+          <h2>Header 2</h2>
+          <h3>Header 3</h3>
+          <h4>Header 4</h4>
+          <h5>Header 5</h5>
+          <hr>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ol>
+          Inline <code>code</code>.
+          <br><br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        </div>
+      </div>
+      <br>
+      <div>
+        <h1>Forms</h1>
+        <div class="content">
+          <a class="btn small">Pill Button</a>
+          <br><br>
+          <a class="btn">Button</a>
+          <br><br>
+          <a class="big btn">Big Button</a>
+          <br><br>
+          <a class="big btn entypo-check">Big Button with Icon</a>
+          <br><br>
+          <div class="btnbar">
+            <a>Toggle 1</a>
+            <a>Toggle 2</a>
+          </div>
+          <hr>
+          <label style="margin-right: 20px">
+            <input type="radio">
+            Radio 1
+          </label>
+          <label>
+            <input type="radio">
+            Radio 2
+          </label>
+          <br>
+          <label>
+            <input type="checkbox">
+            Checkbox
+          </label>
+          <br><br>
+          <input type="text" placeholder="Placeholder">
+          <textarea>Textarea</textarea>
+          <select class="chzn-select">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+            <option>Option 6</option>
+          </select>
+        </div>
+      </div>
+      <section>
+        <div class="doc_section" id="develop_locally">
+                <div class="main_links">
+                  <div class="label">Local</div>
+                  <h1 id="Develop+Locally">Develop Locally
+                  </h1>
+        <p>You downloaded the SDK, have a project running locally, and you’re ready to start developing.</p>
+                  <div class="links">
+                    <div class="panel">
+                      <a class="dev_toolkit" href="../downloads/moovweb_toolkit">Moovweb Toolkit</a>
+                      <a class="dev_api" target="_blank" href="/spec/latest">Tritium API <span class="ext_link"></span></a>
+                      <a class="dev_tester" target="_blank" href="http://play.tritium.io">Tritium Sandbox <span class="ext_link"></span></a>
+                    </div>
+                    <div class="panel">
+                      <a class="dev_command" href="local/moov">Moov Command-Line</a>
+                      <a class="dev_tritium" href="local/configuration">Project Configuration</a>
+                      <a class="dev_config" href="local/project_files">Project Files</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="locally keywords">
+                  <span>Keywords</span> <a href="local/configuration#Cookies">Cookies</a> <a href="local/project_files/images#Spriting">Spriting</a> <a href="local/configuration#config.json">Host Files</a> <a href="local/project_files/mappings">Mapping Pages</a> <a href="local/moov">Terminal</a> <a href="local/mixers">Mixers</a>
+                </div>
+              </div>
+      
+      </section>
+      
+    </div>
+    
+    <footer id="footer">
+      <div class="flex">
+        <div>1st Column</div>
+        <div>2nd Column</div>
+        <div>3rd Column</div>
+      </div>
+    </footer>
+  </body>
+</html>

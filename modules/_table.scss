@@ -1,0 +1,61 @@
+table {
+  @include radius;
+  background: $palegray;
+  width: 100%;
+  margin: 0 0 $sp;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 6px $sp;
+  border: 1px solid $lightgray;
+  border-top: 0;
+  &:not(:first-child) {
+    border-left: 0;
+  }
+  &:not(:last-child) {
+    border-right: 0;
+  }
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  color: rgba(#000, 0.5);
+  font-size: 11px;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+  th, td {
+    border-top: 1px solid $lightgray;
+  }
+  td:first-child, th:first-child {
+    @include border-radius($radius 0 0 0);
+  }
+  td:last-child, th:last-child {
+    @include border-radius(0 $radius 0 0);
+  }
+}
+tr:last-child {
+  td:first-child {
+    @include border-radius(0 0 0 $radius);
+  }
+  td:last-child {
+    @include border-radius(0 0 $radius 0);
+  }
+}
+
+table.no-borders {
+  margin: 0;
+  background: none;
+  th, td {
+    border: 0;
+    padding: 0;
+    @include border-radius(0);
+  }
+}

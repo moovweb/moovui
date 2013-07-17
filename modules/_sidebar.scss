@@ -1,0 +1,42 @@
+@mixin sidebar {
+  float: left;
+  margin: 0 $sp2 0 0;
+  width: 20%;
+  & ~ section {
+    margin: 0 0 0 20%;
+    padding-left: $sp2;
+  }
+  > a {
+    display: block;
+    font-weight: normal;
+    padding: 5px $sp;
+    &[data-ur-tabs-component="button"] {
+      padding-right: 30px;
+      &:before {
+        @extend .entypo-pencil:before;
+        @include entypo-icon;
+        color: $lightgray;
+        float: right;
+        margin-right: -20px;
+      }
+    }
+    &[data-ur-state="enabled"] {
+      color: inherit;
+    }
+    &:hover {
+      @include radius;
+      background: $lightgray;
+      color: #fff;
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+  hr {
+    margin: $sp 0;
+  }
+}
+
+.sidebar {
+  @include sidebar;
+}

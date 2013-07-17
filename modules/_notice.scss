@@ -1,0 +1,53 @@
+.notice {
+  @include box-sizing(border-box);
+  @include radius;
+  background: #98c17b;
+  color: #fff;
+  margin: 0 auto $sp;
+  padding: $sp $sp $sp 68px;
+  position: relative;
+  max-width: $page-width - $sp2;
+  min-height: 60px;
+  &:before {
+    @include entypo-icon;
+    @extend .entypo-circled-info:before;
+    color: #fff;
+    font-size: 40px;
+    margin: -12px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+  }
+  h1 {
+    display: none;
+  }
+  &.error {
+    background: #e46c67;
+    &:before {
+      @extend .entypo-warning:before;
+    }
+  }
+  &.warning {
+    background: #e4cb5d;
+    &:before {
+      @extend .entypo-warning:before;
+    }
+  }
+  a {
+    color: #fff;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+}
+
+.text-success {
+  color: $green;
+}
+
+.text-error {
+  color: $red;
+}
+
+.text-warning {
+  color: mix($orange, $yellow);
+}
