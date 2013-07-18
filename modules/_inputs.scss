@@ -12,6 +12,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   transition-property: box-shadow, border-color;
   border: 1px solid #d9d9d9;
   color: $text-color;
+  display: block;
   font-family: $font;
   font-size: 14px;
   margin: 0 0 $sp2;

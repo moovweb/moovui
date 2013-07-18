@@ -6,10 +6,12 @@
   border: 1px solid #ccc;
   font: 14px/#{$line-height} $font;
   padding: 5px 30px 5px 6px;
+  &.autocomplete + .chzn-container .chzn-search {
+    display: block;
+  }
 }
 
 .chzn-container {
-  //display: inline-block;
   font-size: 14px;
   margin: 0 0 $sp2;
   position: relative;
@@ -61,8 +63,8 @@
 
 .chzn-search {
   border-bottom: 1px solid #ddd;
-  display: none; // can be undone
-  input {
+  display: none;
+  input[type="text"] {
     @include box-shadow(none !important);
     border: 0;
     margin: 0;
