@@ -1,0 +1,64 @@
+.syntaxhighlighter {
+  @include box-sizing(border-box);
+  @include radius;
+  background: #555;
+  color: #f0f0f0;
+  display: inline-block;
+  font: 13px/18px $code-font;
+  overflow: auto;
+  position: relative;
+  white-space: pre;
+  max-width: 100%;
+  table {
+    background: none;
+    margin: 0;
+  }
+  td {
+    border: 0;
+  }
+  a {
+    color: inherit;
+  }
+  .container {
+    @include border-radius(0 0 $radius 0);
+    background: #555;
+    padding: $sp $sp2;
+  }
+  .gutter {
+    background: #777;
+    color: #fff;
+    padding: $sp 6px;
+    text-align: right;
+  }
+  .code {
+    padding: 0;
+  }
+  .comments {
+    color: #999;
+    font-style: italic;
+  }
+  .string {
+    color: tint($green, 25%);
+  }
+  .keyword {
+    color: #ccc;
+  }
+  .variable {
+    color: tint($yellow, 25%);
+  }
+  .functions {
+    color: #ff1493;
+  }
+  .symbol {
+    color: tint($blue, 25%);
+  }
+  .regex {
+    color: tint($orange, 25%);
+  }
+  code {
+    background: none;
+    border: 0;
+    color: #eee;
+    padding: 0;
+  }
+}

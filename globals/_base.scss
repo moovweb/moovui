@@ -15,17 +15,14 @@ body {
   min-height: 100%;
 }
 
-#page, .container {
+#page {
   @include box-sizing(border-box);
-  margin: auto;
-  padding: 0 $sp;
-  max-width: $page-width;
   @include clearfix;
+  margin: auto;
+  padding: $sp $page-margin;
+  max-width: $page-width;
 }
 
-#page {
-  padding: $sp $page-margin;
-}
 .content {
   @include border-radius(7px);
   @include box-shadow(#e3e7e9 0 0 0 1px inset, #f1f4f5 0 0 0 2px inset);

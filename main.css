@@ -1203,22 +1203,19 @@ body {
   min-width: 768px;
   min-height: 100%; }
 
-#page, .container {
+#page {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: auto;
-  padding: 0 10px;
+  padding: 10px 10px;
   max-width: 960px; }
-  #page:before, #page:after, .container:before, .container:after {
+  #page:before, #page:after {
     content: "";
     display: table;
     line-height: 0; }
-  #page:after, .container:after {
+  #page:after {
     clear: both; }
-
-#page {
-  padding: 10px 10px; }
 
 .content {
   -webkit-border-radius: 7px;
@@ -1413,6 +1410,7 @@ body {
   padding: 48px 0;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%; }
   #footer h4 {
     color: #f36721;
@@ -2116,3 +2114,57 @@ table.no-borders {
       margin-right: 7px; }
   #content-sidebar #drawer_results .highlight a:before {
     opacity: 0.8; }
+
+.syntaxhighlighter {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #555;
+  color: #f0f0f0;
+  display: inline-block;
+  font: 13px/18px Consolas, Monaco, Courier, monospace;
+  overflow: auto;
+  position: relative;
+  white-space: pre;
+  max-width: 100%; }
+  .syntaxhighlighter table {
+    background: none;
+    margin: 0; }
+  .syntaxhighlighter td {
+    border: 0; }
+  .syntaxhighlighter a {
+    color: inherit; }
+  .syntaxhighlighter .container {
+    -webkit-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0;
+    background: #555;
+    padding: 10px 20px; }
+  .syntaxhighlighter .gutter {
+    background: #777;
+    color: #fff;
+    padding: 10px 6px;
+    text-align: right; }
+  .syntaxhighlighter .code {
+    padding: 0; }
+  .syntaxhighlighter .comments {
+    color: #999;
+    font-style: italic; }
+  .syntaxhighlighter .string {
+    color: #99d081; }
+  .syntaxhighlighter .keyword {
+    color: #ccc; }
+  .syntaxhighlighter .variable {
+    color: #fff53f; }
+  .syntaxhighlighter .functions {
+    color: #ff1493; }
+  .syntaxhighlighter .symbol {
+    color: #6cbae7; }
+  .syntaxhighlighter .regex {
+    color: #f68d58; }
+  .syntaxhighlighter code {
+    background: none;
+    border: 0;
+    color: #eee;
+    padding: 0; }
