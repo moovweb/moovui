@@ -3,6 +3,10 @@
   @include prefixer(border-radius, $radii, webkit spec);
 }
 
+html {
+  overflow-y: hidden;
+}
+
 @import "bourbon/bourbon";
 @import "globals/normalize";
 @import "globals/vars";
@@ -21,6 +25,7 @@
 @import "modules/btnbar";
 @import "modules/code";
 @import "modules/copy";
+@import "modules/docs";
 @import "modules/dropdown";
 @import "modules/inputs";
 @import "modules/label";

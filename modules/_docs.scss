@@ -1,0 +1,68 @@
+$top-level-bg: #BDC4CB;
+$top-level-hbg: #7C8899;
+$mid-level-bg: #EFF0F0;
+$bottom-level-bg: #FFF;
+
+.doc-section {
+  @include radius;
+  background: #fff;
+  border: 2px solid #bdc4cb;
+  color: #666;
+  padding: $sp2 $sp3;
+}
+
+.doc-label {
+  background: #bdc4cb;
+  color: white;
+  float: right;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 20px;
+  margin: -22px 0 0;
+  padding: 0 $sp;
+  text-transform: uppercase;
+}
+
+.doc-links a {
+  font-weight: bold;
+  margin: 0 0 $sp;
+  &:hover:before {
+    opacity: 1;
+  }
+  &:before {
+    @include entypo-icon;
+    @extend .entypo-right:before;
+    margin: 0 5px -1px 0;
+    opacity: 0.5;
+  }
+  &[target="_blank"]:after {
+    @include entypo-icon;
+    @extend .entypo-popup:before;
+    color: #d1d1d1;
+    margin-left: 5px;
+  }
+}
+
+.doc-kw {
+  @include border-radius(0 0 2px 2px);
+  background: #f0f4f7;
+  border: 1px dotted #bdc4cb;
+  border-top: 1px solid #d7d8e0;
+  padding: $sp $sp2;
+  margin: 0 $sp;
+  text-transform: lowercase;
+  span {
+    color: $darkblue;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+    text-transform: uppercase;
+  }
+  a {
+    background: #fff;
+    font-size: 11px;
+    margin: 0 4px;
+    padding: 3px 5px;
+  }
+}

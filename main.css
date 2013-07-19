@@ -1,3 +1,6 @@
+html {
+  overflow-y: hidden; }
+
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -623,7 +626,7 @@ table {
 .entypo-circled-minus:before {
   content: "\2296"; }
 
-.entypo-right:before {
+.entypo-right:before, .doc-links a:before {
   content: "\27a1"; }
 
 .entypo-direction:before {
@@ -767,7 +770,7 @@ table {
 .entypo-resize-small:before {
   content: "\e746"; }
 
-.entypo-popup:before {
+.entypo-popup:before, .doc-links a[target="_blank"]:after {
   content: "\e74c"; }
 
 .entypo-publish:before {
@@ -1625,6 +1628,9 @@ a {
   color: #0071bc;
   text-decoration: none; }
 
+a.copy, .copy a {
+  font-weight: bold; }
+
 h1, h2 {
   margin: 0 0 20px; }
 
@@ -1668,6 +1674,73 @@ ul.copy, .copy ul {
 ol.copy, .copy ol {
   list-style: decimal;
   margin: 0 0 20px 2em; }
+
+.doc-section {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #fff;
+  border: 2px solid #bdc4cb;
+  color: #666;
+  padding: 20px 30px; }
+
+.doc-label {
+  background: #bdc4cb;
+  color: white;
+  float: right;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 20px;
+  margin: -22px 0 0;
+  padding: 0 10px;
+  text-transform: uppercase; }
+
+.doc-links a {
+  font-weight: bold;
+  margin: 0 0 10px; }
+  .doc-links a:hover:before {
+    opacity: 1; }
+  .doc-links a:before {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: "Entypo";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    vertical-align: bottom;
+    margin: 0 5px -1px 0;
+    opacity: 0.5; }
+  .doc-links a[target="_blank"]:after {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: "Entypo";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    vertical-align: bottom;
+    color: #d1d1d1;
+    margin-left: 5px; }
+
+.doc-kw {
+  -webkit-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
+  background: #f0f4f7;
+  border: 1px dotted #bdc4cb;
+  border-top: 1px solid #d7d8e0;
+  padding: 10px 20px;
+  margin: 0 10px;
+  text-transform: lowercase; }
+  .doc-kw span {
+    color: #536278;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+    text-transform: uppercase; }
+  .doc-kw a {
+    background: #fff;
+    font-size: 11px;
+    margin: 0 4px;
+    padding: 3px 5px; }
 
 .chzn-select {
   -webkit-appearance: none;
@@ -1896,7 +1969,6 @@ label {
     padding-left: 20px; }
   .sidebar > a {
     display: block;
-    font-weight: normal;
     padding: 5px 10px; }
     .sidebar > a[data-ur-tabs-component="button"] {
       padding-right: 30px; }
