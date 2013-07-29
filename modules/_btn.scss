@@ -10,13 +10,14 @@
   font: 11px/#{$line-height} $font;
   letter-spacing: 1px;
   margin: 0;
-  padding: 0 10px;
+  padding: 3px 10px;
   position: relative;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: top;
-  height: 26px;
+  min-width: 100px;
+  height: 32px;
   &:hover {
     @include box-shadow(rgba(#000, 0.1) 0 1px);
     background: tint($darkgray, 15%);
@@ -27,30 +28,67 @@
     background: $darkgray;
     border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
   }
-  &[class*="entypo-"]:before {
+  &[class*="icon-"]:before {
+    font-size: 18px;
     vertical-align: top;
   }
-  &[class*="entypo-"]:not(:empty):before {
+  &[class*="icon-"]:not(:empty):before {
+    margin: 0 7px 0 0;
+  }
+}
+
+@mixin btn-warning {
+  &:hover {
+    background: shade($red, 10%);
+  }
+  &:active {
+    background: shade($red, 20%);
+    border-color: shade($red, 35%) shade($red, 35%) shade($red, 25%);
+  }
+}
+
+@mixin btn-warning {
+  &:hover {
+    background: shade($red, 10%);
+  }
+  &:active {
+    background: shade($red, 20%);
+    border-color: shade($red, 35%) shade($red, 35%) shade($red, 25%);
+  }
+}
+
+@mixin btn-pill {
+  @include box-shadow(none);
+  border: 0;
+  padding: 0 10px;
+  min-width: 0;
+  height: 24px;
+}
+
+@mixin btn-small {
+  padding: 0 10px;
+  min-width: 0;
+  height: 26px;
+ &[class*="icon-"]:before {
+    font-size: 11px;
+  }
+  &[class*="icon-"]:not(:empty):before {
     margin: 0 5px 0 0;
   }
 }
 
-@mixin btn-small {
-  @include box-shadow(none);
-  border: 0;
-  height: 24px;
+@mixin btn-big {
+  padding: 7px 16px;
+  min-width: 130px;
+  height: 40px;
 }
 
-@mixin btn-big {
-  padding: 3px 10px;
-  min-width: 100px;
-  height: 32px;
- &[class*="entypo-"]:before {
-    font-size: 18px;
-  }
-  &[class*="entypo-"]:not(:empty):before {
-    margin: 0 7px 0 0;
-  }
+.btn.pill {
+  @include btn-pill;
+}
+
+.btn.small {
+  @include btn-small;
 }
 
 .btn {
@@ -61,11 +99,10 @@
   @include btn-big;
 }
 
-.btn.small {
-  @include btn-small;
+.btn.warning {
+  @include btn-warning;
 }
 
 input[type="submit"], input[type="button"], button {
   @include btn;
-  @include btn-big;
 }

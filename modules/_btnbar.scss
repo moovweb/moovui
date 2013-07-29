@@ -2,7 +2,6 @@
   @include clearfix;
   a {
     @include btn;
-    @include btn-big;
     @include border-radius(0);
     border-right-width: 0;
     float: left;
@@ -26,4 +25,14 @@
 
 .btnbar {
   @include btnbar;
+}
+
+@mixin btngroup {
+  .btn + .btn {
+    margin-left: $sp;
+  }
+}
+
+.btngroup {
+  @include btngroup;
 }

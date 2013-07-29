@@ -2,7 +2,7 @@ input {
   @include box-sizing(border-box);
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], textarea {
+input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], textarea {
   @include box-shadow(rgba(#fff, 0.5) 0 1px);
   @include radius;
   @include transition(0.3s);

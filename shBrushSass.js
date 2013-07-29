@@ -61,10 +61,7 @@
 						'text-bottom text-top thick thin top transparent tty tv ultra-condensed ultra-expanded underline upper-alpha uppercase upper-latin '+
 						'upper-roman url visible wait white wider w-resize x-fast x-high x-large x-loud x-low x-slow x-small x-soft xx-large xx-small yellow';
 		
-		var fonts =		'[mM]onospace [tT]ahoma [vV]erdana [aA]rial [hH]elvetica [sS]ans-serif [sS]erif [cC]ourier mono sans serif';
-		
 		var statements		= '!important !default';
-		var preprocessor	= '@import @extend @debug @warn @if @for @while @mixin @include';
 		
 		var r = SyntaxHighlighter.regexLib;
 		
@@ -75,12 +72,11 @@
 			{ regex: r.singleQuotedString,								css: 'string' },		// single quoted strings
 			{ regex: /\#[a-fA-F0-9]{3,6}/g,								css: 'value' },			// html colors
 			{ regex: /\b(-?\d+)(\.\d+)?(px|em|pt|\:|\%|)\b/g,			css: 'value' },			// sizes
-			{ regex: /\$\w+/g,											css: 'variable' },		// variables
-			{ regex: new RegExp(this.getKeywords(statements), 'g'),		css: 'color3' },		// statements
-			{ regex: new RegExp(this.getKeywords(preprocessor), 'g'),	css: 'preprocessor' },	// preprocessor
+			{ regex: /\$(?=\w)/g,											css: 'variable' },		// variables
+			{ regex: /\!(?=important|default)\b/g,		css: 'statements' },		// statements
+			{ regex: /(?:^|\W)@(?:import|extend|debug|warn|if|for|while|mixin|include)\b/g,	css: 'preprocessor' },	// preprocessor
 			{ regex: new RegExp(getKeywordsCSS(keywords), 'gm'),		css: 'keyword' },		// keywords
 			{ regex: new RegExp(getValuesCSS(values), 'g'),				css: 'value' },			// values
-			{ regex: new RegExp(this.getKeywords(fonts), 'g'),			css: 'color1' }			// fonts
 			];
 	};
 

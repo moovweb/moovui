@@ -38,7 +38,7 @@
     right: $sp;
     &:before {
       @include entypo-icon;
-      @extend .entypo-chevron-down:before;
+      @extend .icon-chevron-down:before;
     }
   }
 }

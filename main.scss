@@ -3,10 +3,6 @@
   @include prefixer(border-radius, $radii, webkit spec);
 }
 
-html {
-  overflow-y: hidden;
-}
-
 @import "bourbon/bourbon";
 @import "globals/normalize";
 @import "globals/vars";
@@ -21,6 +17,7 @@ html {
 @import "globals/footer";
 
 // Modules
+@import "modules/accordion";
 @import "modules/btn";
 @import "modules/btnbar";
 @import "modules/code";
@@ -29,9 +26,106 @@ html {
 @import "modules/dropdown";
 @import "modules/inputs";
 @import "modules/label";
+@import "modules/modal";
 @import "modules/notice";
 @import "modules/pane";
 @import "modules/sidebar";
 @import "modules/table";
 @import "modules/helios_sidebar";
 @import "modules/syntax_highlighter";
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#logo {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px $sp2 0 0;
+  &:before {
+    content: "<logo>";
+  }
+}
+
+.user-avatar {
+  margin: 9px 0 0 $sp3;
+  img {
+    @include radius;
+  }
+  &:after {
+    @include entypo-icon;
+    @extend .icon-triangle-down:before;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 8px 7px;
+  }
+}
+
+.header-menu {
+  &:not(.open) ul {
+    display: none;
+  }
+  ul {
+    @include box-shadow(rgba(#000, 0.2) 0 1px 4px);
+    background: #f9f9f9;
+    position: absolute;
+    top: $nav-height;
+    right: 0;
+    min-width: 90px;
+    &:before {
+      border: 6px solid transparent;
+      border-bottom-color: #f9f9f9;
+      content: "";
+      margin: -11px 0 0;
+      position: absolute;
+      right: 33px;
+    }
+  }
+  li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+  a {
+    color: #555;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px $sp;
+    white-space: nowrap;
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+}
+
+.signup-link, .signin-link {
+  @include radius;
+  color: #fff;
+  float: left;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 8px 20px;
+  margin: 10px 0 10px $sp;
+  text-shadow: rgba(#000, 0.3) 0 1px;
+  text-transform: uppercase;
+}
+.signup-link {
+  background: shade($green, 10%);
+  &:hover {
+    background: $green;
+  }
+}
+
+.signin-link {
+  background: shade($blue, 10%);
+  &:hover {
+    background: $blue;
+  }
+}
+
+#footer .content > a {
+  margin: 0 0 0 $sp2;
+}

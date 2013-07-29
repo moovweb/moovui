@@ -80,11 +80,15 @@
     margin-left: $sp;
   }
 }
-.right {
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
   text-align: right;
-  .btn {
-    margin-right: $sp;
-  }
 }
 
 @mixin hide-text {

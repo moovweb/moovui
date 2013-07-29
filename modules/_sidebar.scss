@@ -12,7 +12,7 @@
     &[data-ur-tabs-component="button"] {
       padding-right: 30px;
       &:before {
-        @extend .entypo-pencil:before;
+        @extend .icon-pencil:before;
         @include entypo-icon;
         color: $lightgray;
         float: right;
@@ -38,4 +38,67 @@
 
 .sidebar {
   @include sidebar;
+}
+
+@mixin sidebar-doc {
+  @include radius;
+  font-size: 12px;
+  overflow: hidden;
+  width: 20%;
+  
+  
+  [data-ur-toggler-component="button"]:after {
+    @include entypo-icon;
+    @extend .icon-plus:before;
+    float: right;
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: normal;
+  }
+  [data-ur-toggler-component="button"][data-ur-state="enabled"]:after {
+    display: none;
+  }
+  
+  > li {
+    margin: 0 0 1px;
+    > [data-ur-toggler-component="button"] {
+      background: #bdc4cb;
+      color: #7c8899;
+      font-weight: bold;
+      padding: 5px $sp;
+      &[data-ur-state="enabled"] {
+        background: #7c8899;
+        color: #fff;
+      }
+    }
+    > * [data-ur-toggler-component="button"] {
+      background: #eff0f0;
+      font-weight: bold;
+      color: #7c8899;
+      margin: 0 0 1px;
+      padding: 5px $sp 5px $sp;
+      &:before {
+        content: "\2022";
+        font-size: 16px;
+        margin: 0 $sp 0 0;
+        opacity: 0.1;
+      }
+    }
+    > * [data-ur-toggler-component="content"] a {
+      background: #fff;
+      display: block;
+      margin: 0 0 1px;
+      padding: 5px $sp 5px $sp;
+      &:before {
+        content: "\2022\2022";
+        font-size: 16px;
+        margin: 0 $sp 0 0;
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+.sidebar-doc {
+  @include sidebar-doc;
 }

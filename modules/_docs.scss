@@ -32,13 +32,13 @@ $bottom-level-bg: #FFF;
   }
   &:before {
     @include entypo-icon;
-    @extend .entypo-right:before;
+    @extend .icon-right:before;
     margin: 0 5px -1px 0;
     opacity: 0.5;
   }
   &[target="_blank"]:after {
     @include entypo-icon;
-    @extend .entypo-popup:before;
+    @extend .icon-popup:before;
     color: #d1d1d1;
     margin-left: 5px;
   }

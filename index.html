@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>The Works</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.130/uranium-pretty.js"></script>
+    <script src="http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.125/uranium-pretty.js"></script>
+    <script src="bootstrap.min.js"></script>
     <script src="chosen.jquery.js"></script>
     <script src="shCore.js"></script>
     <script src="shBrushJScript.js"></script>
@@ -20,22 +21,113 @@
   </head>
   <body>
     <header id="header">
-      Header
+      <div class="content">
+        <ul class="header-links">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+          <li><a>Link 4</a></li>
+        </ul>
+        <ul class="header-links pull-right">
+          <li><a>Link 5</a></li>
+          <li><a>Link 6</a></li>
+          <li><a>Link 7</a></li>
+          <li><a>Link 8</a></li>
+        </ul>
+      </div>
     </header>
-    <div class="notice info">Info</div>
-    <div class="notice warning">Warning</div>
+    
+    <div class="notice info">Info (default)</div>
+    <div class="notice success">Success</div>
+    <div class="notice warning">Warning/Caution</div>
     <div class="notice error">Error</div>
+    
     <div id="page">
       <div id="context">
         Contextual area
       </div>
-      <div class="content">
+      <div class="pane">
         <span class="text-success">Success: ...</span>
         <br>
         <span class="text-error">Error: ...</span>
       </div>
       <br>
-      <div class="content" data-ur-set="tabs">
+      <div class="pane">
+        <ul class="sidebar-doc">
+          <li data-ur-set="toggler">
+            <div data-ur-toggler-component="button">Tutorials</div>
+            <ul data-ur-toggler-component="content">
+              <li data-ur-set="toggler">
+                <div data-ur-toggler-component="button">Getting Started</div>
+                <ul data-ur-toggler-component="content">
+                  <li><a>Generate</a></li>
+                  <li><a>Transform</a></li>
+                  <li><a>Push</a></li>
+                </ul>
+              </li>
+              <li data-ur-set="toggler">
+                <div data-ur-toggler-component="button">Building a Simple Site</div>
+                <ul data-ur-toggler-component="content">
+                  <li><a>Start</a></li>
+                  <li><a>Header</a></li>
+                  <li><a>Homepage</a></li>
+                </ul>
+              </li>
+              <li data-ur-set="toggler">
+                <div data-ur-toggler-component="button">Deploying</div>
+                <ul data-ur-toggler-component="content">
+                  <li><a>Moovweb Cloud</a></li>
+                  <li><a>Share on moovapp.com</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li data-ur-set="toggler">
+            <div data-ur-toggler-component="button">Docs</div>
+            <ul data-ur-toggler-component="content">
+              <li data-ur-set="toggler">
+                <div data-ur-toggler-component="button">Develop Locally</div>
+                <ul data-ur-toggler-component="content">
+                  <li>Tritium API</li>
+                  <li>Tritium Sandbox</li>
+                  <li>Moov Command</li>
+                  <li>Project Configuration</li>
+                  <li>Project Files</li>
+                  <li>Mixers</li>
+                  <li>Tritium styleguide</li>
+                </ul>
+              </li>
+              <li data-ur-set="toggler">
+                <div data-ur-toggler-component="button">Cloud management</div>
+                <ul data-ur-toggler-component="content">
+                  <li>Start</li>
+                  <li>Header</li>
+                  <li>Homepage</li>
+                </ul>
+              </li>
+              <li data-ur-set="toggler">
+                <div data-ur-toggler-component="button">Deploying</div>
+                <ul data-ur-toggler-component="content">
+                  <li>Moovweb Cloud</li>
+                  <li>Share on moovapp.com</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div class="pane" data-ur-set="toggler">
+        <div data-ur-toggler-component="button">Dropdown toggle</div>
+        <ul class="toggler" data-ur-toggler-component="content">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+          <li><a>Link 4</a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="pane" data-ur-set="tabs">
         <div class="sidebar">
           <a data-ur-tab-id="1" data-ur-tabs-component="button" data-ur-state="enabled">Tab 1</a>
           <a data-ur-tab-id="2" data-ur-tabs-component="button">Tab 2</a>
@@ -45,20 +137,20 @@
           <a>Link 2</a>
         </div>
         <section data-ur-tab-id="1" data-ur-tabs-component="content" data-ur-state="enabled">
-          <h2>Section 1</h2>
-          <div class="subcontent">Subcontent</div>
+          <h3>Section 1</h3>
+          <div class="subpane">subpane</div>
         </section>
         <section data-ur-tab-id="2" data-ur-tabs-component="content">
-          <div class="subcontent">Section 2</div>
+          <div class="subpane">Section 2</div>
         </section>
         <section data-ur-tab-id="3" data-ur-tabs-component="content">
-          <div class="subcontent">Section 3</div>
+          <div class="subpane">Section 3</div>
         </section>
       </div>
       <br>
       <div>
         <h1>Text</h1>
-        <div class="content copy">
+        <div class="pane copy">
           <h1>Header 1</h1>
           <h2>Header 2</h2>
           <h3>Header 3</h3>
@@ -115,12 +207,13 @@
             </tr>
           </tbody>
         </table>
-      <div>
+      </div>
       <br>
       <div>
         <h1>Code</h1>
         <p>Inline <code>code</code>.</p>
-        <code data-lang="ts">
+        <input type="text" value="<code> input" class="code">
+        <pre data-lang="ts">
           # The main file executed by Tritium. The start of all other files.
 
           match($content_type) {
@@ -133,6 +226,10 @@
                 @import html.ts
                 $("/html") {
                   attributes(data-name: "moovweb")
+                  # this comment is very looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
+                  $$("p") {
+                    add_class("p")
+                  }
                 }
               }
 
@@ -145,19 +242,51 @@
               log(concat("Passing through ", $content_type, " unmodified"))
             }
           }
-        </code>
+        </pre>
+        <pre data-lang="js">
+           /* this is js */
+          (function main(bool) {
+            var variable = bool ? "true" : "false";
+            if (variable == 0)
+              return /hello/;
+          })();
+        </pre>
+        <pre data-lang="scss">
+          // this is scss
+          @import "blah";
+          @mixin error {
+            $width: 2px;
+            border: $width solid #f00;
+            display: block !important;
+            &amp;:before {
+              content: "!";
+            }
+          }
+        </pre>
+        <pre data-lang="html">
+          &lt;!-- this is html --&gt;
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+            &lt;body class="test"&gt;
+              &lt;p&gt;Text&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </pre>
       </div>
       <br>
       <div>
         <h1>Forms</h1>
-        <div class="content">
-          <a class="btn small">Pill Button</a>
+        <div class="pane">
+          <a class="btn pill">Pill Button</a>
+          <br><br>
+          <a class="btn small">Small Button</a>
           <br><br>
           <a class="btn">Button</a>
           <br><br>
           <a class="big btn">Big Button</a>
+          <a class="big btn icon-check">Big Button with Icon</a>
           <br><br>
-          <a class="big btn entypo-check">Big Button with Icon</a>
+          <a class="btn warning">Warning Button</a>
           <br><br>
           <div class="btnbar">
             <a>Toggle 1</a>
@@ -231,7 +360,44 @@
           </div>
         </div>
       </div>
-      
+      <br>
+      <div>
+        <h1>Doc section</h1>
+        <div class="pane">
+          <h1>Doc title</h1>
+          <p>This is the documentation description.</p>
+          <h2>Subheader</h2>
+          <p>More Text</p>
+          <hr>
+          <h2>Subheader</h2>
+          <p>More Text</p>
+          <hr>
+        </div>
+      </div>
+      <br>
+      <div>
+        <h1>Helpers</h1>
+        <div class="flex">
+          <div>Flex 1</div>
+          <div>Flex 2<br>Flex 2</div>
+          <div>Flex 3</div>
+        </div>
+        <hr>
+        <div class="flex-center">
+          <div>Flex-center 1</div>
+          <div>Flex-center 2<br>Flex-center 2</div>
+          <div>Flex-center 3</div>
+        </div>
+      </div>
+      <br>
+      <div>
+        <h1>Widgets</h1>
+        <div class="pane">
+          <p>This also takes pieces from Bootstrap v3: Modal, Tab, Tooltip, Alert, Collapse (accordion)</p>
+          <a href="#accordion1" data-toggle="collapse">Accordion header</a>
+          <div id="accordion1"><p>Accordion content</p></div>
+        </div>
+      </div>
     </div>
     
     <footer id="footer">

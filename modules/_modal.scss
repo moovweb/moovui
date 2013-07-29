@@ -1,0 +1,98 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.modal-dialog {
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -280px;
+  width: 560px;
+  padding: 30px 10px;
+}
+
+
+.modal-content {
+  @include border-radius(5px);
+  @include box-shadow(rgba(#000, 0.5) 0 0 8px 1px);
+  @include box-sizing(border-box);
+  //outline: 9999px solid rgba(#000, 0.2);
+  background: #fff;
+  //margin: ($nav-height/2 - 150px) 0 0 -210px;
+  overflow: hidden;
+  //position: fixed;
+  //top: 50%;
+  //left: 50%;
+  //width: 420px;
+  //z-index: 3;
+}
+
+.modal-header {
+  background: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  padding: $sp;
+  position: relative;
+  text-shadow: #fff 0 1px;
+  h3 {
+    margin: 0;
+  }
+  .close {
+    @include border-radius(8px);
+    @include box-shadow(none);
+    background: #a2a2a2;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 0;
+    padding: 0 0 0 1px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    min-width: 0;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.modal-body {
+  @include box-sizing(border-box);
+  padding: $sp;
+  min-height: 208px;
+}
+
+.modal-footer {
+  border-top: 1px solid #d0d0d0;
+  padding: $sp;
+  text-align: center;
+  .button_close {
+    display: none;
+  }
+  .button_confirm {
+    @include btn;
+    &.disabled {
+      opacity: 0.5;
+    }
+    &.danger {
+      background: #e46c67;
+    }
+    
+    &.warning {
+      @include background(linear-gradient(tint($red, 25%), $red));
+      border-color: shade($red, 25%) shade($red, 25%) shade($red, 15%);
+    }
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+

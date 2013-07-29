@@ -5,13 +5,39 @@
   color: #f0f0f0;
   display: inline-block;
   font: 13px/18px $code-font;
-  overflow: auto;
+  margin: 0 0 $sp2;
+  overflow: hidden;
   position: relative;
+  vertical-align: top;
   white-space: pre;
-  max-width: 100%;
+  width: 100%;
+  &:before {
+    color: #fff;
+    font-family: $font;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 3px;
+    top: 0;
+  }
+  &.scss:before {
+    content: "SCSS";
+  }
+  &.html:before {
+    content: "HTML";
+  }
+  &.js:before {
+    content: "JS";
+  }
+  &.ts:before {
+    content: "TS";
+  }
   table {
     background: none;
+    display: block;
     margin: 0;
+    overflow: auto;
   }
   td {
     border: 0;
@@ -21,17 +47,18 @@
   }
   .container {
     @include border-radius(0 0 $radius 0);
-    background: #555;
-    padding: $sp $sp2;
+    padding: $sp;
   }
   .gutter {
     background: #777;
     color: #fff;
     padding: $sp 6px;
+    position: absolute;
     text-align: right;
+    width: 16px;
   }
   .code {
-    padding: 0;
+    padding: 0 0 0 26px;
   }
   .comments {
     color: #999;
@@ -46,14 +73,19 @@
   .variable {
     color: tint($yellow, 25%);
   }
+  /*
   .functions {
     color: #ff1493;
   }
-  .symbol {
-    color: tint($blue, 25%);
-  }
+  */
   .regex {
     color: tint($orange, 25%);
+  }
+  .statements {
+    color: tint($red, 25%);
+  }
+  .symbol, .preprocessor {
+    color: tint($blue, 25%);
   }
   code {
     background: none;

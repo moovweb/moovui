@@ -17,7 +17,7 @@ $bottom-level-bg: #FFF;
     .arrow, .subarrow {
       &:before {
         @include entypo-icon;
-        @extend .entypo-plus:before;
+        @extend .icon-plus:before;
         float: right;
         font-size: 12px;
         margin-top: -24px;
@@ -37,7 +37,7 @@ $bottom-level-bg: #FFF;
     //display: block;
     &.ext-link:after {
       @include entypo-icon;
-      @extend .entypo-export:before;
+      @extend .icon-export:before;
       float: right;
       opacity: 0.4;
     }
