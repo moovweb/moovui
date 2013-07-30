@@ -4,7 +4,7 @@
   background: #98c17b;
   color: #fff;
   margin: 0 auto $sp;
-  padding: $sp $sp $sp 68px;
+  padding: $sp 14px $sp 68px;
   position: relative;
   max-width: $page-width - $sp2;
   min-height: 60px;
@@ -34,6 +34,24 @@
     background: #e4cb5d;
     &:before {
       @extend .icon-warning:before;
+    }
+  }
+  .close {
+    color: #000;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+    opacity: 0.2;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: #000;
+      cursor: pointer;
+      opacity: 0.4;
+      text-decoration: none;
+    }
+    &:before {
+      content: "\00d7";
     }
   }
   a {

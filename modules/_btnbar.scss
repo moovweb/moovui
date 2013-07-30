@@ -12,14 +12,14 @@
       @include border-radius(0 $radius $radius 0);
       border-right-width: 1px;
     }
-    &[data-ur-state="enabled"] {
-      @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
-      background: $darkgray;
-      border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
-      + a {
-        border-left-color: shade($gray, 30%);
-      }
-    }
+  }
+  .active a {
+    @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
+    background: $darkgray;
+    border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
+  }
+  .active + * a {
+    border-left-color: shade($gray, 30%);
   }
 }
 

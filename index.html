@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.125/uranium-pretty.js"></script>
     <script src="chosen.jquery.js"></script>
     <script src="shCore.js"></script>
     <script src="shBrushJScript.js"></script>
@@ -15,7 +14,11 @@
     <script src="shBrushXml.js"></script>
     <script src="shInit.js"></script>
     <script>
-      $(function() {$(".chzn-select").chosen();});
+      $(function() {
+        $(".chzn-select").chosen();
+        $(".notice").prepend("<a class='close' data-dismiss='alert' href='#'></a>");
+        $("[data-toggle='tooltip']").tooltip();
+      });
     </script>
   </head>
   <body>
@@ -36,10 +39,18 @@
       </div>
     </header>
     
-    <div class="notice info">Info (default)</div>
-    <div class="notice success">Success</div>
-    <div class="notice warning">Warning/Caution</div>
-    <div class="notice error">Error</div>
+    <div class="notice info">
+      Info (default)
+    </div>
+    <div class="notice success">
+       Success
+    </div>
+    <div class="notice warning">
+      Warning/Caution
+    </div>
+    <div class="notice error">
+      Error
+    </div>
     
     <div id="page">
       <div id="context">
@@ -53,62 +64,67 @@
       <br>
       <div class="pane">
         <ul class="sidebar-doc">
-          <li data-ur-set="toggler">
-            <div data-ur-toggler-component="button">Tutorials</div>
-            <ul data-ur-toggler-component="content">
-              <li data-ur-set="toggler">
-                <div data-ur-toggler-component="button">Getting Started</div>
-                <ul data-ur-toggler-component="content">
+          <li>
+            <a href="#tut" class="collapsed" data-toggle="collapse">Tutorials</a>
+            <ul id="tut" class="collapse">
+              <li>
+                <a href="#started" class="collapsed" data-toggle="collapse">Getting Started</a>
+                <ul id="started" class="collapse">
                   <li><a>Generate</a></li>
                   <li><a>Transform</a></li>
                   <li><a>Push</a></li>
                 </ul>
               </li>
-              <li data-ur-set="toggler">
-                <div data-ur-toggler-component="button">Building a Simple Site</div>
-                <ul data-ur-toggler-component="content">
+              <li>
+                <a href="#build" class="collapsed" data-toggle="collapse">Building a Simple Site</a>
+                <ul id="build" class="collapse">
                   <li><a>Start</a></li>
                   <li><a>Header</a></li>
                   <li><a>Homepage</a></li>
                 </ul>
               </li>
-              <li data-ur-set="toggler">
-                <div data-ur-toggler-component="button">Deploying</div>
-                <ul data-ur-toggler-component="content">
+              <li>
+                <a href="#deploy" class="collapsed" data-toggle="collapse">Deploying</a>
+                <ul id="deploy" class="collapse">
                   <li><a>Moovweb Cloud</a></li>
                   <li><a>Share on moovapp.com</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li data-ur-set="toggler">
-            <div data-ur-toggler-component="button">Docs</div>
-            <ul data-ur-toggler-component="content">
-              <li data-ur-set="toggler">
-                <div data-ur-toggler-component="button">Develop Locally</div>
-                <ul data-ur-toggler-component="content">
-                  <li>Tritium API</li>
-                  <li>Tritium Sandbox</li>
-                  <li>Moov Command</li>
-                  <li>Project Configuration</li>
-                  <li>Project Files</li>
-                  <li>Mixers</li>
-                  <li>Tritium styleguide</li>
+          <li>
+            <a href="#docs" class="collapsed" data-toggle="collapse">Docs</a>
+            <ul id="docs" class="collapse">
+              <li>
+                <a href="#dev" class="collapsed" data-toggle="collapse">Develop Locally</a>
+                <ul id="dev" class="collapse">
+                  <li><a>Tritium API</a></li>
+                  <li><a>Tritium Sandbox</a></li>
+                  <li><a>Moov Command</a></li>
+                  <li><a>Project Configuration</a></li>
+                  <li><a>Project Files</a></li>
+                  <li><a>Mixers</a></li>
+                  <li><a>Tritium styleguide</a></li>
                 </ul>
               </li>
-              <li data-ur-set="toggler">
-                <div data-ur-toggler-component="button">Cloud management</div>
-                <ul data-ur-toggler-component="content">
-                  <li>Start</li>
-                  <li>Header</li>
-                  <li>Homepage</li>
+              <li>
+                <a href="#cloud" class="collapsed" data-toggle="collapse">Cloud Management</a>
+                <ul id="cloud" class="collapse">
+                  <li><a>Workflow</a></li>
+                  <li><a>Production Domain</a></li>
+                  <li><a>Redirection</a></li>
                 </ul>
               </li>
-              <li data-ur-set="toggler">
-                <div data-ur-toggler-component="button">Deploying</div>
-                <ul data-ur-toggler-component="content">
-                  <li>Moovweb Cloud</li>
-                  <li>Share on moovapp.com</li>
+              <li>
+                <a href="#tools" class="collapsed" data-toggle="collapse">Recommended Tools</a>
+                <ul id="tools" class="collapse">
+                  <li><a>Command Line</a></li>
+                  <li><a>Git</a></li>
+                  <li><a>JavaScript</a></li>
+                  <li><a>Regex</a></li>
+                  <li><a>Sass</a></li>
+                  <li><a>Sublime Text 2</a></li>
+                  <li><a>XPath</a></li>
                 </ul>
               </li>
             </ul>
@@ -116,33 +132,31 @@
         </ul>
       </div>
       <br>
-      <div class="pane" data-ur-set="toggler">
-        <div data-ur-toggler-component="button">Dropdown toggle</div>
-        <ul class="toggler" data-ur-toggler-component="content">
-          <li><a>Link 1</a></li>
-          <li><a>Link 2</a></li>
-          <li><a>Link 3</a></li>
-          <li><a>Link 4</a></li>
-        </ul>
-      </div>
-      <br>
-      <div class="pane" data-ur-set="tabs">
+      <div class="pane">
         <div class="sidebar">
-          <a data-ur-tab-id="1" data-ur-tabs-component="button" data-ur-state="enabled">Tab 1</a>
-          <a data-ur-tab-id="2" data-ur-tabs-component="button">Tab 2</a>
-          <a data-ur-tab-id="3" data-ur-tabs-component="button">Tab 3</a>
+          <ul>
+            <li class="active">
+              <a href="#tab1" data-toggle="tab">Tab 1</a>
+            </li>
+            <li>
+            <a href="#tab2" data-toggle="tab">Tab 2</a>
+            </li>
+            <li>
+              <a href="#tab3" data-toggle="tab">Tab 3</a>
+            </li>
+          </ul>
           <hr>
           <a>Link 1</a>
           <a>Link 2</a>
         </div>
-        <section data-ur-tab-id="1" data-ur-tabs-component="content" data-ur-state="enabled">
+        <section id="tab1" class="tab active">
           <h3>Section 1</h3>
           <div class="subpane">subpane</div>
         </section>
-        <section data-ur-tab-id="2" data-ur-tabs-component="content">
+        <section id="tab2" class="tab">
           <div class="subpane">Section 2</div>
         </section>
-        <section data-ur-tab-id="3" data-ur-tabs-component="content">
+        <section id="tab3" class="tab">
           <div class="subpane">Section 3</div>
         </section>
       </div>
@@ -393,16 +407,16 @@
         <h1>Widgets</h1>
         <div class="pane">
           <p>This also takes pieces from Bootstrap v3: Modal, Tab, Tooltip, Alert, Collapse (accordion)</p>
-          <a href="#accordion1" data-toggle="collapse">Accordion header</a>
-          <div id="accordion1" class="collapse"><p>Accordion content</p></div>
-          <br>
+          <div>
+            <a href="#accordion1" data-toggle="collapse">Collapse (accordion)</a>
+            <div id="accordion1" class="accordion-body collapse">Accordion content</div>
+          </div>
           <a href="#modal1" data-toggle="modal">Modal</a>
-          <div id="modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <!--div id="modal1" class="modal fade"-->
+          <div id="modal1" class="modal fade" tabindex="-1">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <button type="button" class="close" data-dismiss="modal"></button>
                   <h3>Modal Heading</h3>
                 </div>
                 <div class="modal-body">Modal Content</div>
@@ -412,12 +426,15 @@
               </div>
             </div>
           </div>
+          <div>
+            <a href="#" data-toggle="tooltip" title="tooltip text" data-placement="right">Tooltip</a>
+          </div>
         </div>
       </div>
     </div>
     
     <footer id="footer">
-      <div class="flex">
+      <div class="content flex">
         <div>1st Column</div>
         <div>2nd Column</div>
         <div>3rd Column</div>

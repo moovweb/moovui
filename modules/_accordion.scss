@@ -1,3 +1,6 @@
+.accordion-body {
+  @include clearfix;
+}
 
 .collapse {
   display: none;

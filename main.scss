@@ -9,7 +9,6 @@
 @import "globals/mixins";
 
 @import "globals/entypo";
-@import "globals/uranium";
 @import "globals/base";
 
 // Header & Footer
@@ -24,14 +23,15 @@
 @import "modules/copy";
 @import "modules/docs";
 @import "modules/dropdown";
-@import "modules/inputs";
+@import "modules/input";
 @import "modules/label";
 @import "modules/modal";
 @import "modules/notice";
 @import "modules/pane";
 @import "modules/sidebar";
+@import "modules/tab";
 @import "modules/table";
-@import "modules/helios_sidebar";
+@import "modules/tooltip";
 @import "modules/syntax_highlighter";
 
 fieldset {
