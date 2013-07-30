@@ -990,7 +990,7 @@ table {
 .icon-monitor:before {
   content: "\1f4bb"; }
 
-.icon-briefcase:before, .ui-menu-item .Accounts:before {
+.icon-briefcase:before {
   content: "\1f4bc"; }
 
 .icon-save:before {
@@ -999,7 +999,7 @@ table {
 .icon-cd:before {
   content: "\1f4bf"; }
 
-.icon-folder:before, .ui-menu-item .Projects:before {
+.icon-folder:before {
   content: "\1f4c1"; }
 
 .icon-text-doc:before {
@@ -1044,7 +1044,7 @@ table {
 .icon-box:before {
   content: "\1f4e6"; }
 
-.icon-newspaper:before, .ui-menu-item .Documentation:before {
+.icon-newspaper:before {
   content: "\1f4f0"; }
 
 .icon-mobile:before {
@@ -1231,73 +1231,13 @@ body {
     box-shadow: #d43631 0 0 0 1px;
     border-color: #d43631; }
 
-.ui-widget-content {
-  background: #fff; }
-
-.ui-autocomplete {
-  position: absolute; }
-
-.ui-menu {
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  top: 10px;
-  overflow: hidden;
-  max-height: 460px; }
-
-.ui-menu-item {
-  line-height: 16px; }
-  .ui-menu-item:not(:last-child) {
-    border-bottom: 1px solid #e6e6e6; }
-  .ui-menu-item:last-child a[href] {
-    font-weight: bold;
-    padding: 13px 10px;
-    text-align: center; }
-  .ui-menu-item a {
-    display: block;
-    font-weight: normal;
-    padding: 7px 10px; }
-    .ui-menu-item a[href] {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 5px 10px 5px 34px;
-      position: relative;
-      min-width: 600px; }
-  .ui-menu-item .title {
-    color: #444444;
-    display: block;
-    font-size: 14px;
-    font-weight: bold; }
-    .ui-menu-item .title:before {
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      font-family: "Entypo";
-      font-size: 15px;
-      font-style: normal;
-      font-weight: normal;
-      vertical-align: bottom;
-      color: #d0d2d3;
-      font-size: 20px;
-      position: absolute;
-      left: 7px;
-      top: 13px;
-      text-align: center;
-      width: 20px; }
-    .ui-menu-item .title:last-child {
-      margin: 8px 0; }
-  .ui-menu-item .description {
-    color: #a2a2a2;
-    display: block;
-    font-size: 13px;
-    overflow-x: hidden; }
-  .ui-menu-item em {
-    color: #444444;
-    font-weight: bold;
-    font-style: normal; }
-  .ui-menu-item .ui-state-focus {
-    background: #f2f5f7; }
-
-.ui-helper-hidden-accessible {
-  display: none; }
+.fade {
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  opacity: 0; }
+  .fade.in {
+    opacity: 1; }
 
 #header {
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px;
@@ -1839,13 +1779,16 @@ label {
   display: inline-block;
   margin: 0 0 5px; }
 
+.modal-open {
+  overflow: hidden; }
+
 .modal {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
+  z-index: 101;
   display: none;
   overflow: auto;
   overflow-y: scroll; }
@@ -1854,8 +1797,8 @@ label {
   position: relative;
   top: 0;
   left: 50%;
-  margin: 0 0 0 -280px;
-  width: 560px;
+  margin: 0 0 0 -256px;
+  width: 512px;
   padding: 30px 10px; }
 
 .modal-content {
@@ -1898,8 +1841,7 @@ label {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px;
-  min-height: 208px; }
+  padding: 10px; }
 
 .modal-footer {
   border-top: 1px solid #d0d0d0;
@@ -1957,8 +1899,18 @@ label {
       background: linear-gradient( #de6864, #d43631);
       border-color: #9f2824 #9f2824 #b42d29; }
 
-.modal-open {
-  overflow: hidden; }
+.modal-backdrop {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; }
+  .modal-backdrop.fade {
+    opacity: 0; }
+  .modal-backdrop.fade.in {
+    opacity: 0.5; }
 
 .notice {
   -webkit-box-sizing: border-box;

@@ -40,85 +40,11 @@ body {
   }
 }
 
-.ui-widget-content {
-  background: #fff;
-}
-.ui-autocomplete {
-  position: absolute;
-}
-.ui-menu {
-  @include box-shadow(rgba(#000, 0.3) 0 1px 3px);
-  top: 10px;
-  overflow: hidden;
-  max-height: 460px;
-}
-.ui-menu-item {
-  line-height: 16px;
-  &:not(:last-child) {
-    border-bottom: 1px solid #e6e6e6;
+// needed for some Bootstrap widgets
+.fade {
+  @include transition(opacity 0.15s linear);
+  opacity: 0;
+  &.in {
+    opacity: 1;
   }
-  // top nav search autocomplete
-  &:last-child a[href] {
-    font-weight: bold;
-    padding: 13px $sp;
-    text-align: center;
-  }
-  a {
-    display: block;
-    font-weight: normal;
-    padding: 7px $sp;
-    // top nav search autocomplete
-    &[href] {
-      @include box-sizing(border-box);
-      padding: 5px $sp 5px 34px;
-      position: relative;
-      min-width: 600px;
-    }
-  }
-  .title {
-    color: $text-color;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    &:before {
-      @include entypo-icon;
-      color: $lightgray;
-      font-size: 20px;
-      position: absolute;
-      left: 7px;
-      top: 13px;
-      text-align: center;
-      width: 20px;
-    }
-    &:last-child {
-      margin: 8px 0;
-    }
-  }
-  .description {
-    color: #a2a2a2;
-    display: block;
-    font-size: 13px;
-    overflow-x: hidden;
-  }
-  em {
-    color: $text-color;
-    font-weight: bold;
-    font-style: normal;
-  }
-  .ui-state-focus {
-    background: #f2f5f7;
-  }
-
-  .Accounts:before {
-    @extend .icon-briefcase:before;
-  }
-  .Projects:before {
-    @extend .icon-folder:before;
-  }
-  .Documentation:before {
-    @extend .icon-newspaper:before;
-  }
-}
-.ui-helper-hidden-accessible {
-  display: none;
 }

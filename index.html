@@ -5,9 +5,8 @@
     <title>The Works</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="main.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.125/uranium-pretty.js"></script>
-    <script src="bootstrap.min.js"></script>
     <script src="chosen.jquery.js"></script>
     <script src="shCore.js"></script>
     <script src="shBrushJScript.js"></script>
@@ -395,7 +394,24 @@
         <div class="pane">
           <p>This also takes pieces from Bootstrap v3: Modal, Tab, Tooltip, Alert, Collapse (accordion)</p>
           <a href="#accordion1" data-toggle="collapse">Accordion header</a>
-          <div id="accordion1"><p>Accordion content</p></div>
+          <div id="accordion1" class="collapse"><p>Accordion content</p></div>
+          <br>
+          <a href="#modal1" data-toggle="modal">Modal</a>
+          <div id="modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <!--div id="modal1" class="modal fade"-->
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3>Modal Heading</h3>
+                </div>
+                <div class="modal-body">Modal Content</div>
+                <div class="modal-footer">
+                  <a class="btn big" data-dismiss="modal">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -407,5 +423,8 @@
         <div>3rd Column</div>
       </div>
     </footer>
+    
+    <script src="bootstrap.js"></script>
+    
   </body>
 </html>
