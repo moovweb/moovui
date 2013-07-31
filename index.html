@@ -17,7 +17,15 @@
       $(function() {
         $(".chzn-select").chosen();
         $(".notice").prepend("<a class='close' data-dismiss='alert' href='#'></a>");
-        $("[data-toggle='tooltip']").tooltip();
+        $("[data-toggle='tooltip']").tooltip(); // this shouldn't be needed...
+        $(function() {
+          $(window).on("hashchange", function() {
+            var offset = $(location.hash).offset(); // maybe :target would be better
+            if (offset)
+              window.scrollTo(0, offset.top - 53); // $nav-height + 5px
+          });
+        });
+        
       });
     </script>
   </head>
@@ -30,6 +38,17 @@
           <li><a>Link 3</a></li>
           <li><a>Link 4</a></li>
         </ul>
+        <div class="header-menu">
+          <div class="user-avatar pull-right" data-toggle="dropdown">&lt;img&gt;</div>
+          <ul>
+            <li><a href="/users/kwliou/edit">Settings</a></li>
+            <li><a href="/admin/accounts">♛♛♛</a></li>
+            <li><a href="/rep/dashboard">Dashboard</a></li>
+            <li><a href="/rep/organizations/new">Create Organization</a></li>
+            <li><a href="/rep/leads">Leads</a></li>
+            <li data-no-turbolink="true"><a href="/users/sign_out">Sign Out</a></li>
+          </ul>
+        </div>
         <ul class="header-links pull-right">
           <li><a>Link 5</a></li>
           <li><a>Link 6</a></li>
@@ -163,6 +182,15 @@
       <br>
       <div>
         <h1>Text</h1>
+        <div class="pane">
+          <p>(without <code>copy</code> class)</p>
+          <h1>Header 1</h1>
+          <h2>Header 2</h2>
+          <h3>Header 3</h3>
+          <h4>Header 4</h4>
+          <h5>Header 5</h5>
+        </div>
+        <br>
         <div class="pane copy">
           <h1>Header 1</h1>
           <h2>Header 2</h2>
@@ -296,8 +324,10 @@
           <br><br>
           <a class="btn">Button</a>
           <br><br>
-          <a class="big btn">Big Button</a>
-          <a class="big btn icon-check">Big Button with Icon</a>
+          <span class="btngroup">
+            <a class="big btn">Big Button</a>
+            <a class="big btn icon-check">Big Button with Icon</a>
+          </span>
           <br><br>
           <a class="btn warning">Warning Button</a>
           <br><br>

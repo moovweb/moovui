@@ -47,6 +47,8 @@
   width: 20%;
   a {
     display: block;
+    margin: 0 0 1px;
+    padding: 5px $sp;
   }
   .collapsed:after {
     @include entypo-icon;
@@ -63,7 +65,6 @@
       background: #7c8899;
       color: #fff;
       font-weight: bold;
-      padding: 5px $sp;
       &.collapsed {
         background: #bdc4cb;
         color: #7c8899;
@@ -73,8 +74,6 @@
       background: #eff0f0;
       font-weight: bold;
       color: #7c8899;
-      margin: 0 0 1px;
-      padding: 5px $sp 5px $sp;
       &:before {
         content: "\2022";
         font-size: 16px;
@@ -85,8 +84,6 @@
   }
   a:not([data-toggle="collapse"]) {
     background: #fff;
-    margin: 0 0 1px;
-    padding: 5px $sp 5px $sp;
     &:before {
       content: "\2022\2022";
       font-size: 16px;
