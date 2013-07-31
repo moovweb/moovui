@@ -20,7 +20,7 @@
         $("[data-toggle='tooltip']").tooltip(); // this shouldn't be needed...
         $(function() {
           $(window).on("hashchange", function() {
-            var offset = $(location.hash).offset(); // maybe :target would be better
+            var offset = $(":target").offset();
             if (offset)
               window.scrollTo(0, offset.top - 53); // $nav-height + 5px
           });
@@ -39,14 +39,14 @@
           <li><a>Link 4</a></li>
         </ul>
         <div class="header-menu">
-          <div class="user-avatar pull-right" data-toggle="dropdown">&lt;img&gt;</div>
+          <div class="user-avatar pull-right" data-toggle="dropdown"><div style="width: 30px; height: 30px; background: #fff; display: inline-block"></div></div>
           <ul>
-            <li><a href="/users/kwliou/edit">Settings</a></li>
-            <li><a href="/admin/accounts">♛♛♛</a></li>
-            <li><a href="/rep/dashboard">Dashboard</a></li>
-            <li><a href="/rep/organizations/new">Create Organization</a></li>
-            <li><a href="/rep/leads">Leads</a></li>
-            <li data-no-turbolink="true"><a href="/users/sign_out">Sign Out</a></li>
+            <li><a>Link 1</a></li>
+            <li><a>Link 2</a></li>
+            <li><a>Link 3</a></li>
+            <li><a>Link 4</a></li>
+            <li><a>Link 5</a></li>
+            <li><a>Link 6</a></li>
           </ul>
         </div>
         <ul class="header-links pull-right">
@@ -173,10 +173,12 @@
           <div class="subpane">subpane</div>
         </section>
         <section id="tab2" class="tab">
-          <div class="subpane">Section 2</div>
+          <h3>Section 2</h3>
+          <div class="subpane">subpane</div>
         </section>
         <section id="tab3" class="tab">
-          <div class="subpane">Section 3</div>
+          <h3>Section 3</h3>
+          <div class="subpane">subpane</div>
         </section>
       </div>
       <br>
@@ -253,6 +255,13 @@
       <div>
         <h1>Code</h1>
         <p>Inline <code>code</code>.</p>
+        <p>
+          <code class="cmd">rvmsudo moov server -auto-hosts</code>
+        </p>
+        <p>
+          <code class="cmd">rvmsudo moov server -auto-hosts</code>
+          <code class="cmd">rvmsudo moov server -auto-hosts</code>
+        </p>
         <input type="text" value="<code> input" class="code">
         <pre data-lang="ts">
           # The main file executed by Tritium. The start of all other files.
@@ -406,15 +415,19 @@
       <br>
       <div>
         <h1>Doc section</h1>
-        <div class="pane">
+        <div class="pane copy">
           <h1>Doc title</h1>
           <p>This is the documentation description.</p>
           <h2>Subheader</h2>
           <p>More Text</p>
           <hr>
           <h2>Subheader</h2>
+          <h3>Subsubheader</h3>
           <p>More Text</p>
-          <hr>
+          <div class="qna">
+            <a href="#faq" data-toggle="collapse" class="collapsed">Question</a>
+            <div id="faq" class="accordion-body collapse">Answer content</div>
+          </div>
         </div>
       </div>
       <br>
@@ -457,7 +470,7 @@
             </div>
           </div>
           <div>
-            <a href="#" data-toggle="tooltip" title="tooltip text" data-placement="right">Tooltip</a>
+            <span data-toggle="tooltip" title="tooltip text" data-placement="right">Tooltip</span>
           </div>
         </div>
       </div>

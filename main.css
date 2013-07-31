@@ -350,6 +350,7 @@ table {
     -webkit-flex: 1;
     -moz-flex: 1;
     flex: 1;
+    display: block;
     min-width: 0%;
     width: 0; }
 
@@ -522,10 +523,10 @@ table {
 .icon-play:before {
   content: "\25b6"; }
 
-.icon-triangle-right:before {
+.icon-triangle-right:before, .qna [data-toggle="collapse"].collapsed:before {
   content: "\25b8"; }
 
-.icon-triangle-down:before, .user-avatar:after {
+.icon-triangle-down:before, .qna [data-toggle="collapse"]:before, .user-avatar:after {
   content: "\25be"; }
 
 .icon-triangle-left:before {
@@ -1249,6 +1250,35 @@ body {
   -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease; }
 
+.qna {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #dadde2;
+  font-size: 14px;
+  padding: 0 10px 0 25px; }
+  .qna [data-toggle="collapse"] {
+    color: inherit;
+    display: block;
+    font-weight: bold;
+    margin: 0 -10px 0 -25px;
+    padding: 10px 0; }
+    .qna [data-toggle="collapse"]:before {
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-family: "Entypo";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: normal;
+      vertical-align: bottom;
+      width: 14px;
+      padding: 0 0 0 11px; }
+    .qna [data-toggle="collapse"].collapsed:before {
+      width: 13px;
+      padding: 0 0 0 12px; }
+  .qna .accordion-body:after {
+    content: "";
+    margin: 10px 0 0; }
+
 .btn.pill {
   box-shadow: none;
   border: 0;
@@ -1447,6 +1477,19 @@ input.code {
   font-family: Consolas, Monaco, Courier, monospace !important;
   font-size: 12px; }
 
+.cmd {
+  background: #333;
+  border: 0;
+  color: #d8d9da;
+  display: block;
+  margin: 0 0 10px;
+  padding: 10px; }
+  .cmd:before {
+    color: #757575;
+    content: "$> "; }
+  .cmd + .cmd {
+    margin: -30px 0 10px; }
+
 a {
   color: #0071bc;
   text-decoration: none; }
@@ -1512,6 +1555,7 @@ p {
   margin: 0 0 20px; }
 
 p.copy, .copy p {
+  font-weight: 300;
   margin: 0 0 24px; }
 
 ul, ol {

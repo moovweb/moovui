@@ -255,6 +255,7 @@
   width: 100%; // Firefox treats old box like inline-block
   > * {
     @include flex(1);
+    display: block;
     min-width: 0%; // Firefox hack
     width: 0;
   }

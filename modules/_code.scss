@@ -19,3 +19,19 @@ input.code {
   font-family: $code-font !important;
   font-size: 12px;
 }
+
+.cmd {
+  background: #333;
+  border: 0;
+  color: #d8d9da;
+  display: block;
+  margin: 0 0 $sp;
+  padding: $sp;
+  &:before {
+    color: #757575;
+    content: "$> ";
+  }
+  + .cmd {
+    margin: -$sp3 0 $sp;
+  }
+}
