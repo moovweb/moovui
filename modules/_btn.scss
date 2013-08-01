@@ -37,18 +37,18 @@
   }
 }
 
-@mixin btn-warning {
-  &:hover {
-    background: shade($red, 10%);
+@include keyframes(warn) {
+  from {
+    background: tint($gray, 10%);
   }
-  &:active {
-    background: shade($red, 20%);
-    border-color: shade($red, 35%) shade($red, 35%) shade($red, 25%);
+  to {
+    background: shade($red, 10%);
   }
 }
 
 @mixin btn-warning {
   &:hover {
+    @include animation(warn 0.4s);
     background: shade($red, 10%);
   }
   &:active {
