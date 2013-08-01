@@ -23,12 +23,12 @@ input.code {
 .cmd {
   background: #333;
   border: 0;
-  color: #d8d9da;
+  color: #eee;
   display: block;
   margin: 0 0 $sp;
   padding: $sp;
   &:before {
-    color: #757575;
+    color: #999;
     content: "$> ";
   }
   + .cmd {
