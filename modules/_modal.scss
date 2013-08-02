@@ -27,7 +27,6 @@
 .modal-content {
   @include border-radius(5px);
   @include box-shadow(rgba(#000, 0.5) 0 0 8px 1px);
-  @include box-sizing(border-box);
   background: #fff;
   overflow: hidden;
 }
@@ -63,7 +62,6 @@
 }
 
 .modal-body {
-  @include box-sizing(border-box);
   padding: $sp;
 }
 

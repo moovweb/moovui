@@ -1,7 +1,7 @@
 #header {
   @include box-shadow(rgba(#000, 0.2) 0 1px 3px);
   background: #333;
-  position: fixed;
+  position: absolute;
   top: 0;
   min-width: $min-page-width;
   width: 100%;
@@ -20,6 +20,9 @@
   }
   > .content {
     position: relative;
+  }
+  &.affix {
+    position: fixed;
   }
 }
 

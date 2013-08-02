@@ -1,6 +1,5 @@
-.chzn-select {
+select {
   @include appearance(none);
-  @include box-sizing(border-box);
   @include radius;
   background: #fafafa;
   border: 1px solid #ccc;

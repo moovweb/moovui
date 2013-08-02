@@ -1,5 +1,4 @@
-.notice {
-  @include box-sizing(border-box);
+@mixin notice {
   @include radius;
   background: #98c17b;
   color: #fff;
@@ -59,6 +58,38 @@
     font-weight: normal;
     text-decoration: underline;
   }
+}
+
+.notice {
+  @include notice;
+}
+
+@mixin callout {
+  @include radius;
+  background: #eff2f3;
+  border: 1px solid #bdc4cb;
+  border-left-width: 50px;
+  margin: 0 0 $sp;
+  padding: $sp;
+  position: relative;
+  &:before {
+    @include entypo-icon;
+    @extend .icon-info:before;
+    color: #fff;
+    font-size: 20px;
+    margin: -13px 0 0 -60px;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 50px;
+  }
+  &.warning:before {
+    @extend .icon-warning:before;
+  }
+}
+
+.callout {
+  @include callout;
 }
 
 .text-success {

@@ -1,5 +1,4 @@
 .syntaxhighlighter {
-  @include box-sizing(border-box);
   @include radius;
   background: #555;
   color: #f0f0f0;
@@ -55,10 +54,10 @@
     padding: $sp 6px;
     position: absolute;
     text-align: right;
-    width: 16px;
+    width: 28px;
   }
   .code {
-    padding: 0 0 0 26px;
+    padding: 0 0 0 28px;
   }
   .comments {
     color: #999;
@@ -91,6 +90,7 @@
     background: none;
     border: 0;
     color: #eee;
+    font-size: 13px;
     padding: 0;
   }
 }

@@ -11,10 +11,10 @@
         border-radius: 4px;
         background: #fff;
         margin: 0 0 30px;
-        overflow: hidden;
         padding: 10px;
       }
       .example-head {
+        border-radius: 4px 4px 0 0;
         background: #f5f5f5;
         border-bottom: 1px solid #e0e0e0;
         margin: -10px -10px 20px;
@@ -45,7 +45,7 @@
     <script src="shInit.js"></script>
     <script>
       $(function() {
-        $(".chzn-select").chosen();
+        $("select").chosen();
         $(".notice").prepend("<a class='close' data-dismiss='alert' href='#'></a>");
         $("[data-toggle='tooltip']").tooltip(); // this shouldn't be needed...
       });
@@ -62,7 +62,7 @@
     </script>
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="affix">
       <div class="content">
         <ul class="header-links">
           <li><a>Link 1</a></li>
@@ -76,6 +76,35 @@
     <div id="page">
       <div class="example">
         <div class="example-head">
+          <h1>Container</h1>
+          <p>An element with id <code>page</code> behaves the same and can be a general wrapper for content between the header and footer.</p>
+        </div>
+        <div class="content">This content will have automatic margins to fit in the default 960px.</div>
+        <pre data-lang="html">
+          <div class="content">This content will have automatic margins to fit in the default 960px.</div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Header</h1>
+          <p>Add the class <code>affix</code> to fix it to the top of the page.</p>
+        </div>
+        You can find an example fixed to the top of this page.
+        <pre data-lang="html">
+          <header id="header" class="affix">
+            <div class="content">
+              <ul class="header-links">
+                <li><a>Link 1</a></li>
+                <li><a>Link 2</a></li>
+                <li><a>Link 3</a></li>
+                <li><a>Link 4</a></li>
+              </ul>
+            </div>
+          </header>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
           <h1>Notices</h1>
         </div>
         <div class="notice info">Info (default)</div>
@@ -87,6 +116,19 @@
           <div class="notice success">Success</div>
           <div class="notice warning">Warning/Caution</div>
           <div class="notice error">Error</div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Statuses</h1>
+        </div>
+        <div class="text-success">Success: message</div>
+        <div class="text-warning">Warning: message</div>
+        <div class="text-error">Error: message</div>
+        <pre data-lang="html">
+          <div class="text-success">Success: ...</div>
+          <div class="text-warning">Warning: message</div>
+          <div class="text-error">Error: ...</div>
         </pre>
       </div>
       <div class="example">
@@ -109,7 +151,7 @@
       <div class="example">
         <div class="example-head">
           <h1>Headers (copy)</h1>
-          <p>You can add the <code>copy</code> class to an ancestor or the element itself</p>
+          <p>You can add a <code>copy</code> class to an ancestor or the element itself</p>
         </div>
         <h1 class="copy">Header 1</h1>
         <div class="copy">
@@ -131,7 +173,7 @@
       <div class="example">
         <div class="example-head">
           <h1>Lists</h1>
-          <p>You can add the <code>copy</code> class to an ancestor or the element itself</p>
+          <p>You can add a <code>copy</code> class to an ancestor or the element itself</p>
         </div>
         <div class="copy">
           <ul>
@@ -163,7 +205,7 @@
       <div class="example">
         <div class="example-head">
           <h1>Text (copy)</h1>
-          <p>You can add the <code>copy</code> class to an ancestor or the element itself</p>
+          <p>You can add a <code>copy</code> class to an ancestor or the element itself</p>
         </div>
         <p class="copy">
           Lorem ipsum <a>dolor sit</a> amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -177,6 +219,7 @@
       <div class="example">
         <div class="example-head">
           <h1>Accordion</h1>
+          <p>You can add a <code>qna</code> class to the wrapper for the example style.
         </div>
         <div class="qna">
           <a href="#faq" data-toggle="collapse" class="collapsed">Question</a>
@@ -191,21 +234,169 @@
       </div>
       <div class="example">
         <div class="example-head">
+          <h1>Nested Accordion</h1>
+          <p>You can add a <code>sidebar-doc</code> class to the wrapper for the example style.
+        </div>
+        <ul class="sidebar-doc">
+          <li>
+            <a href="#acc1" class="collapsed" data-toggle="collapse">Head 1</a>
+            <ul id="acc1" class="collapse">
+              <li>
+                <a href="#subacc1" class="collapsed" data-toggle="collapse">Subhead 1</a>
+                <ul id="subacc1" class="collapse">
+                  <li><a>Item 1</a></li>
+                  <li><a>Item 2</a></li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#subacc2" class="collapsed" data-toggle="collapse">Subhead 2</a>
+                <ul id="subacc2" class="collapse">
+                  <li><a>Item 4</a></li>
+                  <li><a>Item 5</a></li>
+                  <li><a>Item 6</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#acc2" class="collapsed" data-toggle="collapse">Head 2</a>
+            <ul id="acc2" class="collapse">
+              <li>
+                <a href="#subacc3" class="collapsed" data-toggle="collapse">Subhead 3</a>
+                <ul id="subacc3" class="collapse">
+                  <li><a>Item 7</a></li>
+                  <li><a>Item 8</a></li>
+                  <li><a>Item 9</a></li>
+                  <li><a>Item 10</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#subacc4" class="collapsed" data-toggle="collapse">Subhead 4</a>
+                <ul id="subacc4" class="collapse">
+                  <li><a>Item 11</a></li>
+                  <li><a>Item 12</a></li>
+                  <li><a>Item 13</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre data-lang="html">
+          <ul class="sidebar-doc">
+            <li>
+              <a href="#acc1" class="collapsed" data-toggle="collapse">Head 1</a>
+              <ul id="acc1" class="collapse">
+                <li>
+                  <a href="#subacc1" class="collapsed" data-toggle="collapse">Subhead 1</a>
+                  <ul id="subacc1" class="collapse">
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li><a>Item 3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#subacc2" class="collapsed" data-toggle="collapse">Subhead 2</a>
+                  <ul id="subacc2" class="collapse">
+                    <li><a>Item 4</a></li>
+                    <li><a>Item 5</a></li>
+                    <li><a>Item 6</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#acc2" class="collapsed" data-toggle="collapse">Head 2</a>
+              <ul id="acc2" class="collapse">
+                <li>
+                  <a href="#subacc3" class="collapsed" data-toggle="collapse">Subhead 3</a>
+                  <ul id="subacc3" class="collapse">
+                    <li><a>Item 7</a></li>
+                    <li><a>Item 8</a></li>
+                    <li><a>Item 9</a></li>
+                    <li><a>Item 10</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#subacc4" class="collapsed" data-toggle="collapse">Subhead 4</a>
+                  <ul id="subacc4" class="collapse">
+                    <li><a>Item 11</a></li>
+                    <li><a>Item 12</a></li>
+                    <li><a>Item 13</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
           <h1>Buttons</h1>
         </div>
-        <p><a class="btn pill">Pill Button</a></p>
-        <p><a class="btn small">Small Button</a></p>
-        <p><a class="btn">Button</a></p>
-        <p><a class="btn icon-check">Button with Icon</a></p>
-        <p><a class="btn big">Big Button</a></p>
-        <p><a class="btn warning">Warning Button</a></p>
+        <a class="btn pill">Pill Button</a>
+        <br>
+        <a class="btn small">Small Button</a>
+        <br>
+        <a class="btn">Button</a>
+        <br>
+        <a class="btn icon-check">Button with Icon</a>
+        <br>
+        <a class="btn big">Big Button</a>
+        <br>
+        <a class="btn warning">Warning Button</a>
         <pre data-lang="html">
-          <p><a class="btn pill">Pill Button</a></p>
-          <p><a class="btn small">Small Button</a></p>
-          <p><a class="btn">Button</a></p>
-          <p><a class="btn icon-check">Button with Icon</a></p>
-          <p><a class="btn big">Big Button</a></p>
-          <p><a class="btn warning">Warning Button</a></p>
+          <a class="btn pill">Pill Button</a>
+          <br>
+          <a class="btn small">Small Button</a>
+          <br>
+          <a class="btn">Button</a>
+          <br>
+          <a class="btn icon-check">Button with Icon</a>
+          <br>
+          <a class="btn big">Big Button</a>
+          <br>
+          <a class="btn warning">Warning Button</a>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Dropdowns</h1>
+          <p>Add the class <code>autocomplete</code> to show a text input.</p>
+        </div>
+        <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+          <option>Option 6</option>
+        </select>
+        <select class="autocomplete">
+          <option>Autocomplete Option 1</option>
+          <option>Autocomplete Option 2</option>
+          <option>Autocomplete Option 3</option>
+          <option>Autocomplete Option 4</option>
+          <option>Autocomplete Option 5</option>
+          <option>Autocomplete Option 6</option>
+        </select>
+        <pre data-lang="html">
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+            <option>Option 6</option>
+          </select>
+          <select class="autocomplete">
+            <option>Autocomplete Option 1</option>
+            <option>Autocomplete Option 2</option>
+            <option>Autocomplete Option 3</option>
+            <option>Autocomplete Option 4</option>
+            <option>Autocomplete Option 5</option>
+            <option>Autocomplete Option 6</option>
+          </select>
         </pre>
       </div>
       <div class="example">
@@ -245,7 +436,68 @@
           </div>
         </pre>
       </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Callout</h1>
+        </div>
+        <div class="callout info">Callout info (default)</div>
+        <div class="callout warning">Callout warning</div>
+        <pre data-lang="html">
+          <div class="callout info">Callout info (default)</div>
+          <div class="callout warning">Callout warning</div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Helpers</h1>
+        </div>
+        <div class="pull-left">float left</div>
+        <div class="pull-right">float right</div>
+        <div class="text-center">center</div>
+        <div class="text-left">left</div>
+        <div class="text-right">right</div>
+        <div class="flex">
+          <div>Flex 1</div>
+          <div>Flex 2</div>
+          <div>Flex 3</div>
+        </div>
+        <br>
+        <div class="flex-center">
+          <div>Flex 1<br>Flex 1</div>
+          <div>Flex 2</div>
+          <div>Flex 3<br>Flex 3</div>
+        </div>
+        <pre data-lang="html">
+          <div class="pull-left">float left</div>
+          <div class="pull-right">float right</div>
+          <div class="text-center">center</div>
+          <div class="text-left">left</div>
+          <div class="text-right">right</div>
+          <div class="flex">
+            <div>Flex 1</div>
+            <div>Flex 2</div>
+            <div>Flex 3</div>
+          </div>
+          <br>
+          <div class="flex-center">
+            <div>Flex 1<br>Flex 1</div>
+            <div>Flex 2</div>
+            <div>Flex 3<br>Flex 3</div>
+          </div>
+        </pre>
+      </div>
     </div>
+    <footer id="footer">
+      <div class="content">
+        <h2 class="copy">Footer</h2>
+        <ul>
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+          <li><a>Link 4</a></li>
+        </ul>
+      </div>
+    </footer>
     <script src="bootstrap.js"></script>
   </body>
 </html>

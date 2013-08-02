@@ -250,7 +250,6 @@
 /* helpful classes */
 
 .flex, .flex-center {
-  @include box-sizing(border-box);
   @include display-flex;
   width: 100%; // Firefox treats old box like inline-block
   > * {
@@ -278,7 +277,6 @@
 }
 
 .flex-justify {
-  @include box-sizing(border-box);
   @include display-flex;
   @include justify-content(justify);
   width: 100%; // for Firefox
