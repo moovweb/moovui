@@ -28,8 +28,12 @@
 }
 
 @mixin btngroup {
-  .btn + .btn {
-    margin-left: $sp;
+  @include clearfix;
+  .btn {
+    float: left;
+    & + .btn {
+      margin-left: $sp;
+    }
   }
 }
 

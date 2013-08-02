@@ -1,0 +1,27 @@
+// reset
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.copy, .copy ul {
+  list-style: disc;
+  margin: 0 0 $sp2 2em;
+}
+
+ol.copy, .copy ol {
+  list-style: decimal;
+  margin: 0 0 $sp2 2em;
+}
+
+.link-list {
+  list-style: none !important;
+  margin: 0 0 $sp2 2em;
+  li:before {
+    @include entypo-icon;
+    @extend .icon-right:before;
+    color: #d3d5d5;
+    margin: 0 9px 0 -20px;
+  }
+}
