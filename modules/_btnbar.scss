@@ -1,7 +1,6 @@
 @mixin btnbar {
   @include clearfix;
-  a {
-    @include btn;
+  .btn {
     @include border-radius(0);
     border-right-width: 0;
     float: left;
@@ -13,12 +12,12 @@
       border-right-width: 1px;
     }
   }
-  .active a {
+  .active .btn {
     @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
     background: $darkgray;
     border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
   }
-  .active + * a {
+  .active + * .btn {
     border-left-color: shade($gray, 30%);
   }
 }

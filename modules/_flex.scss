@@ -249,41 +249,43 @@
 
 /* helpful classes */
 
-.flex, .flex-center {
+.flex {
   @include display-flex;
-  width: 100%; // Firefox treats old box like inline-block
+  &.center {
+    @include align-items(center);
+  }
+  &.gap > :not(:last-child) {
+    margin-right: $sp;
+  }
   > * {
     @include flex(1);
     display: block;
-    min-width: 0%; // Firefox hack
-    width: 0;
+    width: 0; // make each same size with 2009 spec
   }
-}
-.ie {
-  .flex, .flex-center {
-    display: table;
-    > * {
-      display: table-cell;
-    }
+  .no-flex {
+    @include flex(none);
   }
 }
 
-.flex-center {
-  @include align-items(center);
-  vertical-align: top; // Firefox treats old box like inline-block
-}
-.ie .flex-center > * {
-  vertical-align: middle;
-}
 
 .flex-justify {
   @include display-flex;
   @include justify-content(justify);
-  width: 100%; // for Firefox
   > *:not(:last-child) {
     @include new-prefixer(box-flex, 1, webkit moz);
   }
 }
+
+.ie  .flex {
+  display: table;
+  &.center > * {
+    vertical-align: middle;
+  }
+  > * {
+    display: table-cell;
+  }
+}
+
 .ie .flex-justify {
   display: table;
   > * {

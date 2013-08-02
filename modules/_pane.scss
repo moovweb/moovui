@@ -3,6 +3,7 @@
   @include box-shadow(#e3e7e9 0 0 0 1px inset, #f1f4f5 0 0 0 2px inset);
   @include clearfix;
   background: #eaedef;
+  margin: 0 0 $sp;
   padding: $sp2;
 }
 

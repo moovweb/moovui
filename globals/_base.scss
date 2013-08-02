@@ -34,12 +34,8 @@ body {
   margin: 0 0 $sp3;
 }
 
-.input.error {
-  color: $red;
-  input {
-    @include box-shadow($red 0 0 0 1px);
-    border-color: $red;
-  }
+.section + .section {
+  margin: $sp2 0 0;
 }
 
 // needed for some Bootstrap widgets

@@ -22,8 +22,6 @@
   }
 }
 
-@import "flex";
-
 @mixin border-radius($radius) {
   @include new-prefixer(border-radius, $radius, webkit spec);
 }
@@ -89,6 +87,10 @@
 }
 .text-right {
   text-align: right;
+}
+
+.stretch {
+  width: 100%;
 }
 
 @mixin hide-text {

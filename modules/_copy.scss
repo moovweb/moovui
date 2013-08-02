@@ -35,6 +35,8 @@ h4 {
 
 h5 {
   font-size: $h5-size;
+  text-transform: uppercase;
+  color: #999
 }
 
 h1.copy, h2.copy, h3.copy, h4.copy, .copy h1, .copy h2, .copy h3, .copy h4 {
@@ -66,7 +68,9 @@ h4.copy, .copy h4 {
 }
 
 h5.copy, .copy h5 {
+  color: inherit;
   font-size: $h5-copy-size;
+  text-transform: inherit;
 }
 
 hr {

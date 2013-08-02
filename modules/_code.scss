@@ -15,9 +15,11 @@ pre {
   margin: 0;
 }
 
-input.code {
-  font-family: $code-font !important;
-  font-size: 12px;
+input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], textarea {
+  &.code {
+    font-family: $code-font !important;
+    font-size: 12px;
+  }
 }
 
 .cmd {

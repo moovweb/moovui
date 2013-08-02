@@ -29,6 +29,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   &:-ms-input-placeholder {
     color: #ccc;
   }
+  &.error {
+    @include box-shadow($red 0 0 0 1px);
+    border-color: $red;
+  }
 }
 
 // hide 'X' in IE10
