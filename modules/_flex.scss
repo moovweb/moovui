@@ -278,6 +278,7 @@
 
 .ie  .flex {
   display: table;
+  width: 100%;
   &.center > * {
     vertical-align: middle;
   }

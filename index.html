@@ -86,6 +86,17 @@
       </div>
       <div class="example">
         <div class="example-head">
+          <h1>Section</h1>
+        </div>
+        <div class="section">Content</div>
+        <div class="section">Content with margin</div>
+        <pre data-lang="html">
+          <div class="section">Content</div>
+          <div class="section">Content with margin</div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
           <h1>Header</h1>
           <p>Add the class <code>affix</code> to fix it to the top of the page.</p>
         </div>
@@ -224,6 +235,101 @@
           <p class="copy">
             Lorem ipsum <a>dolor sit</a> amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Code</h1>
+        </div>
+        <p>Inline <code>code</code>.</p>
+        <code class="cmd">Shell line 1</code>
+        <code class="cmd">Shell line 2</code>
+        <pre data-lang="html">Highlighted <span>syntax</span></pre>
+        <pre data-lang="html">
+          <p>Inline <code>code</code>.</p>
+          <code class="cmd">Shell line 1</code>
+          <code class="cmd">Shell line 2</code>
+          <pre data-lang="html">Highlighted <span>syntax</span></pre>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Table</h1>
+          <p>You can add a <code>no-borders</code> class to remove the styling</p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Col 1</th>
+              <th>Col 2</th>
+              <th>Col 3</th>
+              <th>Col 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Column 1</td>
+              <td>Column 2</td>
+              <td>Column 3</td>
+              <td>Column 4</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="no-borders">
+          <thead>
+            <tr>
+              <th>Col 1</th>
+              <th>Col 2</th>
+              <th>Col 3</th>
+              <th>Col 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Column 1</td>
+              <td>Column 2</td>
+              <td>Column 3</td>
+              <td>Column 4</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre data-lang="html">
+          <table>
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+                <th>Col 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Column 1</td>
+                <td>Column 2</td>
+                <td>Column 3</td>
+                <td>Column 4</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="no-borders">
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+                <th>Col 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Column 1</td>
+                <td>Column 2</td>
+                <td>Column 3</td>
+                <td>Column 4</td>
+              </tr>
+            </tbody>
+          </table>
         </pre>
       </div>
       <div class="example">
@@ -522,10 +628,10 @@
           <h1>Callout</h1>
         </div>
         <div class="callout info">Callout info (default)</div>
-        <div class="callout warning">Callout warning</div>
+        <div class="callout warning">Callout warning<br>with second line</div>
         <pre data-lang="html">
           <div class="callout info">Callout info (default)</div>
-          <div class="callout warning">Callout warning</div>
+          <div class="callout warning">Callout warning<br>with second line</div>
         </pre>
       </div>
       <div class="example">
@@ -667,14 +773,6 @@
             <div>4</div>
             <div>5</div>
           </div>
-          <div class="flex">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-          </div>
           <br>
           <div class="flex center">
             <div>1</div>
@@ -707,14 +805,6 @@
             <div>3</div>
             <div>4</div>
             <div>5</div>
-          </div>
-          <div class="flex">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
           </div>
           <br>
           <div class="flex center">

@@ -2,13 +2,14 @@
   @include appearance(none);
   @include box-shadow(rgba(#000, 0.1) 0 1px, rgba(#fff, 0.5) 0 0 1px inset);
   @include radius;
+  background: tint($gray, 10%);
   @include background(linear-gradient(tint($gray, 25%), $gray));
   border: 1px solid shade($gray, 5%);
   color: #fff;
   display: inline-block;
   font: 11px/#{$line-height} $font;
   letter-spacing: 1px;
-  margin: 0 0 $sp;
+  margin: 0 0 $sp2;
   padding: 3px 10px;
   position: relative;
   text-align: center;
