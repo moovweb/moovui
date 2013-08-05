@@ -46,19 +46,8 @@
     <script>
       $(function() {
         $("select").chosen();
-        $(".notice").prepend("<a class='close' data-dismiss='alert' href='#'></a>");
         $("[data-toggle='tooltip']").tooltip(); // this shouldn't be needed...
       });
-      
-      // fix scroll offset when clicking on a #fragment link
-      (function() {
-        function adjust() {
-          var offset = $(":target").offset();
-          if (offset)
-            window.scrollTo(0, offset.top - 53); // $nav-height + 5px
-        }
-        $(window).on("hashchange", adjust).load(adjust);
-      })();
     </script>
   </head>
   <body>
@@ -118,15 +107,39 @@
         <div class="example-head">
           <h1>Notices</h1>
         </div>
-        <div class="notice info">Info (default)</div>
-        <div class="notice success">Success</div>
-        <div class="notice warning">Warning/Caution</div>
-        <div class="notice error">Error</div>
+        <div class="notice info">
+          <a class="close" data-dismiss="alert" href="#"></a>
+          Info (default)
+        </div>
+        <div class="notice success">
+          <a class="close" data-dismiss="alert" href="#"></a>
+          Success
+        </div>
+        <div class="notice warning">
+          <a class="close" data-dismiss="alert" href="#"></a>
+          Warning/Caution
+        </div>
+        <div class="notice error">
+          <a class="close" data-dismiss="alert" href="#"></a>
+          Error
+        </div>
         <pre data-lang="html">
-          <div class="notice info">Info (default)</div>
-          <div class="notice success">Success</div>
-          <div class="notice warning">Warning/Caution</div>
-          <div class="notice error">Error</div>
+          <div class="notice info">
+            <a class="close" data-dismiss="alert" href="#"></a>
+            Info (default)
+          </div>
+          <div class="notice success">
+            <a class="close" data-dismiss="alert" href="#"></a>
+            Success
+          </div>
+          <div class="notice warning">
+            <a class="close" data-dismiss="alert" href="#"></a>
+            Warning/Caution
+          </div>
+          <div class="notice error">
+            <a class="close" data-dismiss="alert" href="#"></a>
+            Error
+          </div>
         </pre>
       </div>
       <div class="example">
