@@ -445,6 +445,32 @@
       </div>
       <div class="example">
         <div class="example-head">
+          <h1>Inputs</h1>
+          <p>Add the class <code>code</code> for a code input.</p>
+        </div>
+        <label>
+          <input type="checkbox"> Checkbox
+        </label>
+        <br>
+        <label for="input1">Label</label>
+        <input id="input1" type="text" placeholder="Placeholder">
+        <input class="error" type="text" placeholder="Placeholder">
+        <input class="code" type="text" value="<code>">
+        <textarea>Text area</textarea>
+        <pre data-lang="html">
+          <label>
+            <input type="checkbox"> Checkbox
+          </label>
+          <br>
+          <label for="input1">Label</label>
+          <input id="input1" type="text" placeholder="Placeholder">
+          <input class="error" type="text" placeholder="Placeholder">
+          <input class="code" type="text" value="<code>">
+          <textarea>Text area</textarea>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
           <h1>Modal</h1>
         </div>
         <a href="#modal1" data-toggle="modal">Modal</a>
@@ -504,6 +530,202 @@
       </div>
       <div class="example">
         <div class="example-head">
+          <h1>Basic 12 Grid</h1>
+          <p>Notice that the right edges are not always aligned depending on window width.</p>
+        </div>
+        <style>
+          [class^="col-"] {
+            border: 1px solid #ccc;
+          }
+        </style>
+        <div class="text-center">
+          <div class="row">
+            <div class="col-12">12</div>
+          </div>
+          <div class="row">
+            <div class="col-1">1</div>
+            <div class="col-11">11</div>
+          </div>
+          <div class="row">
+            <div class="col-6">6</div>
+            <div class="col-6">6</div>
+          </div>
+          <div class="row">
+            <div class="col-4">4</div>
+            <div class="col-4">4</div>
+            <div class="col-4">4</div>
+          </div>
+          <div class="row">
+            <div class="col-3">3</div>
+            <div class="col-3">3</div>
+            <div class="col-3">3</div>
+            <div class="col-3">3</div>
+          </div>
+          <div class="row">
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+          </div>
+          <div class="row">
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+          </div>
+        </div>
+        <pre data-lang="html">
+          <div class="row">
+            <div class="col-12">12</div>
+          </div>
+          <div class="row">
+            <div class="col-1">1</div>
+            <div class="col-11">11</div>
+          </div>
+          <div class="row">
+            <div class="col-6">6</div>
+            <div class="col-6">6</div>
+          </div>
+          <div class="row">
+            <div class="col-4">4</div>
+            <div class="col-4">4</div>
+            <div class="col-4">4</div>
+          </div>
+          <div class="row">
+            <div class="col-3">3</div>
+            <div class="col-3">3</div>
+            <div class="col-3">3</div>
+            <div class="col-3">3</div>
+          </div>
+          <div class="row">
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+            <div class="col-2">2</div>
+          </div>
+          <div class="row">
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+          </div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Flex</h1>
+          <p>For now, use with caution if supporting IE versions &lt; 10. Add the class <code>center</code> to vertically align elements.</p>
+        </div>
+        <style>
+          .flex > * {
+            border: 1px solid #ccc;
+          }
+        </style>
+        <div class="text-center">
+          <div class="flex">
+            <div>1</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+          <br>
+          <div class="flex center">
+            <div>1</div>
+            <div>2<br>2</div>
+            <div>3<br>3<br>3</div>
+          </div>
+        </div>
+        <pre data-lang="html">
+          <div class="flex">
+            <div>1</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+          </div>
+          <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+          <br>
+          <div class="flex center">
+            <div>1</div>
+            <div>2<br>2</div>
+            <div>3<br>3<br>3</div>
+          </div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
           <h1>Helpers</h1>
         </div>
         <div class="pull-left">float left</div>
@@ -511,34 +733,12 @@
         <div class="text-center">center</div>
         <div class="text-left">left</div>
         <div class="text-right">right</div>
-        <div class="flex">
-          <div>Flex 1</div>
-          <div>Flex 2</div>
-          <div>Flex 3</div>
-        </div>
-        <br>
-        <div class="flex-center">
-          <div>Flex 1<br>Flex 1</div>
-          <div>Flex 2</div>
-          <div>Flex 3<br>Flex 3</div>
-        </div>
         <pre data-lang="html">
           <div class="pull-left">float left</div>
           <div class="pull-right">float right</div>
           <div class="text-center">center</div>
           <div class="text-left">left</div>
           <div class="text-right">right</div>
-          <div class="flex">
-            <div>Flex 1</div>
-            <div>Flex 2</div>
-            <div>Flex 3</div>
-          </div>
-          <br>
-          <div class="flex-center">
-            <div>Flex 1<br>Flex 1</div>
-            <div>Flex 2</div>
-            <div>Flex 3<br>Flex 3</div>
-          </div>
         </pre>
       </div>
     </div>

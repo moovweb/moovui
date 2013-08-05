@@ -1,6 +1,9 @@
 @mixin btnbar {
   @include clearfix;
-  .btn {
+  li {
+    display: inline;
+  }
+  input[type="submit"], input[type="button"], button, .btn {
     @include border-radius(0);
     border-right-width: 0;
     float: left;
@@ -12,13 +15,17 @@
       border-right-width: 1px;
     }
   }
-  .active .btn {
-    @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
-    background: $darkgray;
-    border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
+  .active {
+    input[type="submit"], input[type="button"], button, .btn {
+      @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
+      background: $darkgray;
+      border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
+    }
   }
-  .active + * .btn {
-    border-left-color: shade($gray, 30%);
+  .active + * {
+    input[type="submit"], input[type="button"], button, .btn {
+      border-left-color: shade($gray, 30%);
+    }
   }
 }
 
@@ -28,9 +35,17 @@
 
 @mixin btngroup {
   @include clearfix;
-  .btn {
+  li {
+    display: inline;
+  }
+  li + li {
+    input[type="submit"], input[type="button"], button, .btn {
+      margin-left: $sp;
+    }
+  }
+  input[type="submit"], input[type="button"], button, .btn {
     float: left;
-    & + .btn {
+    & + input[type="submit"], & + input[type="button"], & + button, & + .btn {
       margin-left: $sp;
     }
   }
