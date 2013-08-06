@@ -66,25 +66,12 @@
 }
 
 .modal-footer {
+  @include clearfix;
   border-top: 1px solid #d0d0d0;
   padding: $sp;
   text-align: center;
-  .button_close {
-    display: none;
-  }
-  .button_confirm {
-    @include btn;
-    &.disabled {
-      opacity: 0.5;
-    }
-    &.danger {
-      background: #e46c67;
-    }
-    
-    &.warning {
-      @include background(linear-gradient(tint($red, 25%), $red));
-      border-color: shade($red, 25%) shade($red, 25%) shade($red, 15%);
-    }
+  .btn {
+    margin: 0;
   }
 }
 
@@ -98,8 +85,8 @@
   z-index: 100;
   &.fade {
     opacity: 0;
-  }
-  &.fade.in {
-    opacity: 0.5;
+    &.in {
+      opacity: 0.5;
+    }
   }
 }

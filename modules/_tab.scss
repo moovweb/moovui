@@ -1,6 +1,6 @@
-.tab {
-  display: none;
-  &.active {
-    display: block;
-  }
+.tab:not(.active) {
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  height: 0;
 }

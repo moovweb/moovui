@@ -60,10 +60,6 @@
   }
 }
 
-.notice {
-  @include notice;
-}
-
 @mixin callout {
   @include radius;
   background: #eff2f3;
@@ -86,6 +82,10 @@
   &.warning:before {
     @extend .icon-warning:before;
   }
+}
+
+.notice {
+  @include notice;
 }
 
 .callout {

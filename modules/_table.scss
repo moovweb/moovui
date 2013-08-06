@@ -5,6 +5,16 @@ table {
   margin: 0 0 $sp;
   border-collapse: separate;
   border-spacing: 0;
+
+  &.no-borders {
+    margin: 0;
+    background: none;
+    th, td {
+      border: 0;
+      padding: 0;
+      @include border-radius(0);
+    }
+  }
 }
 
 td, th {
@@ -47,15 +57,5 @@ tr:last-child {
   }
   td:last-child {
     @include border-radius(0 0 $radius 0);
-  }
-}
-
-table.no-borders {
-  margin: 0;
-  background: none;
-  th, td {
-    border: 0;
-    padding: 0;
-    @include border-radius(0);
   }
 }

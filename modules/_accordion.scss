@@ -4,10 +4,9 @@
 
 .collapse {
   display: none;
-}
-
-.collapse.in {
-  display: block;
+  &.in {
+    display: block;
+  }
 }
 
 .collapsing {

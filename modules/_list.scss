@@ -15,7 +15,13 @@ ol.copy, .copy ol {
   margin: 0 0 $sp2 2em;
 }
 
-.link-list {
+@mixin big-list {
+  li {
+    margin: 0 0 $sp;
+  }
+}
+
+@mixin link-list {
   list-style: none !important;
   margin: 0 0 $sp2 2em;
   li:before {
@@ -24,4 +30,12 @@ ol.copy, .copy ol {
     color: #d3d5d5;
     margin: 0 9px 0 -20px;
   }
+}
+
+.big-list {
+  @include big-list;
+}
+
+.link-list {
+  @include link-list;
 }
