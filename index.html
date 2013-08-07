@@ -46,7 +46,7 @@
     <script>
       $(function() {
         $("select").chosen();
-        $("[data-toggle='tooltip']").tooltip(); // this shouldn't be needed...
+        //$("[data-toggle='tooltip']").tooltip(); // this shouldn't be needed...
       });
     </script>
   </head>
@@ -107,19 +107,19 @@
         <div class="example-head">
           <h1>Notices</h1>
         </div>
-        <div class="notice info">
+        <div class="notice info" data-alert>
           <a class="close" data-dismiss="alert" href="#"></a>
           Info (default)
         </div>
-        <div class="notice success">
+        <div class="notice success" data-alert>
           <a class="close" data-dismiss="alert" href="#"></a>
           Success
         </div>
-        <div class="notice warning">
+        <div class="notice warning" data-alert>
           <a class="close" data-dismiss="alert" href="#"></a>
           Warning/Caution
         </div>
-        <div class="notice error">
+        <div class="notice error" data-alert>
           <a class="close" data-dismiss="alert" href="#"></a>
           Error
         </div>
@@ -711,13 +711,13 @@
         <div class="example-head">
           <h1>Modal</h1>
         </div>
-        <a href="#modal1" data-toggle="modal">Modal</a>
-        <div id="modal1" class="modal fade">
+        <a href="#" data-reveal-id="modal1">Modal</a>
+        <div id="modal1" class="reveal-modal">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h3>Modal Heading</h3>
+                <h3 class="lead">Modal Heading</h3>
               </div>
               <div class="modal-body">Modal Content</div>
               <div class="modal-footer">
@@ -748,7 +748,7 @@
         <div class="example-head">
           <h1>Tooltip</h1>
         </div>
-        <span data-toggle="tooltip" title="tooltip text">Hover over me</span>
+        <span class="has-tip" data-tooltip data-toggle="tooltip" title="tooltip text">Hover over me</span>
         <span data-toggle="tooltip" data-placement="right" title="tooltip text">Hover over me</span>
         <pre data-lang="html">
           <span data-toggle="tooltip" title="tooltip text">Hover over me</span>
@@ -975,6 +975,13 @@
         </ul>
       </div>
     </footer>
+    <!--
     <script src="bootstrap.js"></script>
+    -->
+    <script src="custom.modernizr.js"></script>
+    <script src="foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
