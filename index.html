@@ -363,7 +363,7 @@
         </div>
         <div class="qna">
           <a href="#faq" data-toggle="collapse" class="collapsed">Question</a>
-          <div id="faq" class="accordion-body collapse" style="height: 0px;">Answer content</div>
+          <div id="faq" class="accordion-body collapse">Answer content</div>
         </div>
         <pre data-lang="html">
           <div class="qna">
@@ -468,6 +468,114 @@
               </ul>
             </li>
           </ul>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Pane with sidebar</h1>
+        </div>
+        <div class="pane">
+          <div class="sidebar">
+            <ul>
+              <li class="active">
+                <a href="#tab1" data-toggle="tab">Tab 1</a>
+              </li>
+              <li>
+              <a href="#tab2" data-toggle="tab">Tab 2</a>
+              </li>
+              <li>
+                <a href="#tab3" data-toggle="tab">Tab 3</a>
+              </li>
+            </ul>
+            <hr>
+            <a>Link 1</a>
+            <a>Link 2</a>
+          </div>
+          <section id="tab1" class="tab active">
+            <h3>Section 1</h3>
+            <div class="subpane">Content 1</div>
+          </section>
+          <section id="tab2" class="tab">
+            <h3>Section 2</h3>
+            <div class="subpane">Content 2</div>
+          </section>
+          <section id="tab3" class="tab">
+            <h3>Section 3</h3>
+            <div class="subpane">Content 3</div>
+          </section>
+        </div>
+        <pre data-lang="html">
+          <div class="pane">
+            <div class="sidebar">
+              <ul>
+                <li class="active">
+                  <a href="#tab1" data-toggle="tab">Tab 1</a>
+                </li>
+                <li>
+                <a href="#tab2" data-toggle="tab">Tab 2</a>
+                </li>
+                <li>
+                  <a href="#tab3" data-toggle="tab">Tab 3</a>
+                </li>
+              </ul>
+              <hr>
+              <a>Link 1</a>
+              <a>Link 2</a>
+            </div>
+            <section id="tab1" class="tab active">
+              <h3>Section 1</h3>
+              <div class="subpane">Content 1</div>
+            </section>
+            <section id="tab2" class="tab">
+              <h3>Section 2</h3>
+              <div class="subpane">Content 2</div>
+            </section>
+            <section id="tab3" class="tab">
+              <h3>Section 3</h3>
+              <div class="subpane">Content 3</div>
+            </section>
+          </div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Docs Section</h1>
+        </div>
+        <div class="doc-section copy">
+          <span class="doc-label">Local</span>
+          <h1>Doc Section Header</h1>
+          <p>Description.</p>
+          <div class="doc-links">
+            <div class="flex">
+              <a>Link 1</a>
+              <a target="_blank">Link 2</a>
+              <a target="_blank">Link 3</a>
+            </div>
+            <div class="flex">
+              <a>Link 4</a>
+              <a>Link 5</a>
+              <a>Link 6</a>
+            </div>
+          </div>
+        </div>
+        <pre data-lang="html">
+          <div class="doc-section copy">
+            <span class="doc-label">Local</span>
+            <h1>Doc Section Header</h1>
+            <p>Description.</p>
+            <div class="doc-links">
+              <div class="flex">
+                <a>Link 1</a>
+                <a target="_blank">Link 2</a>
+                <a target="_blank">Link 3</a>
+              </div>
+              <div class="flex">
+                <a>Link 4</a>
+                <a>Link 5</a>
+                <a>Link 6</a>
+              </div>
+            </div>
+          </div>
         </pre>
       </div>
       <div class="example">
@@ -767,7 +875,7 @@
           <p>For now, use with caution if supporting IE versions &lt; 10. Add the class <code>center</code> to vertically align elements.</p>
         </div>
         <style>
-          .flex > * {
+          .text-center .flex > * {
             border: 1px solid #ccc;
           }
         </style>

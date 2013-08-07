@@ -1,8 +1,3 @@
-$top-level-bg: #BDC4CB;
-$top-level-hbg: #7C8899;
-$mid-level-bg: #EFF0F0;
-$bottom-level-bg: #FFF;
-
 .doc-section {
   @include radius;
   background: #fff;
@@ -25,7 +20,6 @@ $bottom-level-bg: #FFF;
 }
 
 .doc-links a {
-  font-weight: bold;
   margin: 0 0 $sp;
   &:hover:before {
     opacity: 1;
