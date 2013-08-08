@@ -1,4 +1,4 @@
-.doc-section {
+@mixin doc-section {
   @include radius;
   background: #fff;
   border: 2px solid #bdc4cb;
@@ -6,7 +6,32 @@
   padding: $sp2 $sp3;
 }
 
-.doc-label {
+@mixin doc-pane {
+  @include clearfix;
+  @include radius;
+  background: #fff;
+  border: 1px solid #bdc4cb;
+  margin: 0 0 $sp2;
+  padding: $sp;
+  & + .doc-pane {
+    margin-left: $sp2;
+  }
+  h5 {
+    margin: 0;
+  }
+  .media {
+    float: left;
+    margin: 0 $sp 0 0;
+  }
+  .doc-label {
+    font-size: 9px;
+    line-height: 16px;
+    margin: -11px 0 0;
+    padding: 0 6px;
+  }
+}
+
+@mixin doc-label {
   background: #bdc4cb;
   color: white;
   float: right;
@@ -19,26 +44,7 @@
   text-transform: uppercase;
 }
 
-.doc-links a {
-  margin: 0 0 $sp;
-  &:hover:before {
-    opacity: 1;
-  }
-  &:before {
-    @include entypo-icon;
-    @extend .icon-right:before;
-    margin: 0 5px -1px 0;
-    opacity: 0.5;
-  }
-  &[target="_blank"]:after {
-    @include entypo-icon;
-    @extend .icon-popup:before;
-    color: #d1d1d1;
-    margin-left: 5px;
-  }
-}
-
-.doc-kw {
+@mixin doc-keywords {
   @include border-radius(0 0 2px 2px);
   background: #f0f4f7;
   border: 1px dotted #bdc4cb;
@@ -59,4 +65,45 @@
     margin: 0 4px;
     padding: 3px 5px;
   }
+}
+
+@mixin doc-links {
+  a {
+    margin: 0 0 $sp;
+    &:hover:before {
+      opacity: 1;
+    }
+    &:before {
+      @include entypo-icon;
+      @extend .icon-right:before;
+      margin: 0 5px -1px 0;
+      opacity: 0.5;
+    }
+    &[target="_blank"]:after {
+      @include entypo-icon;
+      @extend .icon-popup:before;
+      color: #d1d1d1;
+      margin-left: 5px;
+    }
+  }
+}
+
+.doc-section {
+  @include doc-section;
+}
+
+.doc-pane {
+  @include doc-pane;
+}
+
+.doc-label {
+  @include doc-label;
+}
+
+.doc-links {
+  @include doc-links;
+}
+
+.doc-kw {
+  @include doc-keywords;
 }
