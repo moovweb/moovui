@@ -46,7 +46,6 @@
     <script>
       $(function() {
         $("select").chosen();
-        //$("[data-toggle='tooltip']").tooltip(); // this shouldn't be needed...
       });
     </script>
   </head>
@@ -361,14 +360,18 @@
           <h1>Accordion</h1>
           <p>You can add a <code>qna</code> class to the wrapper for the example style.
         </div>
-        <div class="qna">
-          <a href="#faq" data-toggle="collapse" class="collapsed">Question</a>
-          <div id="faq" class="accordion-body collapse">Answer content</div>
+        <div class="qna" data-section="accordion">
+          <section>
+            <div data-section-title>Question</div>
+            <div data-section-content>Answer content</div>
+          </section>
         </div>
         <pre data-lang="html">
-          <div class="qna">
-            <a href="#faq" data-toggle="collapse" class="collapsed">Question</a>
-            <div id="faq" class="accordion-body collapse">Answer content</div>
+          <div class="qna" data-section="accordion">
+            <section>
+              <div data-section-title>Question</div>
+              <div data-section-content>Answer content</div>
+            </section>
           </div>
         </pre>
       </div>
@@ -378,162 +381,175 @@
           <p>You can add a <code>sidebar-doc</code> class to the wrapper for the example style.
         </div>
         <ul class="sidebar-doc">
-          <li>
-            <a href="#acc1" class="collapsed" data-toggle="collapse">Head 1</a>
-            <ul id="acc1" class="collapse">
-              <li>
-                <a href="#subacc1" class="collapsed" data-toggle="collapse">Subhead 1</a>
-                <ul id="subacc1" class="collapse">
-                  <li><a>Item 1</a></li>
-                  <li><a>Item 2</a></li>
-                  <li><a>Item 3</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#subacc2" class="collapsed" data-toggle="collapse">Subhead 2</a>
-                <ul id="subacc2" class="collapse">
-                  <li><a>Item 4</a></li>
-                  <li><a>Item 5</a></li>
-                  <li><a>Item 6</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#acc2" class="collapsed" data-toggle="collapse">Head 2</a>
-            <ul id="acc2" class="collapse">
-              <li>
-                <a href="#subacc3" class="collapsed" data-toggle="collapse">Subhead 3</a>
-                <ul id="subacc3" class="collapse">
-                  <li><a>Item 7</a></li>
-                  <li><a>Item 8</a></li>
-                  <li><a>Item 9</a></li>
-                  <li><a>Item 10</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#subacc4" class="collapsed" data-toggle="collapse">Subhead 4</a>
-                <ul id="subacc4" class="collapse">
-                  <li><a>Item 11</a></li>
-                  <li><a>Item 12</a></li>
-                  <li><a>Item 13</a></li>
-                </ul>
-              </li>
-            </ul>
+          <li data-section="accordion">
+            <section>
+              <div data-section-title>Head 1</div>
+              <ul data-section-content>
+                <li data-section="accordion">
+                  <section>
+                    <div data-section-title>Subhead 1</div>
+                    <ul data-section-content>
+                      <li><a>Item 1</a></li>
+                      <li><a>Item 2</a></li>
+                      <li><a>Item 3</a></li>
+                    </ul>
+                  </section>
+                </li>
+                <li data-section="accordion">
+                  <section>
+                    <div data-section-title>Subhead 2</div>
+                    <ul data-section-content>
+                      <li><a>Item 4</a></li>
+                      <li><a>Item 5</a></li>
+                      <li><a>Item 6</a></li>
+                    </ul>
+                  </section>
+                </li>
+              </ul>
+            </section>
+          
+            <section>
+              <div data-section-title>Head 2</div>
+              <ul data-section-content>
+                <li data-section="accordion">
+                  <section>
+                    <div data-section-title>Subhead 3</div>
+                    <ul data-section-content>
+                      <li><a>Item 7</a></li>
+                      <li><a>Item 8</a></li>
+                      <li><a>Item 9</a></li>
+                      <li><a>Item 10</a></li>
+                    </ul>
+                  </section>
+                </li>
+                <li data-section="accordion">
+                  <section>
+                    <div data-section-title>Subhead 4</div>
+                    <ul data-section-content>
+                      <li><a>Item 11</a></li>
+                      <li><a>Item 12</a></li>
+                      <li><a>Item 13</a></li>
+                    </ul>
+                  </section>
+                </li>
+              </ul>
+            </section>
           </li>
         </ul>
         <pre data-lang="html">
           <ul class="sidebar-doc">
-            <li>
-              <a href="#acc1" class="collapsed" data-toggle="collapse">Head 1</a>
-              <ul id="acc1" class="collapse">
-                <li>
-                  <a href="#subacc1" class="collapsed" data-toggle="collapse">Subhead 1</a>
-                  <ul id="subacc1" class="collapse">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                    <li><a>Item 3</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#subacc2" class="collapsed" data-toggle="collapse">Subhead 2</a>
-                  <ul id="subacc2" class="collapse">
-                    <li><a>Item 4</a></li>
-                    <li><a>Item 5</a></li>
-                    <li><a>Item 6</a></li>
-                  </ul>
-                </li>
-              </ul>
+            <li data-section="accordion">
+              <section>
+                <div data-section-title>Head 1</div>
+                <ul data-section-content>
+                  <li data-section="accordion">
+                    <section>
+                      <div data-section-title>Subhead 1</div>
+                      <ul data-section-content>
+                        <li><a>Item 1</a></li>
+                        <li><a>Item 2</a></li>
+                        <li><a>Item 3</a></li>
+                      </ul>
+                    </section>
+                  </li>
+                  <li data-section="accordion">
+                    <section>
+                      <div data-section-title>Subhead 2</div>
+                      <ul data-section-content>
+                        <li><a>Item 4</a></li>
+                        <li><a>Item 5</a></li>
+                        <li><a>Item 6</a></li>
+                      </ul>
+                    </section>
+                  </li>
+                </ul>
+              </section>
             </li>
-            <li>
-              <a href="#acc2" class="collapsed" data-toggle="collapse">Head 2</a>
-              <ul id="acc2" class="collapse">
-                <li>
-                  <a href="#subacc3" class="collapsed" data-toggle="collapse">Subhead 3</a>
-                  <ul id="subacc3" class="collapse">
-                    <li><a>Item 7</a></li>
-                    <li><a>Item 8</a></li>
-                    <li><a>Item 9</a></li>
-                    <li><a>Item 10</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#subacc4" class="collapsed" data-toggle="collapse">Subhead 4</a>
-                  <ul id="subacc4" class="collapse">
-                    <li><a>Item 11</a></li>
-                    <li><a>Item 12</a></li>
-                    <li><a>Item 13</a></li>
-                  </ul>
-                </li>
-              </ul>
+            <li data-section="accordion">
+              <section>
+                <div data-section-title>Head 2</div>
+                <ul data-section-content>
+                  <li data-section="accordion">
+                    <section>
+                      <div data-section-title>Subhead 3</div>
+                      <ul data-section-content>
+                        <li><a>Item 7</a></li>
+                        <li><a>Item 8</a></li>
+                        <li><a>Item 9</a></li>
+                        <li><a>Item 10</a></li>
+                      </ul>
+                    </section>
+                  </li>
+                  <li data-section="accordion">
+                    <section>
+                      <div data-section-title>Subhead 4</div>
+                      <ul data-section-content>
+                        <li><a>Item 11</a></li>
+                        <li><a>Item 12</a></li>
+                        <li><a>Item 13</a></li>
+                      </ul>
+                    </section>
+                  </li>
+                </ul>
+              </section>
             </li>
           </ul>
         </pre>
       </div>
       <div class="example">
         <div class="example-head">
-          <h1>Pane with sidebar</h1>
+          <h1>Tabbed pane</h1>
         </div>
         <div class="pane">
-          <div class="sidebar">
-            <ul>
-              <li class="active">
-                <a href="#tab1" data-toggle="tab">Tab 1</a>
-              </li>
-              <li>
-              <a href="#tab2" data-toggle="tab">Tab 2</a>
-              </li>
-              <li>
-                <a href="#tab3" data-toggle="tab">Tab 3</a>
-              </li>
-            </ul>
-            <hr>
-            <a>Link 1</a>
-            <a>Link 2</a>
+          <div data-section="vertical-tabs">
+            <section>
+              <a data-section-title href="#">Tab 1</a>
+              <div data-section-content>
+                <h3>Title 1</h3>
+                <div class="subpane">Content 1</div>
+              </div>
+            </section>
+            <section>
+              <a data-section-title href="#">Tab 2</a>
+              <div data-section-content>
+                <h3>Title 2</h3>
+                <div class="subpane">Content 2</div>
+              </div>
+            </section>
+            <section>
+              <a data-section-title href="#">Tab 3</a>
+              <div data-section-content>
+                <h3>Title 3</h3>
+                <div class="subpane">Content 3</div>
+              </div>
+            </section>
           </div>
-          <section id="tab1" class="tab active">
-            <h3>Section 1</h3>
-            <div class="subpane">Content 1</div>
-          </section>
-          <section id="tab2" class="tab">
-            <h3>Section 2</h3>
-            <div class="subpane">Content 2</div>
-          </section>
-          <section id="tab3" class="tab">
-            <h3>Section 3</h3>
-            <div class="subpane">Content 3</div>
-          </section>
         </div>
         <pre data-lang="html">
           <div class="pane">
-            <div class="sidebar">
-              <ul>
-                <li class="active">
-                  <a href="#tab1" data-toggle="tab">Tab 1</a>
-                </li>
-                <li>
-                <a href="#tab2" data-toggle="tab">Tab 2</a>
-                </li>
-                <li>
-                  <a href="#tab3" data-toggle="tab">Tab 3</a>
-                </li>
-              </ul>
-              <hr>
-              <a>Link 1</a>
-              <a>Link 2</a>
+            <div data-section="vertical-tabs">
+              <section>
+                <a data-section-title href="#">Tab 1</a>
+                <div data-section-content>
+                  <h3>Title 1</h3>
+                  <div class="subpane">Content 1</div>
+                </div>
+              </section>
+              <section>
+                <a data-section-title href="#">Tab 2</a>
+                <div data-section-content>
+                  <h3>Title 2</h3>
+                  <div class="subpane">Content 2</div>
+                </div>
+              </section>
+              <section>
+                <a data-section-title href="#">Tab 3</a>
+                <div data-section-content>
+                  <h3>Title 3</h3>
+                  <div class="subpane">Content 3</div>
+                </div>
+              </section>
             </div>
-            <section id="tab1" class="tab active">
-              <h3>Section 1</h3>
-              <div class="subpane">Content 1</div>
-            </section>
-            <section id="tab2" class="tab">
-              <h3>Section 2</h3>
-              <div class="subpane">Content 2</div>
-            </section>
-            <section id="tab3" class="tab">
-              <h3>Section 3</h3>
-              <div class="subpane">Content 3</div>
-            </section>
           </div>
         </pre>
       </div>
@@ -790,11 +806,15 @@
         <div class="example-head">
           <h1>Tooltip</h1>
         </div>
-        <span class="has-tip" data-tooltip data-toggle="tooltip" title="tooltip text">Hover over me</span>
-        <span data-toggle="tooltip" data-placement="right" title="tooltip text">Hover over me</span>
+        <span class="has-tip" data-tooltip title="tooltip text">Hover over me</span>
+        <span class="has-tip tip-top" data-tooltip title="tooltip text">Hover over me</span>
+        <span class="has-tip tip-left" data-tooltip title="tooltip text">Hover over me</span>
+        <span class="has-tip tip-right" data-tooltip title="tooltip text">Hover over me</span>
         <pre data-lang="html">
-          <span data-toggle="tooltip" title="tooltip text">Hover over me</span>
-          <span data-toggle="tooltip" data-placement="right" title="tooltip text">Hover over me</span>
+          <span class="has-tip" data-tooltip title="tooltip text">Hover over me</span>
+          <span class="has-tip tip-top" data-tooltip title="tooltip text">Hover over me</span>
+          <span class="has-tip tip-left" data-tooltip title="tooltip text">Hover over me</span>
+          <span class="has-tip tip-right" data-tooltip title="tooltip text">Hover over me</span>
         </pre>
       </div>
       <div class="example">
@@ -1017,13 +1037,10 @@
         </ul>
       </div>
     </footer>
-    <!--
-    <script src="bootstrap.js"></script>
-    -->
     <script src="custom.modernizr.js"></script>
     <script src="foundation.min.js"></script>
     <script>
-      $(document).foundation();
+      $(document).foundation("alerts reveal tooltips").foundation("section", {one_up: false});
     </script>
   </body>
 </html>

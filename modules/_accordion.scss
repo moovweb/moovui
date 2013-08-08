@@ -1,47 +1,32 @@
-.accordion-body {
-  @include clearfix;
-}
-
-.collapse {
+[data-section="accordion"] > :not(.active) [data-section-content] {
   display: none;
-  &.in {
-    display: block;
-  }
 }
 
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-          transition: height 0.35s ease;
-}
-
-.qna {
+@mixin qna {
   @include radius;
   background: #dadde2;
   font-size: 14px;
-  padding: 0 $sp 0 ($sp + 15px);
-  [data-toggle="collapse"] {
-    color: inherit;
-    display: block;
+  [data-section-title] {
+    cursor: pointer;
     font-weight: bold;
-    margin: 0 (-$sp) 0 -25px;
-    padding: $sp 0;
+    padding: $sp;
     &:before {
       @include entypo-icon;
-      @extend .icon-triangle-down:before;
-      width: 14px;
-      padding: 0 0 0 11px;
-    }
-    &.collapsed:before {
       @extend .icon-triangle-right:before;
       width: 13px;
-      padding: 0 0 0 12px;
+      padding: 0 0 0 2px;
     }
   }
-  .accordion-body:after {
-    content: "";
-    margin: $sp 0 0;
+  .active [data-section-title]:before {
+    @extend .icon-triangle-down:before;
+    width: 14px;
+    padding: 0 0 0 1px;
   }
+  [data-section-content] {
+    padding: 0 $sp $sp 25px;
+  }
+}
+
+.qna {
+  @include qna;
 }
