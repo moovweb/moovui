@@ -1,57 +1,44 @@
-// <body> class
-/*
-.modal-open {
-  overflow: hidden;
-}
-
-.modal {
+.reveal-modal-bg {
+  background: #000;
+  background: rgba(#000, 0.45);
+  display: none;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  z-index: 101;
-  display: none;
-  overflow: auto;
-  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
 }
 
-.modal-dialog {
-  position: relative;
-  top: 0;
-  left: 50%;
-  margin: 0 0 0 -256px;
-  width: 512px;
-  padding: 30px 10px;
-}
-
-.modal-content {
-  @include border-radius(5px);
-  @include box-shadow(rgba(#000, 0.5) 0 0 8px 1px);
+.reveal-modal {
+  @include box-shadow(rgba(#000, 0.4) 0 0 10px);
+  @include radius;
   background: #fff;
-  overflow: hidden;
+  border: solid 1px #666;
+  display: none;
+  margin-left: -30%;
+  position: absolute;
+  top: $nav-height + $sp2;
+  left: 50%;
+  visibility: hidden;
+  width: 60%;
+  height: auto;
+  z-index: 99;
 }
 
 .modal-header {
+  @include border-radius($radius $radius 0 0);
   background: #f9f9f9;
   border-bottom: 1px solid #ccc;
   padding: $sp;
-  position: relative;
-  text-shadow: #fff 0 1px;
-  h3 {
-    margin: 0;
-  }
-  .close {
+  .close-reveal-modal {
     @include border-radius(8px);
-    @include box-shadow(none);
     background: #a2a2a2;
-    cursor: pointer;
-    line-height: 0;
-    padding: 0 0 0 1px;
+    line-height: 14px;
+    padding: 0 0 0 4px;
     position: absolute;
     top: 16px;
     right: 16px;
-    min-width: 0;
     width: 16px;
     height: 16px;
     &:before {
@@ -60,6 +47,10 @@
       font-size: 14px;
     }
   }
+  h3 {
+    margin: 0;
+    text-shadow: #fff 0 1px;
+  }
 }
 
 .modal-body {
@@ -67,72 +58,12 @@
 }
 
 .modal-footer {
+  @include border-radius(0 0 $radius $radius);
   @include clearfix;
   border-top: 1px solid #d0d0d0;
   padding: $sp;
   text-align: center;
   .btn {
     margin: 0;
-  }
-}
-
-.modal-backdrop {
-  background: #000;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  &.fade {
-    opacity: 0;
-    &.in {
-      opacity: 0.5;
-    }
-  }
-}
-*/
-
-.reveal-modal-bg {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: black;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 98;
-  display: none;
-  top: 0;
-  left: 0; }
-
-.reveal-modal {
-  visibility: hidden;
-  display: none;
-  position: absolute;
-  left: 50%;
-  z-index: 99;
-  height: auto;
-  margin-left: -40%;
-  width: 80%;
-  background-color: white;
-  padding: 1.875em;
-  border: solid 1px #666666;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  top: 6.25em;
-  > :first-child {
-    margin-top: 0;
-  }
-  > :last-child {
-    margin-bottom: 0;
-  }
-  .close-reveal-modal {
-    font-size: 1.375em;
-    line-height: 1;
-    position: absolute;
-    top: 0.5em;
-    right: 0.6875em;
-    color: #aaaaaa;
-    font-weight: bold;
-    cursor: pointer;
   }
 }
