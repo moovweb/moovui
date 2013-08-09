@@ -1033,6 +1033,13 @@
         </ul>
       </div>
     </footer>
+    <script>
+      $("pre[data-lang]").each(function() {
+        // innerHTML makes boolean attributes have an empty string value
+        var html = this.innerHTML;
+        this.innerHTML = html.replace(/=""/g, "").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      });
+    </script>
     <script src="custom.modernizr.js"></script>
     <script src="foundation.min.js"></script>
     <script>
