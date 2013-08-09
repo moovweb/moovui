@@ -23,7 +23,11 @@
     padding: 0 0 0 1px;
   }
   [data-section-content] {
-    padding: 0 $sp $sp 25px;
+    @include clearfix;
+    padding: 0 $sp 0 25px;
+    &:after {
+      margin: $sp 0 0;
+    }
   }
 }
 

@@ -47,6 +47,10 @@
       $(function() {
         $("select").chosen();
       });
+      $(document).on("click", "[data-section='accordion'] [data-section-title]", function() {
+        $(this).parent().siblings().children("[data-section-content]").slideUp(250);
+        $(this).next().slideToggle(250);
+      });
     </script>
   </head>
   <body>
