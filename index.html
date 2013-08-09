@@ -56,6 +56,16 @@
   <body>
     <header id="header" class="affix">
       <div class="content">
+        <a href="#" class="pull-right" data-dropdown="menu">
+          <div style="background: #eee; border-radius: 4px; width: 30px; height: 30px; margin: 9px 0; pointer-events: none"></div>
+        </a>
+        <ul id="menu" data-dropdown-content>
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+          <li><a>Link 4</a></li>
+          <li><a>Link 5</a></li>
+        </ul>
         <ul class="header-links">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
@@ -108,39 +118,55 @@
       </div>
       <div class="example">
         <div class="example-head">
+          <h1>Dropdown menu</h1>
+        </div>
+        You can find the example in the header.
+        <pre data-lang="html">
+          <a href="#" class="pull-right" data-dropdown="menu"></a>
+          <ul id="menu" data-dropdown-content>
+            <li><a>Link 1</a></li>
+            <li><a>Link 2</a></li>
+            <li><a>Link 3</a></li>
+            <li><a>Link 4</a></li>
+            <li><a>Link 5</a></li>
+          </ul>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
           <h1>Notices</h1>
         </div>
         <div class="notice info" data-alert>
-          <a class="close" data-dismiss="alert" href="#"></a>
+          <a class="close" href="#"></a>
           Info (default)
         </div>
         <div class="notice success" data-alert>
-          <a class="close" data-dismiss="alert" href="#"></a>
+          <a class="close" href="#"></a>
           Success
         </div>
         <div class="notice warning" data-alert>
-          <a class="close" data-dismiss="alert" href="#"></a>
+          <a class="close" href="#"></a>
           Warning/Caution
         </div>
         <div class="notice error" data-alert>
-          <a class="close" data-dismiss="alert" href="#"></a>
+          <a class="close" href="#"></a>
           Error
         </div>
         <pre data-lang="html">
           <div class="notice info">
-            <a class="close" data-dismiss="alert" href="#"></a>
+            <a class="close" href="#"></a>
             Info (default)
           </div>
           <div class="notice success">
-            <a class="close" data-dismiss="alert" href="#"></a>
+            <a class="close" href="#"></a>
             Success
           </div>
           <div class="notice warning">
-            <a class="close" data-dismiss="alert" href="#"></a>
+            <a class="close" href="#"></a>
             Warning/Caution
           </div>
           <div class="notice error">
-            <a class="close" data-dismiss="alert" href="#"></a>
+            <a class="close" href="#"></a>
             Error
           </div>
         </pre>
@@ -705,7 +731,7 @@
       </div>
       <div class="example">
         <div class="example-head">
-          <h1>Dropdowns</h1>
+          <h1>Select dropdowns</h1>
           <p>Add the class <code>autocomplete</code> to show a text input.</p>
         </div>
         <select>
@@ -1043,7 +1069,7 @@
     <script src="custom.modernizr.js"></script>
     <script src="foundation.min.js"></script>
     <script>
-      $(document).foundation("alerts reveal tooltips").foundation("section", {one_up: false});
+      $(document).foundation("alerts dropdown reveal tooltips").foundation("section", {one_up: false});
     </script>
   </body>
 </html>

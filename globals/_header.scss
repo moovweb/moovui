@@ -7,6 +7,12 @@
   width: 100%;
   height: $nav-height;
   z-index: 2;
+  &.affix {
+    position: fixed;
+  }
+  > .content {
+    position: relative;
+  }
   input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"] {
     @include border-radius(14px);
     @include box-shadow(none);
@@ -18,32 +24,38 @@
       opacity: 1;
     }
   }
-  > .content {
-    position: relative;
+  [data-dropdown]:before {
+    @include entypo-icon;
+    @extend .icon-triangle-down:before;
+    color: #fff;
+    margin: 13px 0 0 36px;
+    position: absolute;
   }
-  &.affix {
-    position: fixed;
+  [data-dropdown-content].right {
+    margin: 0 0 0 $sp;
+    &:before {
+      left: auto;
+      right: 19px;
+    }
   }
 }
 
-.header-links {
-  li {
-    display: inline;
-    a {
-      color: #fff;
-      float: left;
-      font-size: 12px;
-      letter-spacing: 1px;
-      line-height: $nav-height + 2px;
-      text-align: center;
-      text-transform: uppercase;
-      height: $nav-height;
-      &:hover {
-        color: #ddd;
-      }
+.header-links li {
+  display: inline;
+  a {
+    color: #fff;
+    float: left;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: $nav-height + 2px;
+    text-align: center;
+    text-transform: uppercase;
+    height: $nav-height;
+    &:hover {
+      color: #ddd;
     }
   }
-  li:not(:Last-child) a {
+  &:not(:Last-child) a {
     margin: 0 24px 0 0;
   }
 }
