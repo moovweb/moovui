@@ -40,8 +40,9 @@
   }
 }
 
-@mixin sidebar-doc {
+@mixin doc-sidebar {
   @include radius;
+  color: #7c8899;
   font-size: 12px;
   overflow: hidden;
   width: 20%;
@@ -63,7 +64,6 @@
   > li {
     > * > [data-section-title] {
       background: #bdc4cb;
-      color: #7c8899;
       font-weight: bold;
     }
     > .active > [data-section-title] {
@@ -71,9 +71,8 @@
       color: #fff;
     }
   }
-  [data-section-content] [data-section-title] {
+  > li > * > ul > li > a, ul [data-section-title] {
     background: #eff0f0;
-    color: #7c8899;
     font-weight: bold;
     &:before {
       content: "\2022";
@@ -91,9 +90,15 @@
       margin: 0 $sp 0 0;
       opacity: 0.1;
     }
+    &[target="_blank"]:after {
+      @include entypo-icon;
+      @extend .icon-popup:before;
+      float: right;
+      opacity: 0.5;
+    }
   }
 }
 
-.sidebar-doc {
-  @include sidebar-doc;
+.doc-sidebar {
+  @include doc-sidebar;
 }

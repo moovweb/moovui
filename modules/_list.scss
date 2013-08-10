@@ -15,7 +15,7 @@ ol.copy, .copy ol {
   margin: 0 0 $sp2 2em;
 }
 
-@mixin big-list {
+@mixin section-list {
   li {
     margin: 0 0 $sp;
   }
@@ -32,8 +32,8 @@ ol.copy, .copy ol {
   }
 }
 
-.big-list {
-  @include big-list;
+.section-list {
+  @include section-list;
 }
 
 .link-list {

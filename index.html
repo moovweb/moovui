@@ -72,6 +72,7 @@
           <li><a>Link 3</a></li>
           <li><a>Link 4</a></li>
         </ul>
+        <input type="text" class="pull-left">
       </div>
     </header>
     
@@ -106,12 +107,14 @@
         <pre data-lang="html">
           <header id="header" class="affix">
             <div class="content">
+              ...
               <ul class="header-links">
                 <li><a>Link 1</a></li>
                 <li><a>Link 2</a></li>
                 <li><a>Link 3</a></li>
                 <li><a>Link 4</a></li>
               </ul>
+              <input type="text" class="pull-left">
             </div>
           </header>
         </pre>
@@ -227,7 +230,7 @@
         <div class="example-head">
           <h1>Lists</h1>
           <p>You can add a <code>copy</code> class to an ancestor or the element itself. You can add a <code>link-list</code> class for the example style.</p>
-          <p>You can add a <code>big-list</code> to add spacing in an implicit list.</p>
+          <p>You can add a <code>section-list</code> to add spacing in a list of sections.</p>
         </div>
         <div class="copy">
           <ul>
@@ -246,7 +249,7 @@
           <li>Item 2</li>
           <li>Item 3</li>
         </ul>
-        <ul class="big-list">
+        <ul class="section-list">
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>
@@ -269,7 +272,7 @@
             <li>Item 2</li>
             <li>Item 3</li>
           </ul>
-          <ul class="big-list">
+          <ul class="section-list">
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
@@ -408,9 +411,9 @@
       <div class="example">
         <div class="example-head">
           <h1>Nested Accordion</h1>
-          <p>You can add a <code>sidebar-doc</code> class to the wrapper for the example style.
+          <p>You can add a <code>doc-sidebar</code> class to the wrapper for the example style.
         </div>
-        <ul class="sidebar-doc">
+        <ul class="doc-sidebar">
           <li data-section="accordion">
             <section>
               <div data-section-title>Head 1</div>
@@ -420,7 +423,7 @@
                     <div data-section-title>Subhead 1</div>
                     <ul data-section-content>
                       <li><a>Item 1</a></li>
-                      <li><a>Item 2</a></li>
+                      <li><a target="_blank">Item 2</a></li>
                       <li><a>Item 3</a></li>
                     </ul>
                   </section>
@@ -435,9 +438,9 @@
                     </ul>
                   </section>
                 </li>
+                <li><a>Top Link</a></li>
               </ul>
             </section>
-          
             <section>
               <div data-section-title>Head 2</div>
               <ul data-section-content>
@@ -467,7 +470,7 @@
           </li>
         </ul>
         <pre data-lang="html">
-          <ul class="sidebar-doc">
+          <ul class="doc-sidebar">
             <li data-section="accordion">
               <section>
                 <div data-section-title>Head 1</div>
@@ -477,7 +480,7 @@
                       <div data-section-title>Subhead 1</div>
                       <ul data-section-content>
                         <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a target="_blank">Item 2</a></li>
                         <li><a>Item 3</a></li>
                       </ul>
                     </section>
@@ -492,10 +495,9 @@
                       </ul>
                     </section>
                   </li>
+                  <li><a>Top Link</a></li>
                 </ul>
               </section>
-            </li>
-            <li data-section="accordion">
               <section>
                 <div data-section-title>Head 2</div>
                 <ul data-section-content>
