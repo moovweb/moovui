@@ -1,3 +1,5 @@
+$prefix: "" !default;
+
 // temp
 @mixin border-radius($radii) {
   @include prefixer(border-radius, $radii, webkit spec);

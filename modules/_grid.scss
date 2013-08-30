@@ -1,101 +1,101 @@
-.row {
+.#{$prefix}row {
   @include clearfix;
 }
 
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
+.#{$prefix}col-1,
+.#{$prefix}col-2,
+.#{$prefix}col-3,
+.#{$prefix}col-4,
+.#{$prefix}col-5,
+.#{$prefix}col-6,
+.#{$prefix}col-7,
+.#{$prefix}col-8,
+.#{$prefix}col-9,
+.#{$prefix}col-10,
+.#{$prefix}col-11,
+.#{$prefix}col-12 {
   float: left;
   position: relative;
 }
 
-.col-1 {
+.#{$prefix}col-1 {
   width: 8.333%;
 }
 
-.col-2 {
+.#{$prefix}col-2 {
   width: 16.666%;
 }
 
-.col-3 {
+.#{$prefix}col-3 {
   width: 25%;
 }
 
-.col-4 {
+.#{$prefix}col-4 {
   width: 33.333%;
 }
 
-.col-5 {
+.#{$prefix}col-5 {
   width: 41.666%;
 }
 
-.col-6 {
+.#{$prefix}col-6 {
   width: 50%;
 }
 
-.col-7 {
+.#{$prefix}col-7 {
   width: 58.333%;
 }
 
-.col-8 {
+.#{$prefix}col-8 {
   width: 66.666%;
 }
 
-.col-9 {
+.#{$prefix}col-9 {
   width: 75%;
 }
 
-.col-10 {
+.#{$prefix}col-10 {
   width: 83.333%;
 }
 
-.col-11 {
+.#{$prefix}col-11 {
   width: 91.666%;
 }
 
-.col-12 {
+.#{$prefix}col-12 {
   width: 100%;
 }
 
-.col-offset-1 {
+.#{$prefix}col-offset-1 {
   margin-left: 8.333%;
 }
-.col-offset-2 {
+.#{$prefix}col-offset-2 {
   margin-left: 16.666%;
 }
-.col-offset-3 {
+.#{$prefix}col-offset-3 {
   margin-left: 25%;
 }
-.col-offset-4 {
+.#{$prefix}col-offset-4 {
   margin-left: 33.333%;
 }
-.col-offset-5 {
+.#{$prefix}col-offset-5 {
   margin-left: 41.666%;
 }
-.col-offset-6 {
+.#{$prefix}col-offset-6 {
   margin-left: 50%;
 }
-.col-offset-7 {
+.#{$prefix}col-offset-7 {
   margin-left: 58.333%;
 }
-.col-offset-8 {
+.#{$prefix}col-offset-8 {
   margin-left: 66.666%;
 }
-.col-offset-9 {
+.#{$prefix}col-offset-9 {
   margin-left: 75%;
 }
-.col-offset-10 {
+.#{$prefix}col-offset-10 {
   margin-left: 83.333%;
 }
-.col-offset-11 {
+.#{$prefix}col-offset-11 {
   margin-left: 91.666%;
 }

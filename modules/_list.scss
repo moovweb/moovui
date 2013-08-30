@@ -5,12 +5,12 @@ ul, ol {
   padding: 0;
 }
 
-ul.copy, .copy ul {
+ul.#{$prefix}copy, .#{$prefix}copy ul {
   list-style: disc;
   margin: 0 0 $sp2 2em;
 }
 
-ol.copy, .copy ol {
+ol.#{$prefix}copy, .#{$prefix}copy ol {
   list-style: decimal;
   margin: 0 0 $sp2 2em;
 }
@@ -32,10 +32,10 @@ ol.copy, .copy ol {
   }
 }
 
-.section-list {
+.#{$prefix}section-list {
   @include section-list;
 }
 
-.link-list {
+.#{$prefix}link-list {
   @include link-list;
 }

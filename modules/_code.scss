@@ -22,7 +22,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   }
 }
 
-.cmd {
+.#{$prefix}cmd {
   background: #333;
   border: 0;
   color: #eee;
@@ -33,7 +33,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
     color: #999;
     content: "$> ";
   }
-  + .cmd {
+  + .#{$prefix}cmd {
     margin: -$sp4 0 $sp2;
   }
 }

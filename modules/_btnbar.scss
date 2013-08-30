@@ -3,7 +3,7 @@
   li {
     display: inline;
   }
-  input[type="submit"], input[type="button"], button, .btn {
+  input[type="submit"], input[type="button"], button, .#{$prefix}btn {
     @include border-radius(0);
     border-right-width: 0;
     float: left;
@@ -16,20 +16,20 @@
     }
   }
   .active {
-    input[type="submit"], input[type="button"], button, .btn {
+    input[type="submit"], input[type="button"], button, .#{$prefix}btn {
       @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
       background: $darkgray;
       border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
     }
   }
   .active + * {
-    input[type="submit"], input[type="button"], button, .btn {
+    input[type="submit"], input[type="button"], button, .#{$prefix}btn {
       border-left-color: shade($gray, 30%);
     }
   }
 }
 
-.btnbar {
+.#{$prefix}btnbar {
   @include btnbar;
 }
 
@@ -39,18 +39,18 @@
     display: inline;
   }
   li + li {
-    input[type="submit"], input[type="button"], button, .btn {
+    input[type="submit"], input[type="button"], button, .#{$prefix}btn {
       margin-left: $sp;
     }
   }
-  input[type="submit"], input[type="button"], button, .btn {
+  input[type="submit"], input[type="button"], button, .#{$prefix}btn {
     float: left;
-    & + input[type="submit"], & + input[type="button"], & + button, & + .btn {
+    & + input[type="submit"], & + input[type="button"], & + button, & + .#{$prefix}btn {
       margin-left: $sp;
     }
   }
 }
 
-.btngroup {
+.#{$prefix}btngroup {
   @include btngroup;
 }

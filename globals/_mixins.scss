@@ -59,7 +59,7 @@
   }
 }
 
-.clearfix {
+.#{$prefix}clearfix {
   @include clearfix;
 }
 
@@ -69,27 +69,27 @@
   white-space: nowrap;
 }
 
-.pull-left {
+.#{$prefix}pull-left {
   float: left;
 }
-.pull-right {
+.#{$prefix}pull-right {
   float: right;
   .btn {
     margin-left: $sp;
   }
 }
 
-.text-left {
+.#{$prefix}text-left {
   text-align: left;
 }
-.text-center {
+.#{$prefix}text-center {
   text-align: center;
 }
-.text-right {
+.#{$prefix}text-right {
   text-align: right;
 }
 
-.stretch {
+.#{$prefix}stretch {
   width: 100%;
 }
 
@@ -102,10 +102,10 @@
   text-shadow: none;
 }
 
-.hide-text {
+.#{$prefix}hide-text {
   @include hide-text;
 }
 
-.hide {
+.#{$prefix}hide {
   display: none !important;
 }

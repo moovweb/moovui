@@ -249,7 +249,7 @@
 
 /* helpful classes */
 
-.flex {
+.#{$prefix}flex {
   @include display-flex;
   &.center {
     @include align-items(center);
@@ -268,7 +268,7 @@
 }
 
 
-.flex-justify {
+.#{$prefix}flex-justify {
   @include display-flex;
   @include justify-content(justify);
   > *:not(:last-child) {
@@ -276,7 +276,7 @@
   }
 }
 
-.ie  .flex {
+.ie  .#{$prefix}flex {
   display: table;
   width: 100%;
   &.center > * {
@@ -287,7 +287,7 @@
   }
 }
 
-.ie .flex-justify {
+.ie .#{$prefix}flex-justify {
   display: table;
   > * {
     display: table-cell;

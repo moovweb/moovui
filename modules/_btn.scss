@@ -83,23 +83,23 @@
   height: 40px;
 }
 
-.btn.pill {
+.#{$prefix}btn.pill {
   @include btn-pill;
 }
 
-.btn.small {
+.#{$prefix}btn.small {
   @include btn-small;
 }
 
-.btn {
+.#{$prefix}btn {
   @include btn;
 }
 
-.btn.big {
+.#{$prefix}btn.big {
   @include btn-big;
 }
 
-.btn.warning {
+.#{$prefix}btn.warning {
   @include btn-warning;
 }
 
