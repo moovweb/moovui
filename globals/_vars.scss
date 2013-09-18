@@ -32,6 +32,9 @@ $sp2: 2 * $sp;
 $sp3: 3 * $sp;
 $sp4: 4 * $sp;
 $sp5: 5 * $sp;
+$sp6: 6 * $sp;
+$sp7: 7 * $sp;
+$sp8: 8 * $sp;
 
 $radius: 4px;
 
@@ -54,4 +57,4 @@ $page-width: 960px;
 $min-page-width: 768px;
 
 $nav-height: 48px;
-$footer-height: 298px;
+$footer-height: 298px !default;
