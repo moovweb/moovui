@@ -6,13 +6,13 @@ ul, ol {
 }
 
 ul.#{$prefix}copy, .#{$prefix}copy ul {
-  font-weight: 300;
+  color: #666;
   list-style: disc;
   margin: 0 0 $sp2 2em;
 }
 
 ol.#{$prefix}copy, .#{$prefix}copy ol {
-  font-weight: 300;
+  color: #666;
   list-style: decimal;
   margin: 0 0 $sp2 2em;
 }
@@ -32,6 +32,9 @@ ol.#{$prefix}copy, .#{$prefix}copy ol {
     @extend .icon-right:before;
     color: #d3d5d5;
     margin: 0 9px 0 -20px;
+  }
+  a {
+    font-weight: normal;
   }
 }
 

@@ -34,8 +34,6 @@
 			{ regex: /[$%](?=\w)/g,																			css: 'variable' },	// variables
 			{ regex: /@\w+/g,																						css: 'keyword' }		// keywords
 			];
-
-		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
 	};
 
 	Brush.prototype	= new SyntaxHighlighter.Highlighter();
