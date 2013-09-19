@@ -3,7 +3,7 @@
   @include background(linear-gradient(tint($gray, 25%), $gray));
   @include box-shadow(rgba(#000, 0.1) 0 1px, rgba(#fff, 0.5) 0 0 1px inset);
   @include radius;
-  background: tint($gray, 10%);
+  background-color: tint($gray, 10%);
   border: 1px solid shade($gray, 5%);
   color: #fff;
   display: inline-block;
