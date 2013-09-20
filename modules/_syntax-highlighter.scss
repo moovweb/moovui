@@ -29,6 +29,9 @@
   &.js:before {
     content: "JS";
   }
+  &.json:before {
+    content: "JSON";
+  }
   &.ts:before {
     content: "TS";
   }
