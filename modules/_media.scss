@@ -1,0 +1,9 @@
+@mixin media-block {
+  display: block;
+  margin: 0 auto $sp2;
+  max-width: 100%;
+}
+
+.#{$prefix}media-block {
+  @include media-block;
+}
