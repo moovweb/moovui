@@ -8,13 +8,13 @@ ul, ol {
 ul.#{$prefix}copy, .#{$prefix}copy ul {
   color: #666;
   list-style: disc;
-  margin: 0 0 $sp2 2em;
+  margin: 0 0 $sp2 3em;
 }
 
 ol.#{$prefix}copy, .#{$prefix}copy ol {
   color: #666;
   list-style: decimal;
-  margin: 0 0 $sp2 2em;
+  margin: 0 0 $sp2 3em;
 }
 
 @mixin section-list {
@@ -26,7 +26,7 @@ ol.#{$prefix}copy, .#{$prefix}copy ol {
 @mixin link-list {
   list-style: none !important;
   margin: 0 0 $sp2 2em;
-  padding: 0 0 0 2em; // padding won't get overridden
+  padding: 0 0 0 1em; // padding won't get overridden
   li:before {
     @include entypo-icon;
     @extend .icon-right:before;
