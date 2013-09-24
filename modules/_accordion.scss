@@ -11,18 +11,19 @@
   [data-section-title] {
     cursor: pointer;
     font-weight: bold;
-    padding: $sp;
+    padding: $sp $sp $sp 25px;
     &:before {
       @include entypo-icon;
       @extend .icon-triangle-right:before;
+      margin: 0 0 0 -13px;
+      position: absolute;
       width: 13px;
-      padding: 0 0 0 2px;
     }
   }
   .active [data-section-title]:before {
     @extend .icon-triangle-down:before;
+    margin: 0 0 0 -14px;
     width: 14px;
-    padding: 0 0 0 1px;
   }
   [data-section-content] {
     @include clearfix;
@@ -30,6 +31,9 @@
     &:after {
       margin: $sp 0 0;
     }
+  }
+  code {
+    font-size: 12px;
   }
 }
 

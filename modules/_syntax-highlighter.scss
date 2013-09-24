@@ -3,8 +3,8 @@
   background: #555;
   color: #f0f0f0;
   display: inline-block;
-  font: 13px/18px $code-font;
-  margin: $sp 0 $sp2;
+  font: 13px/20px $code-font;
+  margin: 0 0 $sp2;
   overflow: hidden;
   position: relative;
   vertical-align: top;
@@ -88,13 +88,14 @@
     background: none;
     border: 0;
     color: #eee;
+    font: inherit;
     padding: 0;
   }
   
   [data-tooltip] {
     @include radius;
     background: tint($gray, 10%);
-    padding: 0 2px;
+    padding: 1px 2px;
     color: #fff;
   }
 }
