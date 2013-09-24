@@ -57,10 +57,10 @@
     padding: $sp 6px;
     position: absolute;
     text-align: right;
-    width: 28px;
+    width: 35px;
   }
   .code {
-    padding: 0 0 0 28px;
+    padding: 0 0 0 35px;
   }
   .comments {
     color: #999;
@@ -94,6 +94,7 @@
   [data-tooltip] {
     @include radius;
     background: tint($gray, 10%);
-    padding: 1px 2px;
+    padding: 0 2px;
+    color: #fff;
   }
 }

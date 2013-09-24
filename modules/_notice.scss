@@ -82,6 +82,9 @@
   &.warning:before {
     @extend .icon-warning:before;
   }
+  p {
+    font: inherit;
+  }
 }
 
 .notice {

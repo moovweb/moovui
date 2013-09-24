@@ -7,3 +7,8 @@
 .#{$prefix}media-block {
   @include media-block;
 }
+
+img.#{$prefix}media-block {
+  @include border-radius(3px);
+  border: 3px solid #ddd;
+}
