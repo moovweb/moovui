@@ -4,7 +4,7 @@
 //************************************************************************//
 @mixin box-shadow ($shadows...) {
   @include prefixer(box-shadow, $shadows, spec);
-  @warn "box-shadow is deprecated and will be removed in the next major version release";
+  //@warn "box-shadow is deprecated and will be removed in the next major version release";
 }
 
 @mixin background-size ($lengths...) {
