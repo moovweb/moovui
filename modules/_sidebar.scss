@@ -90,6 +90,9 @@
       margin: 0 $sp 0 0;
       opacity: 0.1;
     }
+    &.active:before {
+      opacity: 0.8;
+    }
     &[target="_blank"]:after {
       @include entypo-icon;
       @extend .icon-popup:before;
