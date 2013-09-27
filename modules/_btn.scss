@@ -49,6 +49,19 @@
   }
 }
 
+@mixin btn-action {
+  @include background(linear-gradient(tint($green, 30%), $green));
+  background-color: tint($green, 10%);
+  border: 1px solid shade($green, 5%);
+  &:hover {
+    background: $green;
+  }
+  &:active {
+    background: shade($green, 5%);
+    border-color: shade($green, 30%) shade($green, 30%) shade($green, 20%);
+  }
+}
+
 @mixin btn-warning {
   &:hover {
     @include animation(warn 0.4s);
@@ -100,6 +113,10 @@
 
 .#{$prefix}btn.big {
   @include btn-big;
+}
+
+.#{$prefix}btn.action {
+  @include btn-action;
 }
 
 .#{$prefix}btn.warning {
