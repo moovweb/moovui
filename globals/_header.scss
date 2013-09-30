@@ -13,6 +13,7 @@
   > .content {
     position: relative;
   }
+  
   input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"] {
     @include border-radius(14px);
     @include box-shadow(none);
@@ -23,6 +24,9 @@
     &:hover, &:focus {
       opacity: 1;
     }
+  }
+  input[type="search"]{
+    @include border-radius(2px);
   }
   [data-dropdown]:before {
     @include entypo-icon;
