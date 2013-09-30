@@ -1,4 +1,4 @@
-.syntaxhighlighter {
+.syntaxhighlighter-wrapper {
   @include radius;
   background: #555;
   color: #f0f0f0;
@@ -10,8 +10,15 @@
   vertical-align: top;
   white-space: pre;
   width: 100%;
+}
+.syntaxhighlighter {
+  background: none;
+  display: block;
+  margin: 0;
+  overflow: auto;
   &:before {
     color: #fff;
+    content: attr(data-lang);
     font-family: $font;
     font-size: 9px;
     font-weight: bold;
@@ -19,27 +26,11 @@
     position: absolute;
     right: 3px;
     top: 0;
-  }
-  &.scss:before {
-    content: "SCSS";
-  }
-  &.html:before {
-    content: "HTML";
-  }
-  &.js:before {
-    content: "JS";
-  }
-  &.json:before {
-    content: "JSON";
-  }
-  &.ts:before {
-    content: "TS";
+    text-transform: uppercase;
   }
   table {
     background: none;
-    display: block;
     margin: 0;
-    overflow: auto;
   }
   td {
     border: 0;

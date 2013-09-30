@@ -2284,7 +2284,7 @@ sh.Highlighter.prototype = {
       classes.push('ie');
     
     html = 
-      '<div id="' + getHighlighterId(this.id) + '" class="' + classes.join(' ') + '">'
+      '<div class="syntaxhighlighter-wrapper"><div id="' + getHighlighterId(this.id) + '" class="' + classes.join(' ') + '" data-lang="' + this.getParam('brush') + '">'
         + (this.getParam('toolbar') ? sh.toolbar.getHtml(this) : '')
         + '<table border="0" cellpadding="0" cellspacing="0">'
           + this.getTitleHtml(this.getParam('title'))
@@ -2299,7 +2299,7 @@ sh.Highlighter.prototype = {
             + '</tr>'
           + '</tbody>'
         + '</table>'
-      + '</div>'
+      + '</div></div>'
       ;
       
     return html;

@@ -165,6 +165,7 @@
             .removeClass('tip-override');
         } else if (classes && classes.indexOf('tip-left') > -1) {
           // PATCH to vertically center tooltips
+          tip.css("left", 0); // need this so text doesn't wrap so calc width is accurate
           objPos(tip, (target.offset().top + (this.outerHeight(target) - this.outerHeight(tip)) / 2), 'auto', 'auto', (target.offset().left - this.outerWidth(tip) - nubHeight), width)
             .removeClass('tip-override');
         } else if (classes && classes.indexOf('tip-right') > -1) {
