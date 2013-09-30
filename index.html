@@ -613,15 +613,15 @@
           <h1>Doc Section Header</h1>
           <p>Description.</p>
           <div class="doc-links">
-            <div class="flex">
-              <a>Link 1</a>
-              <a target="_blank">Link 2</a>
-              <a target="_blank">Link 3</a>
+            <div class="row">
+              <a class="col-4">Link 1</a>
+              <a class="col-4" target="_blank">Link 2</a>
+              <a class="col-4" target="_blank">Link 3</a>
             </div>
-            <div class="flex">
-              <a>Link 4</a>
-              <a>Link 5</a>
-              <a>Link 6</a>
+            <div class="row">
+              <a class="col-4">Link 4</a>
+              <a class="col-4">Link 5</a>
+              <a class="col-4">Link 6</a>
             </div>
           </div>
           <div class="doc-kw">
@@ -662,33 +662,41 @@
             height: 87px;
           }
         </style>
-        <div class="flex copy">
-          <div class="doc-pane">
-            <span class="doc-label">Local</span>
-            <div class="media"></div>
-            <h5>Title</h5>
-            <p>Description.</p>
-          </div>
-          <div class="doc-pane">
-            <span class="doc-label">Local</span>
-            <div class="media"></div>
-            <h5>Title</h5>
-            <p>Description.</p>
-          </div>
-        </div>
-        <pre data-lang="html">
-          <div class="flex copy">
+        <div class="doc-panes row copy">
+          <div class="col-6">
             <div class="doc-pane">
               <span class="doc-label">Local</span>
               <div class="media"></div>
               <h5>Title</h5>
               <p>Description.</p>
             </div>
+          </div>
+          <div class="col-6">
             <div class="doc-pane">
               <span class="doc-label">Local</span>
               <div class="media"></div>
               <h5>Title</h5>
               <p>Description.</p>
+            </div>
+          </div>
+        </div>
+        <pre data-lang="html">
+          <div class="doc-panes row copy">
+            <div class="col-6">
+              <div class="doc-pane">
+                <span class="doc-label">Local</span>
+                <div class="media"></div>
+                <h5>Title</h5>
+                <p>Description.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="doc-pane">
+                <span class="doc-label">Local</span>
+                <div class="media"></div>
+                <h5>Title</h5>
+                <p>Description.</p>
+              </div>
             </div>
           </div>
         </pre>
@@ -885,7 +893,7 @@
           <p>Notice that the right edges are not always aligned depending on window width.</p>
         </div>
         <style>
-          [class^="col-"] {
+          .text-center [class^="col-"] {
             border: 1px solid #ccc;
           }
         </style>

@@ -7,6 +7,15 @@
   padding: $sp2 $sp3;
 }
 
+@mixin doc-panes {
+  :first-child .doc-pane {
+    margin-right: $sp;
+  }
+  :last-child .doc-pane {
+    margin-left: $sp;
+  }
+}
+
 @mixin doc-pane {
   @include clearfix;
   @include radius;
@@ -15,9 +24,6 @@
   font-size: 14px;
   margin: 0 0 $sp2;
   padding: $sp 14px;
-  & + .doc-pane {
-    margin-left: $sp2;
-  }
   h5 {
     margin: 0;
   }
@@ -98,6 +104,10 @@
 
 .doc-section {
   @include doc-section;
+}
+
+.doc-panes {
+  @include doc-panes;
 }
 
 .doc-pane {
