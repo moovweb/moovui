@@ -37,6 +37,7 @@
   }
   a {
     color: inherit;
+    font: inherit;
   }
   .container {
     @include border-radius(0 0 $radius 0);
