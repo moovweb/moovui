@@ -7,12 +7,14 @@ ul, ol {
 
 ul.#{$prefix}copy, .#{$prefix}copy ul {
   color: #666;
+  font-weight: 300;
   list-style: disc;
   margin: 0 0 $sp2 3em;
 }
 
 ol.#{$prefix}copy, .#{$prefix}copy ol {
   color: #666;
+  font-weight: 300;
   list-style: decimal;
   margin: 0 0 $sp2 3em;
 }

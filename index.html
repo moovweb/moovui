@@ -31,7 +31,10 @@
       .example > div:last-child {
         margin: 20px -10px -30px;
       }
-      .example > div:last-child .syntaxhighlighter {
+      .example > pre:last-child {
+        display: none;
+      }
+      .example > div:last-child .syntaxhighlighter-wrapper {
         border-radius: 0 0 4px 4px;
       }
     </style>
@@ -1112,6 +1115,7 @@
     <script src="custom.modernizr.js"></script>
     <script src="foundation.js"></script>
     <script src="foundation.alerts.js"></script>
+    <script src="foundation.dropdown.js"></script>
     <script src="foundation.reveal.js"></script>
     <script src="foundation.section.js"></script>
     <script src="foundation.tooltips.custom.js"></script>
