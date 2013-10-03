@@ -19,6 +19,9 @@
       position: absolute;
       width: 13px;
     }
+    code {
+      font-weight: 400;
+    }
   }
   .active [data-section-title]:before {
     @extend .icon-triangle-down:before;
