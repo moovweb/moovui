@@ -17,9 +17,6 @@
     top: 50%;
     left: 15px;
   }
-  h1 {
-    display: none;
-  }
   &.success:before {
     @extend .icon-thumbs-up:before;
   }
@@ -87,7 +84,7 @@
   }
 }
 
-.notice {
+[data-alert] {
   @include notice;
 }
 
