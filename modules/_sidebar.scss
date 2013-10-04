@@ -59,7 +59,7 @@
     font-weight: normal;
   }
   .active > [data-section-title]:after {
-    display: none;
+    @extend .icon-minus:before;
   }
   > li {
     > * > [data-section-title] {

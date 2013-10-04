@@ -15,7 +15,6 @@
 .#{$prefix}col-11,
 .#{$prefix}col-12 {
   float: left;
-  position: relative;
 }
 
 .#{$prefix}col-1 {
@@ -64,38 +63,4 @@
 
 .#{$prefix}col-12 {
   width: 100%;
-}
-
-.#{$prefix}col-offset-1 {
-  margin-left: 8.333%;
-}
-.#{$prefix}col-offset-2 {
-  margin-left: 16.666%;
-}
-.#{$prefix}col-offset-3 {
-  margin-left: 25%;
-}
-.#{$prefix}col-offset-4 {
-  margin-left: 33.333%;
-}
-.#{$prefix}col-offset-5 {
-  margin-left: 41.666%;
-}
-.#{$prefix}col-offset-6 {
-  margin-left: 50%;
-}
-.#{$prefix}col-offset-7 {
-  margin-left: 58.333%;
-}
-.#{$prefix}col-offset-8 {
-  margin-left: 66.666%;
-}
-.#{$prefix}col-offset-9 {
-  margin-left: 75%;
-}
-.#{$prefix}col-offset-10 {
-  margin-left: 83.333%;
-}
-.#{$prefix}col-offset-11 {
-  margin-left: 91.666%;
 }
