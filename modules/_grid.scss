@@ -1,5 +1,11 @@
 .#{$prefix}row {
   @include clearfix;
+  &.#{$prefix}gutters {
+    margin-left: -$sp3;
+    > * {
+      padding-left: $sp3;
+    }
+  }
 }
 
 .#{$prefix}col-1,

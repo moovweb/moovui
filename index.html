@@ -901,11 +901,17 @@
       <div class="example">
         <div class="example-head">
           <h1>Basic 12 Grid</h1>
-          <p>Notice that the right edges are not always aligned depending on window width.</p>
+          <p>Add the class <code>gutters</code> to add some spacing between columns.</p>
         </div>
         <style>
           .text-center [class^="col-"] {
             border: 1px solid #ccc;
+          }
+          .row.gutters .col-3 {
+            border: 0;
+          }
+          .gutters .col-3 div {
+            background: #eee;
           }
         </style>
         <div class="text-center">
@@ -925,11 +931,11 @@
             <div class="col-4">4</div>
             <div class="col-4">4</div>
           </div>
-          <div class="row">
-            <div class="col-3">3</div>
-            <div class="col-3">3</div>
-            <div class="col-3">3</div>
-            <div class="col-3">3</div>
+          <div class="row gutters">
+            <div class="col-3"><div>3</div></div>
+            <div class="col-3"><div>3</div></div>
+            <div class="col-3"><div>3</div></div>
+            <div class="col-3"><div>3</div></div>
           </div>
           <div class="row">
             <div class="col-2">2</div>
@@ -971,11 +977,11 @@
             <div class="col-4">4</div>
             <div class="col-4">4</div>
           </div>
-          <div class="row">
-            <div class="col-3">3</div>
-            <div class="col-3">3</div>
-            <div class="col-3">3</div>
-            <div class="col-3">3</div>
+          <div class="row gutters">
+            <div class="col-3"><div>3</div></div>
+            <div class="col-3"><div>3</div></div>
+            <div class="col-3"><div>3</div></div>
+            <div class="col-3"><div>3</div></div>
           </div>
           <div class="row">
             <div class="col-2">2</div>
