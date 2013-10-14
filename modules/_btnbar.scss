@@ -1,12 +1,12 @@
 @mixin btnbar {
   @include clearfix;
+  font-size: 0;
   li {
     display: inline;
   }
-  input[type="submit"], input[type="button"], button, .#{$prefix}btn {
+  input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
     @include border-radius(0);
     border-right-width: 0;
-    float: left;
     &:first-of-type {
       @include border-radius($radius 0 0 $radius);
     }
@@ -16,20 +16,20 @@
     }
   }
   .active {
-    input[type="submit"], input[type="button"], button, .#{$prefix}btn {
+    input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
       @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
       background: $darkgray;
       border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
     }
   }
   .active + * {
-    input[type="submit"], input[type="button"], button, .#{$prefix}btn {
+    input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
       border-left-color: shade($gray, 30%);
     }
   }
 }
 
-.#{$prefix}btnbar {
+.#{$moovui-prefix}btnbar {
   @include btnbar;
 }
 
@@ -40,17 +40,17 @@
     display: inline;
   }
   li + li {
-    input[type="submit"], input[type="button"], button, .#{$prefix}btn {
+    input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
       margin-left: $sp;
     }
   }
-  input[type="submit"], input[type="button"], button, .#{$prefix}btn {
-    & + input[type="submit"], & + input[type="button"], & + button, & + .#{$prefix}btn {
+  input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
+    & + input[type="submit"], & + input[type="button"], & + button, & + .#{$moovui-prefix}btn {
       margin-left: $sp;
     }
   }
 }
 
-.#{$prefix}btngroup {
+.#{$moovui-prefix}btngroup {
   @include btngroup;
 }

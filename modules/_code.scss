@@ -45,7 +45,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
     color: #999;
     content: "$> ";
   }
-  + .#{$prefix}cmd {
+  + .#{$moovui-prefix}cmd {
     margin: -$sp4 0 $sp2;
   }
 }

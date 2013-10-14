@@ -42,10 +42,10 @@ ol.copy, .copy ol {
   }
 }
 
-.#{$prefix}section-list {
+.#{$moovui-prefix}section-list {
   @include section-list;
 }
 
-.#{$prefix}link-list {
+.#{$moovui-prefix}link-list {
   @include link-list;
 }

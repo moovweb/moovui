@@ -10,9 +10,15 @@
   }
 }
 
-// usually meant for portrait
+// meant for portrait mode
 @mixin tablet {
   @media #{$tablet-query} {
+    @content;
+  }
+}
+
+@mixin not-tablet {
+  @media #{$not-tablet-query} {
     @content;
   }
 }
@@ -34,7 +40,9 @@
   .mobile-omit {
     display: none;
   }
-  .tablet-only, .desktop-only {
+}
+@include not-mobile {
+  .mobile-only {
     display: none;
   }
 }
@@ -43,7 +51,9 @@
   .tablet-omit {
     display: none;
   }
-  .mobile-only, .desktop-only {
+}
+@include not-tablet {
+  .tablet-only {
     display: none;
   }
 }
@@ -52,7 +62,9 @@
   .desktop-omit {
     display: none;
   }
-  .mobile-only, .tablet-only {
+}
+@include not-desktop {
+  .desktop-only {
     display: none;
   }
 }

@@ -99,27 +99,27 @@
   height: 40px;
 }
 
-.#{$prefix}btn.pill {
+.#{$moovui-prefix}btn.pill {
   @include btn-pill;
 }
 
-.#{$prefix}btn.small {
+.#{$moovui-prefix}btn.small {
   @include btn-small;
 }
 
-.#{$prefix}btn {
+.#{$moovui-prefix}btn {
   @include btn;
 }
 
-.#{$prefix}btn.big {
+.#{$moovui-prefix}btn.big {
   @include btn-big;
 }
 
-.#{$prefix}btn.action {
+.#{$moovui-prefix}btn.action {
   @include btn-action;
 }
 
-.#{$prefix}btn.warning {
+.#{$moovui-prefix}btn.warning {
   @include btn-warning;
 }
 

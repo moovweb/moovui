@@ -43,13 +43,13 @@
   
   // 2009
   // horizontal|vertical|inline-axis|block-axis|inherit
-  @include new-prefixer(box-orient, $old-syntax, webkit);
+  @include prefixer(box-orient, $old-syntax, webkit);
   @if $reverse {
-    @include new-prefixer(box-direction, reverse, webkit);
+    @include prefixer(box-direction, reverse, webkit);
   }
   // 2011, latest
   // row|row-reverse|column|column-reverse|inherit
-  @include new-prefixer(flex-direction, $orient, webkit moz ms spec);
+  @include prefixer(flex-direction, $orient, webkit moz ms spec);
 }
 // alias
 @mixin box-orient($orient: row) {
@@ -91,13 +91,13 @@
   
   // 2009
   // start|end|center|justify
-  @include new-prefixer(box-pack, $old-syntax, webkit);
+  @include prefixer(box-pack, $old-syntax, webkit);
   // 2011
   // start|end|center|justify|distribute
-  @include new-prefixer(flex-pack, $ms-syntax, ms);
+  @include prefixer(flex-pack, $ms-syntax, ms);
   // latest
   // flex-start|flex-end|center|space-between|space-around
-  @include new-prefixer(justify-content, $pack, webkit moz spec)
+  @include prefixer(justify-content, $pack, webkit moz spec)
 }
 // alias
 @mixin box-pack($pack: start) {
@@ -120,13 +120,13 @@
   }
   // 2009
   // start|end|center|baseline|stretch
-  @include new-prefixer(box-align, $old-syntax, webkit moz);
+  @include prefixer(box-align, $old-syntax, webkit moz);
   // 2011
   // start|end|center|baseline|stretch
-  @include new-prefixer(flex-align, $old-syntax, ms);
+  @include prefixer(flex-align, $old-syntax, ms);
   // latest
   // flex-start|flex-end|center|baseline|stretch
-  @include new-prefixer(align-items, $align, webkit moz spec);
+  @include prefixer(align-items, $align, webkit moz spec);
 }
 // alias
 @mixin box-align($align: stretch) {
@@ -135,11 +135,11 @@
 
 @mixin order($int: 0) {
   // 2009
-  @include new-prefixer(box-ordinal-group, $int, webkit);
+  @include prefixer(box-ordinal-group, $int, webkit);
   // 2011
-  @include new-prefixer(flex-order, $int, ms);
+  @include prefixer(flex-order, $int, ms);
   // latest
-  @include new-prefixer(order, $int, webkit moz spec);
+  @include prefixer(order, $int, webkit moz spec);
 }
 // alias
 @mixin box-ordinal-group($int: 1) {
@@ -157,11 +157,11 @@
     $value: nth($value, 1) abs(nth($value, 1)) nth($value, 3);
   }
   // 2009
-  @include new-prefixer(box-flex, $old-syntax, webkit moz);
+  @include prefixer(box-flex, $old-syntax, webkit moz);
   // 2011
-  @include new-prefixer(flex, $ms-syntax, ms);
+  @include prefixer(flex, $ms-syntax, ms);
   // latest
-  @include new-prefixer(flex, $value, webkit moz spec);
+  @include prefixer(flex, $value, webkit moz spec);
 }
 // alias
 @mixin box-flex($value: 0) {
@@ -172,23 +172,23 @@
 
 @mixin flex-wrap($value: nowrap) {
   // nowrap|wrap|wrap-reverse
-  @include new-prefixer(flex-wrap, $value, webkit moz ms spec);
+  @include prefixer(flex-wrap, $value, webkit moz ms spec);
 }
 @mixin flex-flow($value) {
   // flex-direction flex-wrap
-  @include new-prefixer(flex-flow, $value, webkit moz ms spec);
+  @include prefixer(flex-flow, $value, webkit moz ms spec);
 }
 
 @mixin flex-grow($number: 0) {
-  @include new-prefixer(flex-grow, $number, webkit moz spec);
+  @include prefixer(flex-grow, $number, webkit moz spec);
 }
 
 @mixin flex-shrink($number: 1) {
-  @include new-prefixer(flex-shrink, $number, webkit moz spec);
+  @include prefixer(flex-shrink, $number, webkit moz spec);
 }
 
 @mixin flex-basis($width: auto) {
-  @include new-prefixer(flex-basis, $width, webkit moz spec);
+  @include prefixer(flex-basis, $width, webkit moz spec);
 }
 
 @mixin align-self($align: auto) {
@@ -207,10 +207,10 @@
   }
   // 2011
   // auto|start|end|center|baseline|stretch
-  @include new-prefixer(flex-item-align, $align, ms);
+  @include prefixer(flex-item-align, $align, ms);
   // latest
   // auto|flex-start|flex-end|center|baseline|stretch
-  @include new-prefixer(align-self, $align, webkit moz spec);
+  @include prefixer(align-self, $align, webkit moz spec);
 }
 
 @mixin align-content($align: stretch) {
@@ -241,15 +241,15 @@
   }
   // 2011
   // start|end|center|justify|distribute|stretch
-  @include new-prefixer(flex-item-align, $ms-syntax, ms);
+  @include prefixer(flex-item-align, $ms-syntax, ms);
   // latest
   // flex-start|flex-end|center|space-between|space-around|stretch
-  @include new-prefixer(align-content, $align, webkit moz spec)
+  @include prefixer(align-content, $align, webkit moz spec)
 }
 
 /* helpful classes */
 
-.#{$prefix}flex {
+.#{$moovui-prefix}flex {
   @include display-flex;
   &.center {
     @include align-items(center);
@@ -268,15 +268,15 @@
 }
 
 
-.#{$prefix}flex-justify {
+.#{$moovui-prefix}flex-justify {
   @include display-flex;
   @include justify-content(justify);
   > *:not(:last-child) {
-    @include new-prefixer(box-flex, 1, webkit moz);
+    @include prefixer(box-flex, 1, webkit moz);
   }
 }
 
-.no-flexbox.no-flexboxlegacy .#{$prefix}flex {
+.no-flexbox.no-flexboxlegacy .#{$moovui-prefix}flex {
   display: table;
   width: 100%;
   &.center > * {
@@ -287,7 +287,7 @@
   }
 }
 
-.no-flexbox.no-flexboxlegacy .#{$prefix}flex-justify {
+.no-flexbox.no-flexboxlegacy .#{$moovui-prefix}flex-justify {
   display: table;
   > * {
     display: table-cell;

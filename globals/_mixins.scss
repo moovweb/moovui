@@ -1,29 +1,5 @@
-// latest version of bourbon's prefixer
-@mixin new-prefixer($property, $value, $prefixes) {
-  @each $prefix in $prefixes {
-    @if $prefix == webkit {
-      -webkit-#{$property}: $value;
-    }
-    @else if $prefix == moz {
-      -moz-#{$property}: $value;
-    }
-    @else if $prefix == ms {
-      -ms-#{$property}: $value;
-    }
-    @else if $prefix == o {
-      -o-#{$property}: $value;
-    }
-    @else if $prefix == spec {
-      #{$property}: $value;
-    }
-    @else  {
-      @warn "Unrecognized prefix: #{$prefix}";
-    }
-  }
-}
-
 @mixin border-radius($radius) {
-  @include new-prefixer(border-radius, $radius, webkit spec);
+  @include prefixer(border-radius, $radius, webkit spec);
 }
 
 @mixin radius {
@@ -41,7 +17,7 @@
   }
 }
 
-.#{$prefix}clearfix {
+.#{$moovui-prefix}clearfix {
   @include clearfix;
 }
 
@@ -51,27 +27,27 @@
   white-space: nowrap;
 }
 
-.#{$prefix}pull-left {
+.#{$moovui-prefix}pull-left {
   float: left;
 }
-.#{$prefix}pull-right {
+.#{$moovui-prefix}pull-right {
   float: right;
-  .#{$prefix}btn {
+  .#{$moovui-prefix}btn {
     margin-left: $sp;
   }
 }
 
-.#{$prefix}text-left {
+.#{$moovui-prefix}text-left {
   text-align: left;
 }
-.#{$prefix}text-center {
+.#{$moovui-prefix}text-center {
   text-align: center;
 }
-.#{$prefix}text-right {
+.#{$moovui-prefix}text-right {
   text-align: right;
 }
 
-.#{$prefix}stretch {
+.#{$moovui-prefix}stretch {
   width: 100%;
 }
 
@@ -84,10 +60,10 @@
   text-shadow: none;
 }
 
-.#{$prefix}hide-text {
+.#{$moovui-prefix}hide-text {
   @include hide-text;
 }
 
-.#{$prefix}hide {
+.#{$moovui-prefix}hide {
   display: none !important;
 }

@@ -102,26 +102,26 @@
   }
 }
 
-.#{$prefix}doc-section {
+.#{$moovui-prefix}doc-section {
   @include doc-section;
 }
 
-.#{$prefix}doc-panes {
+.#{$moovui-prefix}doc-panes {
   @include doc-panes;
 }
 
-.#{$prefix}doc-pane {
+.#{$moovui-prefix}doc-pane {
   @include doc-pane;
 }
 
-.#{$prefix}doc-label {
+.#{$moovui-prefix}doc-label {
   @include doc-label;
 }
 
-.#{$prefix}doc-links {
+.#{$moovui-prefix}doc-links {
   @include doc-links;
 }
 
-.#{$prefix}doc-kw {
+.#{$moovui-prefix}doc-kw {
   @include doc-keywords;
 }

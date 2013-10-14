@@ -82,6 +82,82 @@
     <div id="page">
       <div class="example">
         <div class="example-head">
+          <h1>Responsive Use</h1>
+        </div>
+        <div class="mobile-omit">Mobile: false</div>
+        <div class="mobile-only">Mobile: true</div>
+        <div class="tablet-omit">Tablet: false</div>
+        <div class="tablet-only">Tablet: true</div>
+        <div class="desktop-omit">Desktop: false</div>
+        <div class="desktop-only">Desktop: true</div>
+        <br>
+        <p>There are also Sass helper mixins available e.g. <code>@include mobile { &hellip; }</code> or <code>@include not-mobile { &hellip; }</code></p>
+        <p>There are also different ways to import MoovUI:</p>
+        <ul style="list-style: disc; margin: 0 0 0 2em">
+          <li>
+            If using little or no pure responsive design:
+            <pre data-lang="scss" class="hide">
+              @import "moovui/main";
+              // outputs .btn { ... }
+            </pre>
+          </li>
+          <li>
+            If radically altering another site using MoovUI, original classes can be ignored:
+            <pre data-lang="scss" class="hide">
+              $moovui-prefix: "_";
+              @import "moovui/main";
+              // outputs ._btn { ... }
+            </pre>
+          </li>
+          <li>
+            If using discrete classes similar to Foundation: (note that base styles are only generated the first time your import MoovUI.)
+            <pre data-lang="scss" class="hide">
+              @import "moovui/main";
+              // outputs .btn { ... } meant for all screen sizes
+              @media #{$mobile-query} {
+                $moovui-prefix: "m-";
+                @import "moovui/main";
+                // outputs @media &hellip; { .m-btn { ... } } meant for small screens
+              }
+              @media #{$desktop-query} {
+                $moovui-prefix: "d-";
+                @import "moovui/main";
+                // outputs @media &hellip; { .d-btn { ... } } meant for large screens
+              }
+            </pre>
+          </li>
+        </ul>
+        <pre data-lang="html">
+          <div class="mobile-omit">Mobile: false</div>
+          <div class="mobile-only">Mobile: true</div>
+          <div class="tablet-omit">Tablet: false</div>
+          <div class="tablet-only">Tablet: true</div>
+          <div class="desktop-omit">Desktop: false</div>
+          <div class="desktop-only">Desktop: true</div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Entypo icon font</h1>
+          <p>Find icon names by mousing over icons in the <a href="http://www.entypo.com/characters/" target="_blank">character map</a>.</p>
+        </div>
+        <span class="icon-phone"></span>
+        <span class="icon-mobile"></span>
+        <span class="icon-mouse"></span>
+        <span class="icon-address"></span>
+        <span class="icon-mail"></span>
+        <span class="icon-paper-plane"></span>
+        <pre data-lang="html">
+          <span class="icon-phone"></span>
+          <span class="icon-mobile"></span>
+          <span class="icon-mouse"></span>
+          <span class="icon-address"></span>
+          <span class="icon-mail"></span>
+          <span class="icon-paper-plane"></span>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
           <h1>Container</h1>
           <p>An element with id <code>page</code> behaves the same and can be a general wrapper for content between the header and footer.</p>
         </div>
@@ -112,14 +188,24 @@
             <div class="content">
               ...
               <ul class="header-links">
-                <li><a>Link 1</a></li>
-                <li><a>Link 2</a></li>
-                <li><a>Link 3</a></li>
-                <li><a>Link 4</a></li>
+                ...
               </ul>
               <input type="text" class="pull-left">
             </div>
           </header>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Footer</h1>
+        </div>
+        You can find an example at the bottom of this page.
+        <pre data-lang="html">
+          <footer id="footer">
+            <div class="content">
+              ...
+            </div>
+          </footer>
         </pre>
       </div>
       <div class="example">
@@ -779,7 +865,7 @@
       </div>
       <div class="example">
         <div class="example-head">
-          <h1>Select dropdowns</h1>
+          <h1>Select (dropdown)</h1>
           <p>Add the class <code>autocomplete</code> to show a text input.</p>
         </div>
         <select>

@@ -16,10 +16,10 @@
   padding: $sp2 - 1px;
 }
 
-.#{$prefix}pane {
+.#{$moovui-prefix}pane {
   @include pane;
 }
 
-.#{$prefix}subpane {
+.#{$moovui-prefix}subpane {
   @include subpane;
 }
