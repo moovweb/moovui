@@ -1,3 +1,4 @@
+@if $moovui-init {
 input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], textarea {
   @include box-shadow(rgba(#fff, 0.5) 0 1px);
   @include radius;
@@ -54,4 +55,5 @@ textarea {
   display: block;
   padding: $sp;
   max-width: 100%;
+}
 }

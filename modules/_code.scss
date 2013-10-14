@@ -1,3 +1,4 @@
+@if $moovui-init {
 code {
   @include radius;
   background: #eee;
@@ -30,7 +31,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   }
 }
 
-.#{$prefix}cmd, pre {
+.cmd, pre {
   background: #333;
   border: 0;
   color: #eee;
@@ -39,7 +40,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   padding: $sp;
 }
 
-.#{$prefix}cmd {
+.cmd {
   &:before {
     color: #999;
     content: "$> ";
@@ -47,4 +48,5 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   + .#{$prefix}cmd {
     margin: -$sp4 0 $sp2;
   }
+}
 }

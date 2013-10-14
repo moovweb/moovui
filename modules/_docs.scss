@@ -102,26 +102,26 @@
   }
 }
 
-.doc-section {
+.#{$prefix}doc-section {
   @include doc-section;
 }
 
-.doc-panes {
+.#{$prefix}doc-panes {
   @include doc-panes;
 }
 
-.doc-pane {
+.#{$prefix}doc-pane {
   @include doc-pane;
 }
 
-.doc-label {
+.#{$prefix}doc-label {
   @include doc-label;
 }
 
-.doc-links {
+.#{$prefix}doc-links {
   @include doc-links;
 }
 
-.doc-kw {
+.#{$prefix}doc-kw {
   @include doc-keywords;
 }

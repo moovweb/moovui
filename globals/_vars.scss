@@ -58,3 +58,9 @@ $min-page-width: 768px;
 
 $nav-height: 48px;
 $footer-height: 298px !default;
+
+$mobile-query: "(max-width: 480px), (max-height: 480px)";
+$not-mobile-query: "(min-width: 481px) and (min-height: 481px)";
+$tablet-query: "(min-width: 768px) and (max-width: 800px)";
+$desktop-query: "(min-width: 801px)";
+$not-desktop-query: "(max-width: 800px)";

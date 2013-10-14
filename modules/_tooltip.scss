@@ -1,10 +1,11 @@
 // copy :focus style
-.icon-circled-help[data-tooltip]:active {
+.#{$prefix}icon-circled-help[data-tooltip]:active {
   @include box-shadow(rgba(#000, 0.1) 0 1px);
   background: tint($darkgray, 15%);
   border-color: transparent;
 }
 
+@if $moovui-init {
 .tooltip {
   @include radius;
   background: rgba(#000, 0.7);
@@ -54,4 +55,5 @@
   pre, code {
     font-size: 12px;
   }
+}
 }

@@ -1,3 +1,4 @@
+@if $moovui-init {
 table {
   @include radius;
   background: $palegray;
@@ -58,4 +59,5 @@ tr:last-child {
   td:last-child {
     @include border-radius(0 0 $radius 0);
   }
+}
 }

@@ -30,24 +30,6 @@
   @include border-radius($radius);
 }
 
-@mixin small {
-  @media (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin med {
-  @media (max-width: 960px) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media (min-width: 961px) {
-    @content;
-  }
-}
-
 @mixin clearfix {
   &:before, &:after {
     content: "";
@@ -74,7 +56,7 @@
 }
 .#{$prefix}pull-right {
   float: right;
-  .btn {
+  .#{$prefix}btn {
     margin-left: $sp;
   }
 }

@@ -123,6 +123,8 @@
   @include btn-warning;
 }
 
+@if $moovui-init {
 input[type="submit"], input[type="button"], button {
   @include btn;
+}
 }

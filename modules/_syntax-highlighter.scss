@@ -1,3 +1,4 @@
+@if $moovui-init {
 .syntaxhighlighter-wrapper {
   @include radius;
   background: #555;
@@ -80,11 +81,12 @@
     font: inherit;
     padding: 0;
   }
-  
+
   [data-tooltip] {
     @include radius;
     background: tint($gray, 10%);
     padding: 1px 2px;
     color: #fff;
   }
+}
 }

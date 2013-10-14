@@ -16,10 +16,10 @@
   padding: $sp2 - 1px;
 }
 
-.pane {
+.#{$prefix}pane {
   @include pane;
 }
 
-.subpane {
+.#{$prefix}subpane {
   @include subpane;
 }

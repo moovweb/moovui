@@ -1,3 +1,4 @@
+@if $moovui-init {
 * {
   @include box-sizing(border-box);
 }
@@ -32,4 +33,5 @@ body {
 
 .section + .section {
   margin: $sp2 0 0;
+}
 }

@@ -1,3 +1,4 @@
+@if $moovui-init {
 .reveal-modal-bg {
   background: #000;
   background: rgba(#000, 0.45);
@@ -66,4 +67,5 @@
   .btn {
     margin: 0;
   }
+}
 }

@@ -1,3 +1,4 @@
+@if $moovui-init {
 #header {
   @include box-shadow(rgba(#000, 0.2) 0 1px 3px);
   background: #333;
@@ -13,7 +14,7 @@
   > .content {
     position: relative;
   }
-  
+
   input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"] {
     @include border-radius(2px);
     @include box-shadow(none);
@@ -59,4 +60,5 @@
   &:not(:Last-child) a {
     margin: 0 24px 0 0;
   }
+}
 }

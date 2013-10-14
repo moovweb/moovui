@@ -1,5 +1,7 @@
+@if $moovui-init {
 [data-section="accordion"] > :not(.active) [data-section-content] {
   display: none;
+}
 }
 
 @mixin qna {

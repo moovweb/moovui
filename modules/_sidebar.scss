@@ -1,3 +1,4 @@
+@if $moovui-init {
 [data-section="vertical-tabs"] {
   display: block;
   position: relative;
@@ -38,6 +39,7 @@
   [data-section-content] {
     padding-left: $sp2;
   }
+}
 }
 
 @mixin doc-sidebar {
@@ -102,6 +104,6 @@
   }
 }
 
-.doc-sidebar {
+.#{$prefix}doc-sidebar {
   @include doc-sidebar;
 }

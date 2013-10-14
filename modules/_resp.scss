@@ -1,0 +1,59 @@
+@mixin mobile {
+  @media #{$mobile-query} {
+    @content;
+  }
+}
+
+@mixin not-mobile {
+  @media #{$not-mobile-query} {
+    @content;
+  }
+}
+
+// usually meant for portrait
+@mixin tablet {
+  @media #{$tablet-query} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop-query} {
+    @content;
+  }
+}
+
+@mixin not-desktop {
+  @media #{$not-desktop-query} {
+    @content;
+  }
+}
+
+@if $moovui-init {
+@include mobile {
+  .mobile-omit {
+    display: none;
+  }
+  .tablet-only, .desktop-only {
+    display: none;
+  }
+}
+
+@include tablet {
+  .tablet-omit {
+    display: none;
+  }
+  .mobile-only, .desktop-only {
+    display: none;
+  }
+}
+
+@include desktop {
+  .desktop-omit {
+    display: none;
+  }
+  .mobile-only, .tablet-only {
+    display: none;
+  }
+}
+}
