@@ -1,5 +1,5 @@
 // copy :focus style
-.#{$moovui-prefix}icon-circled-help[data-tooltip]:active {
+.#{$moovui-prefix}btn[data-tooltip]:empty:active {
   @include box-shadow(rgba(#000, 0.1) 0 1px);
   background: tint($darkgray, 15%);
   border-color: transparent;
