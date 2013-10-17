@@ -1,5 +1,5 @@
-$font: Lato, Helvetica, Arial, sans-serif;
-$code-font: Consolas, Monaco, Courier, monospace;
+$font: Lato, Helvetica, Arial, sans-serif !default;
+$code-font: "Source Code Pro", Consolas, Monaco, Courier, monospace !default;
 
 $text-color: #444;
 
@@ -53,10 +53,10 @@ $h5-copy-size: 15px;
 
 
 $page-margin: 10px; // shown when window is at $page-width
-$page-width: 960px;
-$min-page-width: 768px;
+$page-width: 960px !default;
+$min-page-width: 768px !default;
 
-$nav-height: 48px;
+$nav-height: 48px !default;
 $footer-height: 298px !default;
 
 $mobile-query: "(max-width: 480px), (max-height: 480px)";
