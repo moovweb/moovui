@@ -50,7 +50,10 @@
     width: 35px;
   }
   .code {
-    padding: 0 0 0 35px;
+    padding: 0;
+  }
+  .gutter + .code {
+    padding-left: 35px;
   }
   .comments {
     color: #999;

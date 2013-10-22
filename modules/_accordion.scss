@@ -21,6 +21,11 @@
       position: absolute;
       width: 13px;
     }
+    code {
+      background: none;
+      border: 0;
+      padding: 0;
+    }
   }
   .active [data-section-title]:before {
     @extend .icon-triangle-down:before;
