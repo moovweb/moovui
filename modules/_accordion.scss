@@ -44,3 +44,7 @@
 .#{$moovui-prefix}qna {
   @include qna;
 }
+
+.win .#{$moovui-prefix}qna {
+  font-weight: normal;
+}

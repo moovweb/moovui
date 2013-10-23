@@ -19,6 +19,12 @@ ol.copy, .copy ol {
   list-style: decimal;
   margin: 0 0 $sp2 3em;
 }
+
+.win {
+  ul.copy, .copy ul, ol.copy, .copy ol {
+    font-weight: normal;
+  }
+}
 }
 
 @mixin section-list {

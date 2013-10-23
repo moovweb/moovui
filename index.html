@@ -54,6 +54,9 @@
         $(this).parent().siblings().children("[data-section-content]").slideUp(250);
         $(this).next().slideToggle(250);
       });
+      
+      if (/Win/.test(navigator.userAgent))
+        $("html").addClass("win");
     </script>
   </head>
   <body>
