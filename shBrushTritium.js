@@ -29,7 +29,7 @@
 			{ regex: SyntaxHighlighter.regexLib.multiLineCComments, 		css: 'comments' },	// multi line comments
 			{ regex: /"([^\\"]|\\.)*"/mg,																css: 'string' },		// double quoted strings
 			{ regex: /'([^\\']|\\.)*'/mg,																css: 'string' },		// single quoted strings
-			{ regex: /\/([^\\\/\n]|\\.)*\//g,														css: 'regex' },			// regular expressions
+			{ regex: /\/([^\\\/\n]|\\.)*\/\B/g,														css: 'regex' },			// regular expressions
 			{ regex: /[\w-:]*:/g,																				css: 'symbol' },		// attribute symbols
 			{ regex: /[$%](?=\w)/g,																			css: 'variable' },	// variables
 			{ regex: /@\w+/g,																						css: 'keyword' }		// keywords
