@@ -81,7 +81,7 @@
 	};
 
 	Brush.prototype	= new SyntaxHighlighter.Highlighter();
-	Brush.aliases	= ['sass', 'scss'];
+	Brush.aliases	= ['sass', 'scss', 'css'];
 
 	SyntaxHighlighter.brushes.Sass = Brush;
 

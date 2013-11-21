@@ -2,6 +2,9 @@
 a {
   color: $link-color;
   text-decoration: none;
+  code {
+    color: inherit;
+  }
 }
 
 a.copy, .copy a {
