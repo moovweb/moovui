@@ -19,6 +19,10 @@ body {
   min-height: 100%;
 }
 
+img {
+  max-width: 100%;
+}
+
 #page, .content {
   @include clearfix;
   margin-left: auto;

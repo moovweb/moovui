@@ -83,6 +83,9 @@
   p, ol {
     font: inherit;
   }
+  > p:last-child {
+    margin: 0;
+  }
 }
 
 @if $moovui-init {
