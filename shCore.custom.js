@@ -2283,8 +2283,10 @@ sh.Highlighter.prototype = {
     if (typeof(navigator) != 'undefined' && navigator.userAgent && navigator.userAgent.match(/MSIE/))
       classes.push('ie');
     
+    var brush = this.getParam('brush');
+    
     html = 
-      '<div class="syntaxhighlighter-wrapper"><div id="' + getHighlighterId(this.id) + '" class="' + classes.join(' ') + '" data-lang="' + this.getParam('brush') + '">'
+      '<div class="syntaxhighlighter-wrapper"><div id="' + getHighlighterId(this.id) + '" class="' + classes.join(' ') + (brush ? '" data-lang="' + brush : '') + '">'
         + (this.getParam('toolbar') ? sh.toolbar.getHtml(this) : '')
         + '<table border="0" cellpadding="0" cellspacing="0">'
           + this.getTitleHtml(this.getParam('title'))
