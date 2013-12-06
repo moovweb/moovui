@@ -1350,10 +1350,11 @@ function findBrush(alias, showAlert)
     sh.vars.discoveredBrushes = brushes;
   }
   
-  result = sh.brushes[brushes[alias]];
+  // PATCH to pass through unrecognized languages
+  result = sh.brushes[brushes[alias] || "Null"];
 
-  if (result == null && showAlert != false)
-    alert(sh.config.strings.noBrush + alias);
+  if (brushes[alias] == null && showAlert != false)
+    console.log(sh.config.strings.noBrush + alias);
   
   return result;
 };
