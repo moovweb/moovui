@@ -17,15 +17,15 @@ dt {
   position: absolute;
   margin-left: -1em;
   }
-  &:after {
-    -webkit-font-smoothing: antialiased;
-    content: "  ⎯ ";
-  }
 }
 
 dd {
   display: inline;
   margin: 0;
+  &:not(:empty):before {
+    -webkit-font-smoothing: antialiased;
+    content: "  ⎯  ";
+  }
   &:after {
     content: "";
     display: block;
