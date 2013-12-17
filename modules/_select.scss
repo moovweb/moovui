@@ -6,22 +6,22 @@ select {
   border: 1px solid #ccc;
   font: 14px/#{$line-height} $font;
   padding: 5px 30px 5px 6px;
-  &.autocomplete + .chzn-container .chzn-search {
-    display: block;
+  &.autocomplete + .chosen-container .chosen-search {
+    height: auto;
   }
 }
 
-.chzn-container {
+.chosen-container {
   font-size: 14px;
   margin: 0 0 $sp2;
   position: relative;
   vertical-align: middle;
 }
-.chzn-container-active .chzn-single {
+.chosen-container-active .chosen-single {
   border-color: #aaa;
 }
 
-.chzn-single {
+.chosen-single {
   @include radius;
   background: #fafafa;
   border: 1px solid #ccc;
@@ -43,7 +43,7 @@ select {
   }
 }
 
-.chzn-drop {
+.chosen-drop {
   @include box-shadow(rgba(#000, 0.2) 0 0 3px 1px);
   @include radius;
   background: #fff;
@@ -57,13 +57,13 @@ select {
   z-index: 100;
 }
 
-.chzn-with-drop .chzn-drop {
+.chosen-with-drop .chosen-drop {
   left: 0;
 }
 
-.chzn-search {
+.chosen-search {
   border-bottom: 1px solid #ddd;
-  display: none;
+  height: 0;
   input[type="text"] {
     @include box-shadow(none !important);
     border: 0;
@@ -72,7 +72,7 @@ select {
   }
 }
 
-.chzn-results {
+.chosen-results {
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;

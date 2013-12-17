@@ -48,7 +48,8 @@
     <script src="shInit.js"></script>
     <script>
       $(function() {
-        $("select").chosen();
+        $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
+        $("select.autocomplete").chosen();
       });
       $(document).on("click", "[data-section='accordion'] [data-section-title]", function() {
         $(this).parent().siblings().children("[data-section-content]").slideUp(250);
