@@ -1,0 +1,53 @@
+@mixin toggle {
+  @include border-radius(3px);
+  border: 1px solid #d4d4d4;
+  color: #666;
+  font-size: 0;
+  position: relative;
+  text-align: center;
+  width: 100px;
+  input[type="checkbox"] {
+    @include appearance(none);
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &:checked + span, &:not(:checked) ~ span:last-child {
+      @include box-sizing(content-box);
+      background: #d9f2ce;
+      padding: 0 1px;
+    }
+    &:checked + span {
+      margin-right: -1px;
+    }
+    &:not(:checked) ~ span:last-child {
+      margin-left: -1px;
+    }
+    &:checked ~ span:last-child, &:not(:checked) + span {
+      @include btn;
+      color: transparent;
+      min-width: 0 !important;
+      height: 34px;
+    }
+    &:checked ~ span:last-child {
+      margin: -1px -1px -1px 0;
+    }
+    &:not(:checked) + span {
+      margin: -1px 0 -1px -1px;
+    }
+  }
+  span {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 32px;
+    pointer-events: none;
+    text-transform: uppercase;
+    width: 50%;
+  }
+}
+
+.#{$moovui-prefix}toggle {
+  @include toggle;
+}

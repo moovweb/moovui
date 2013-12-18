@@ -47,10 +47,6 @@
     <script src="shBrushXml.js"></script>
     <script src="shInit.js"></script>
     <script>
-      $(function() {
-        $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
-        $("select.autocomplete").chosen();
-      });
       $(document).on("click", "[data-section='accordion'] [data-section-title]", function() {
         $(this).parent().siblings().children("[data-section-content]").slideUp(250);
         $(this).next().slideToggle(250);
@@ -834,19 +830,19 @@
         <div class="example-head">
           <h1>Buttons</h1>
         </div>
-        <a class="btn pill">Pill Button</a>
+        <a class="btn pill" href="javascript://">Pill Button</a>
         <br>
-        <a class="btn small">Small Button</a>
+        <a class="btn small" href="javascript://">Small Button</a>
         <br>
-        <a class="btn">Button</a>
+        <a class="btn" href="javascript://">Button</a>
         <br>
-        <a class="btn icon-check">Button with Icon</a>
+        <a class="btn icon-check" href="javascript://">Button with Icon</a>
         <br>
-        <a class="btn big">Big Button</a>
+        <a class="btn big" href="javascript://">Big Button</a>
         <br>
-        <a class="btn warning">Warning Button</a>
+        <a class="btn warning" href="javascript://">Warning Button</a>
         <br>
-        <a class="btn action">Call to Action Button</a>
+        <a class="btn action" href="javascript://">Call to Action Button</a>
         <pre data-lang="html">
           <a class="btn pill">Pill Button</a>
           <br>
@@ -868,9 +864,9 @@
           <h1>Button group</h1>
         </div>
         <div class="btngroup">
-          <a class="btn">Button 1</a>
-          <a class="btn">Button 2</a>
-          <a class="btn">Button 3</a>
+          <a class="btn" href="javascript://">Button 1</a>
+          <a class="btn" href="javascript://">Button 2</a>
+          <a class="btn" href="javascript://">Button 3</a>
         </div>
         <pre data-lang="html">
           <div class="btngroup">
@@ -885,9 +881,9 @@
           <h1>Button bar</h1>
         </div>
         <div class="btnbar">
-          <a class="btn">Button 1</a>
-          <a class="btn">Button 2</a>
-          <a class="btn">Button 3</a>
+          <a class="btn" href="javascript://">Button 1</a>
+          <a class="btn" href="javascript://">Button 2</a>
+          <a class="btn" href="javascript://">Button 3</a>
         </div>
         <pre data-lang="html">
           <div class="btnbar">
@@ -900,15 +896,15 @@
       <div class="example">
         <div class="example-head">
           <h1>Select (dropdown)</h1>
-          <p>MoovUI uses the <a href="http://harvesthq.github.io/chosen/" target="_blank">Chosen</a> plugin. Add the class <code>autocomplete</code> to show a text input.</p>
+          <p>MoovUI can use the <a href="http://harvesthq.github.io/chosen/" target="_blank">Chosen</a> plugin.</p>
         </div>
         <select>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-          <option>Option 4</option>
-          <option>Option 5</option>
-          <option>Option 6</option>
+          <option>Chosen Option 1</option>
+          <option>Chosen Option 2</option>
+          <option>Chosen Option 3</option>
+          <option>Chosen Option 4</option>
+          <option>Chosen Option 5</option>
+          <option>Chosen Option 6</option>
         </select>
         <select class="autocomplete">
           <option>Autocomplete Option 1</option>
@@ -918,14 +914,26 @@
           <option>Autocomplete Option 5</option>
           <option>Autocomplete Option 6</option>
         </select>
+        <script>
+          $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
+          $("select.autocomplete").chosen();
+        </script>
+        <select>
+          <option>Native Option 1</option>
+          <option>Native Option 2</option>
+          <option>Native Option 3</option>
+          <option>Native Option 4</option>
+          <option>Native Option 5</option>
+          <option>Native Option 6</option>
+        </select>
         <pre data-lang="html">
           <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-            <option>Option 4</option>
-            <option>Option 5</option>
-            <option>Option 6</option>
+            <option>Chosen Option 1</option>
+            <option>Chosen Option 2</option>
+            <option>Chosen Option 3</option>
+            <option>Chosen Option 4</option>
+            <option>Chosen Option 5</option>
+            <option>Chosen Option 6</option>
           </select>
           <select class="autocomplete">
             <option>Autocomplete Option 1</option>
@@ -935,6 +943,35 @@
             <option>Autocomplete Option 5</option>
             <option>Autocomplete Option 6</option>
           </select>
+          &lt;script&gt;
+            $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
+            $("select.autocomplete").chosen();
+          &lt;/script&gt;
+          <select>
+            <option>Native Option 1</option>
+            <option>Native Option 2</option>
+            <option>Native Option 3</option>
+            <option>Native Option 4</option>
+            <option>Native Option 5</option>
+            <option>Native Option 6</option>
+          </select>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Toggle (checkbox)</h1>
+        </div>
+        <div class="toggle">
+          <input type="checkbox">
+          <span>On</span>
+          <span>Off</span>
+        </div>
+        <pre data-lang="html">
+          <div class="toggle">
+            <input type="checkbox">
+            <span>On</span>
+            <span>Off</span>
+          </div>
         </pre>
       </div>
       <div class="example">

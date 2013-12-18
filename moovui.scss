@@ -38,6 +38,7 @@ $moovui-prefix: "" !default;
 @import "modules/sidebar";
 @import "modules/syntax-highlighter";
 @import "modules/table";
+@import "modules/toggle";
 @import "modules/tooltip";
 
 $moovui-init: false;
