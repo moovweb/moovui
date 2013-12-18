@@ -6,8 +6,9 @@ select {
   border: 1px solid #ccc;
   font: 14px/#{$line-height} $font;
   padding: 5px 30px 5px 6px;
-  &.autocomplete + .chosen-container .chosen-search {
-    height: auto;
+  &:not(.autocomplete) + .chosen-container .chosen-search {
+    position: absolute;
+    left: -9999px;
   }
 }
 
@@ -63,7 +64,6 @@ select {
 
 .chosen-search {
   border-bottom: 1px solid #ddd;
-  height: 0;
   input[type="text"] {
     @include box-shadow(none !important);
     border: 0;
