@@ -898,8 +898,20 @@
       <div class="example">
         <div class="example-head">
           <h1>Select (dropdown)</h1>
-          <p>MoovUI can use the <a href="http://harvesthq.github.io/chosen/" target="_blank">Chosen</a> plugin.</p>
         </div>
+        <select>
+          <option>Native Option 1</option>
+          <option>Native Option 2</option>
+          <option>Native Option 3</option>
+          <option>Native Option 4</option>
+          <option>Native Option 5</option>
+          <option>Native Option 6</option>
+        </select>
+        <p>MoovUI can use the <a href="http://harvesthq.github.io/chosen/" target="_blank">Chosen</a> plugin. Remember to initialize Chosen:</p>
+        <pre data-lang="js">
+          $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
+          $("select.autocomplete").chosen();
+        </pre>
         <select>
           <option>Chosen Option 1</option>
           <option>Chosen Option 2</option>
@@ -915,18 +927,18 @@
           <option>Autocomplete Option 6</option>
         </select>
         <script>
-          $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
+          $("select:nth-of-type(2)").chosen({disable_search_threshold: Infinity});
           $("select.autocomplete").chosen();
         </script>
-        <select>
-          <option>Native Option 1</option>
-          <option>Native Option 2</option>
-          <option>Native Option 3</option>
-          <option>Native Option 4</option>
-          <option>Native Option 5</option>
-          <option>Native Option 6</option>
-        </select>
         <pre data-lang="html">
+          <select>
+            <option>Native Option 1</option>
+            <option>Native Option 2</option>
+            <option>Native Option 3</option>
+            <option>Native Option 4</option>
+            <option>Native Option 5</option>
+            <option>Native Option 6</option>
+          </select>
           <select>
             <option>Chosen Option 1</option>
             <option>Chosen Option 2</option>
@@ -942,18 +954,6 @@
             <option>Autocomplete Option 4</option>
             <option>Autocomplete Option 5</option>
             <option>Autocomplete Option 6</option>
-          </select>
-          &lt;script&gt;
-            $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
-            $("select.autocomplete").chosen();
-          &lt;/script&gt;
-          <select>
-            <option>Native Option 1</option>
-            <option>Native Option 2</option>
-            <option>Native Option 3</option>
-            <option>Native Option 4</option>
-            <option>Native Option 5</option>
-            <option>Native Option 6</option>
           </select>
         </pre>
       </div>
