@@ -13,7 +13,6 @@
   [data-section-title] {
     cursor: pointer;
     font-weight: bold;
-    margin: 0;
     padding: $sp $sp $sp 25px;
     &:before {
       @include entypo-icon;

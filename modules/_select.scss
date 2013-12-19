@@ -3,11 +3,11 @@ select {
   @include appearance(none);
   font: 12px/18px $font;
   margin: 0 0 $sp2;
-  padding: 6px 45px 6px 10px;
+  padding: 5px 45px 5px 10px;
   // hide dropdown arrow in Firefox
   text-indent: 0.1px;
   text-overflow: "";
-  min-height: 32px;
+  min-height: 30px;
   @media (-moz-device-pixel-ratio) {
     padding-right: 26px;
     padding-left: 6px;
@@ -46,7 +46,7 @@ select, .chosen-single {
   display: block;
   font-weight: normal;
   line-height: $line-height;
-  padding: 3px 10px;
+  padding: 2px 10px;
   position: relative;
   div {
     display: none;
@@ -86,12 +86,12 @@ select, .chosen-single {
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  padding: 6px 0;
+  padding: 7px 0;
   max-height: 140px;
   li {
     color: #666;
     display: none;
-    padding: 2px 21px 2px 16px;
+    padding: 1px 21px 1px 16px;
     white-space: nowrap;
   }
   .active-result {

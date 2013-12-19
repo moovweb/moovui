@@ -15,7 +15,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   font-size: 14px;
   margin: 0 0 $sp2;
   padding: 0 $sp 1px;
-  min-height: 34px;
+  min-height: 32px;
   &:focus {
     @include box-shadow(rgba(#000, 0.2) 0 0 3px, rgba(#fff, 0.5) 0 1px);
     border-color: #c8c8c8;

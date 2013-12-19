@@ -6,7 +6,7 @@
   position: relative;
   text-align: center;
   width: 100px;
-  height: 34px;
+  height: 30px;
   input[type="checkbox"] {
     @include appearance(none);
     margin: 0;
@@ -19,7 +19,7 @@
     &:checked + span, &:not(:checked) ~ span:last-child {
       @include box-shadow(rgba(#000, 0.1) 0 1px 1px inset);
       @include box-sizing(content-box);
-      background: #d9f2ce;
+      background: #ccc;
       padding: 0 1px;
     }
     &:checked + span {
@@ -31,10 +31,11 @@
     &:checked ~ span:last-child, &:not(:checked) + span {
       @include btn;
       @include border-radius(3px);
+      @include box-shadow(rgba(#000, 0.05) 0 1px, rgba(#fff, 0.8) 0 1px 1px 1px inset);
+      border-color: #d4d4d4 #d4d4d4 #b6b6b6;
       color: transparent;
       font-size: 0;
       min-width: 0 !important;
-      height: 34px;
     }
     &:checked ~ span:last-child {
       margin: -1px -1px -1px 0;
@@ -46,7 +47,7 @@
   span {
     display: inline-block;
     font-size: 12px;
-    line-height: 32px;
+    line-height: 28px;
     pointer-events: none;
     text-transform: uppercase;
     width: 50%;
