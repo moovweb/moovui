@@ -1,8 +1,8 @@
 @mixin toggle {
   @include border-radius(3px);
   border: 1px solid #d4d4d4;
-  color: #666;
   font-size: 0;
+  overflow: hidden;
   position: relative;
   text-align: center;
   width: 100px;
@@ -19,36 +19,42 @@
     &:checked + span, &:not(:checked) ~ span:last-child {
       @include box-shadow(rgba(#000, 0.1) 0 1px 1px inset);
       @include box-sizing(content-box);
-      background: #ccc;
       padding: 0 1px;
     }
     &:checked + span {
+      background: #d9f2ce;
       margin-right: -1px;
     }
     &:not(:checked) ~ span:last-child {
+      background: #ccc;
       margin-left: -1px;
     }
     &:checked ~ span:last-child, &:not(:checked) + span {
       @include btn;
       @include border-radius(3px);
-      @include box-shadow(rgba(#000, 0.05) 0 1px, rgba(#fff, 0.8) 0 1px 1px 1px inset);
+      @include box-shadow(rgba(#fff, 0.8) 0 1px 1px 1px inset);
       border-color: #d4d4d4 #d4d4d4 #b6b6b6;
       color: transparent;
       font-size: 0;
       min-width: 0 !important;
     }
     &:checked ~ span:last-child {
+      @include box-shadow(rgba(#fff, 0.8) 0 1px 1px 1px inset, rgba(#000, 0.1) -1px 0px 2px);
       margin: -1px -1px -1px 0;
     }
     &:not(:checked) + span {
+      @include box-shadow(rgba(#fff, 0.8) 0 1px 1px 1px inset, rgba(#000, 0.1) 1px 0px 2px);
       margin: -1px 0 -1px -1px;
     }
   }
   span {
+    color: #666;
+    font-weight: bold;
     display: inline-block;
     font-size: 12px;
-    line-height: 28px;
+    line-height: 30px;
     pointer-events: none;
+    text-shadow: rgba(#fff, 0.4) 0 1px;
     text-transform: uppercase;
     width: 50%;
   }

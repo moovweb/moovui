@@ -25,6 +25,8 @@ select, .chosen-single {
   @include box-shadow(rgba(#000, 0.2) 0 1px 1px);
   border: 1px solid #ccc;
   color: #777;
+  letter-spacing: 0.5px;
+  text-shadow: #fff 0 1px;
 }
 
 .chosen-container {
