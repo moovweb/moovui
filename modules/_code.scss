@@ -1,18 +1,17 @@
 @if $moovui-init {
-code, pre, samp {
-  font-family: $code-font;
-  font-size: 13px;
-  font-weight: normal;
-}
-
 code {
   @include radius;
   background: #eee;
   border: 1px solid #ccc;
   color: #555;
-  font-size: 12px;
   margin: 0 1px;
   padding: 0 3px;
+}
+
+code, pre, samp {
+  font-family: $code-font;
+  font-size: 13px;
+  font-weight: normal;
 }
 
 pre {
