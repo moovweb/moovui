@@ -1,20 +1,54 @@
 @if $moovui-init {
 table {
-  @include radius;
-  background: $palegray;
-  width: 100%;
-  margin: 0 0 $sp;
+  @include border-radius(0);
   border-collapse: separate;
   border-spacing: 0;
-
+  margin: 0 0 $sp;
+  width: 100%;
   &.no-borders {
     margin: 0;
     background: none;
+    tr {
+      background: none !important;
+    }
     th, td {
       border: 0;
       padding: 0;
       @include border-radius(0);
     }
+  }
+  thead {
+    @include box-shadow(rgba(#000, 0.3) 0 1px 2px);
+    border-top: 1px solid #c9c9c9;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    tr {
+      @include background(linear-gradient(#fbfbfb, #eaeaea));
+    }
+  }
+  th {
+    border-bottom-color: #b8b8b8;
+    border-width: 1px 0;
+    font-weight: 300;
+    padding: 3px 10px;
+  }
+  tr:first-child td {
+    @include box-shadow(rgba(#000, 0.1) 0 2px 1px -1px inset);
+  }
+  tr {
+    background: #fafafa;
+    &:nth-child(even) {
+      background: #fff;
+    }
+  }
+  th, td {
+    @include border-radius(0 !important);
+  }
+  td {
+    border-width: 0 0 1px;
+    padding: 12px $sp;
   }
 }
 
