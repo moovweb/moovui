@@ -34,7 +34,7 @@ table {
     font-weight: 300;
     padding: 3px 10px;
   }
-  tr:first-child td {
+  thead + tbody tr:first-child td {
     @include box-shadow(rgba(#000, 0.1) 0 2px 1px -1px inset);
   }
   tr {
