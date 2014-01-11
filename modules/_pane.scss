@@ -1,16 +1,16 @@
 @mixin pane {
-  @include border-radius(7px);
-  @include box-shadow(#e3e7e9 0 0 0 1px inset, #f1f4f5 0 0 0 2px inset);
+  @include border-radius(5px);
+  @include box-shadow(rgba(#000, 0.1) 0 1px 2px 1px);
   @include clearfix;
-  background: #eaedef;
-  margin: 0 0 $sp;
+  background: #fafbfb;
+  margin: 0 0 $sp2;
   padding: $sp2;
 }
 
-@mixin subpane() {
+@mixin subpane {
   @include clearfix;
   @include radius;
-  background: $palegray;
+  background: #fff;
   border: 1px solid #ccc;
   margin: 0 0 $sp2;
   padding: $sp2 - 1px;

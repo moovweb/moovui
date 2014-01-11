@@ -41,17 +41,6 @@
   }
 }
 
-@include keyframes(warn) {
-  from {
-    background: #f1f1f1;
-    border-color: #f1f1f1;
-  }
-  to {
-    background: shade($red, 10%);
-    border-color: shade($red, 20%);
-  }
-}
-
 @mixin btn-action {
   @include background(linear-gradient(tint($green, 30%), $green));
   @include box-shadow(rgba(#000, 0.2) 0 1px 1px, rgba(#fff, 0.4) 0 1px inset);
@@ -69,20 +58,62 @@
   }
 }
 
-@mixin btn-warning {
-  &:hover {
-    @include animation(warn 0.4s);
-    @include box-shadow(none);
+@if $moovui-init {
+@include keyframes(confirm) {
+  from {
+    background: #f1f1f1;
+    border-color: #f1f1f1;
+  }
+  to {
+    background: $green;
+    border-color: $green;
+  }
+}
+@include keyframes(warn) {
+  from {
+    background: #f1f1f1;
+    border-color: #f1f1f1;
+  }
+  to {
     background: shade($red, 10%);
-    border-color: shade($red, 20%);
+    border-color: shade($red, 10%);
+  }
+}
+}
+
+@mixin btn-confirm {
+  &:hover, &:active {
     color: #fff;
     text-shadow: none;
   }
+  &:hover {
+    @include animation(confirm 0.3s);
+    @include box-shadow(none);
+    background: $green;
+    border-color: $green;
+  }
   &:active {
-    background: shade($red, 20%);
-    border-color: shade($red, 35%) shade($red, 35%) shade($red, 25%);
+    @include box-shadow(none);
+    background: shade($green, 10%);
+    border-color: shade($green, 10%);
+  }
+}
+
+@mixin btn-warning {
+  &:hover, &:active {
     color: #fff;
     text-shadow: none;
+  }
+  &:hover {
+    @include animation(warn 0.3s);
+    @include box-shadow(none);
+    background: shade($red, 10%);
+    border-color: shade($red, 10%);
+  }
+  &:active {
+    @include box-shadow(none);
+    background: shade($red, 20%);
+    border-color: shade($red, 20%);
   }
 }
 
@@ -131,6 +162,10 @@
 
 .#{$moovui-prefix}btn.action {
   @include btn-action;
+}
+
+.#{$moovui-prefix}btn.confirm {
+  @include btn-confirm;
 }
 
 .#{$moovui-prefix}btn.warning {
