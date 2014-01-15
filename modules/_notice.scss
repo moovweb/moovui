@@ -1,112 +1,33 @@
 @mixin notice {
+  @include box-shadow(rgba(#000, 0.1) 0 1px 2px 1px);
   @include radius;
-  background: #98c17b;
-  color: #fff;
-  margin: 0 auto $sp;
-  padding: $sp 40px $sp 68px;
-  position: relative;
-  max-width: $page-width - $sp2;
-  min-height: 60px;
-  &:before {
-    @include entypo-icon;
-    @extend .icon-circled-info:before;
-    color: #fff;
-    font-size: 40px;
-    margin: -12px 0 0;
-    position: absolute;
-    top: 50%;
-    left: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: $sp $sp2;
+  width: 30%;
+  &.pull-left {
+    margin-right: $sp3;
   }
-  &.success:before {
-    @extend .icon-thumbs-up:before;
+  &.pull-right {
+    margin-left: $sp3;
   }
-  &.error {
-    background: #e46c67;
-    &:before {
-      @extend .icon-warning:before;
-    }
-  }
-  &.warning {
-    background: #e4cb5d;
-    &:before {
-      @extend .icon-warning:before;
-    }
-  }
-  .close {
-    color: #000;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 22px;
-    margin: 0 -26px 0 0;
-    opacity: 0.2;
-    text-decoration: none;
-    &:hover, &:focus {
-      color: #000;
-      cursor: pointer;
-      opacity: 0.4;
-      text-decoration: none;
-    }
-    &:before {
-      content: "\00d7";
-    }
-  }
-  a {
-    color: #fff;
-    font-weight: normal;
-    text-decoration: underline;
-  }
-}
-
-@mixin callout {
-  @include radius;
-  background: #eff2f3;
-  border: 1px solid #bdc4cb;
-  border-left-width: 50px;
-  font-weight: normal;
-  margin: 0 0 $sp2;
-  padding: $sp;
-  position: relative;
-  &:before {
-    @include entypo-icon;
-    @extend .icon-info:before;
-    color: #fff;
-    font-size: 20px;
-    margin: -13px 0 0 -60px;
-    position: absolute;
-    top: 50%;
+  .title {
+    border-bottom: 1px solid #ccc;
+    margin: -5px (-$sp2) $sp;
+    letter-spacing: 0.5px;
+    padding: 0 $sp 5px;
     text-align: center;
-    width: 50px;
+    text-transform: uppercase;
   }
-  &.warning:before {
-    @extend .icon-warning:before;
-  }
-  p, ol {
-    font: inherit;
-  }
-  > p:last-child {
-    margin: 0;
+  .foot {
+    border-top: 1px solid #ccc;
+    color: #999;
+    display: block;
+    margin: $sp (-$sp2) -5px;
+    padding: 5px $sp 0;
   }
 }
 
-@if $moovui-init {
-[data-alert] {
+.#{$moovui-prefix}notice {
   @include notice;
-}
-
-.callout {
-  @include callout;
-}
-
-.text-success {
-  color: $green;
-}
-
-.text-error {
-  color: $red;
-}
-
-.text-warning {
-  color: mix($orange, $yellow);
-}
 }
