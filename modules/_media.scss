@@ -11,4 +11,7 @@
 img.#{$moovui-prefix}media-block {
   @include border-radius(3px);
   border: 3px solid #ddd;
+  &.no-border {
+    border: 0;
+  }
 }
