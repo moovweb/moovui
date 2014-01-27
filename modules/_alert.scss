@@ -82,7 +82,7 @@
     @extend .icon-warning:before;
   }
   p, ol {
-    font: inherit;
+    font: inherit !important;
   }
   > p:last-child {
     margin: 0;
