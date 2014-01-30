@@ -1,7 +1,7 @@
-// copy :focus style
+// copy normal style
 .#{$moovui-prefix}btn[data-tooltip]:empty:active {
   @include background(linear-gradient(#f9f9f9, #eaeaea));
-  @include box-shadow(rgba(#000, 0.2) 0 1px 1px, #fff 0 1px inset);
+  @include box-shadow(rgba(#000, 0.1) 0 1px 1px, #fff 0 1px inset);
   background-color: #f1f1f1;
   border: 1px solid #ccc;
 }

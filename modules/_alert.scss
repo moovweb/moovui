@@ -8,8 +8,7 @@
   max-width: $page-width - $sp2;
   min-height: 60px;
   &:before {
-    @include entypo-icon;
-    @extend .icon-circled-info:before;
+    @include icon-circled-info;
     color: #fff;
     font-size: 40px;
     margin: -12px 0 0;
@@ -18,18 +17,18 @@
     left: 15px;
   }
   &.success:before {
-    @extend .icon-thumbs-up:before;
+    content: $icon-thumbs-up;
   }
   &.error {
     background: #e46c67;
     &:before {
-      @extend .icon-warning:before;
+      content: $icon-warning;
     }
   }
   &.warning {
     background: #e4cb5d;
     &:before {
-      @extend .icon-warning:before;
+      content: $icon-warning;
     }
   }
   .close {
@@ -68,8 +67,7 @@
   padding: $sp;
   position: relative;
   &:before {
-    @include entypo-icon;
-    @extend .icon-info:before;
+    @include icon-info;
     color: #fff;
     font-size: 20px;
     margin: -13px 0 0 -60px;
@@ -79,7 +77,7 @@
     width: 50px;
   }
   &.warning:before {
-    @extend .icon-warning:before;
+    content: $icon-warning;
   }
   p, ol {
     font: inherit !important;

@@ -27,8 +27,7 @@
     }
   }
   [data-dropdown]:before {
-    @include entypo-icon;
-    @extend .icon-triangle-down:before;
+    @include icon-triangle-down;
     color: #fff;
     margin: 13px 0 0 36px;
     position: absolute;

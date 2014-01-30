@@ -15,8 +15,7 @@
     font-weight: bold;
     padding: $sp $sp $sp 25px;
     &:before {
-      @include entypo-icon;
-      @extend .icon-triangle-right:before;
+      @include icon-triangle-right;
       margin: 0 0 0 -13px;
       position: absolute;
       width: 13px;
@@ -28,7 +27,7 @@
     }
   }
   .active [data-section-title]:before {
-    @extend .icon-triangle-down:before;
+    content: $icon-triangle-down;
     margin: 0 0 0 -14px;
     width: 14px;
   }

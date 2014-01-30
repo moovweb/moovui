@@ -38,8 +38,7 @@ ol.copy, .copy ol {
   margin: 0 0 $sp2 2em;
   padding: 0 0 0 1em; // padding won't get overridden
   li:before {
-    @include entypo-icon;
-    @extend .icon-right:before;
+    @include icon-right;
     color: #d3d5d5;
     margin: 0 9px 0 -20px;
   }

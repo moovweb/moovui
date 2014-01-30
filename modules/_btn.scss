@@ -2,7 +2,7 @@
   @include appearance(none);
   @include background(linear-gradient(#f9f9f9, #eaeaea));
   @include border-radius(2px);
-  @include box-shadow(rgba(#000, 0.2) 0 1px 1px, #fff 0 1px inset);
+  @include box-shadow(rgba(#000, 0.1) 0 1px 1px, #fff 0 1px inset);
   background-color: #f1f1f1;
   border: 1px solid #ccc;
   color: #777;
@@ -45,7 +45,7 @@
 
 @mixin btn-action {
   @include background(linear-gradient(tint($green, 30%), $green));
-  @include box-shadow(rgba(#000, 0.2) 0 1px 1px, rgba(#fff, 0.4) 0 1px inset);
+  @include box-shadow(rgba(#000, 0.1) 0 1px 1px, rgba(#fff, 0.4) 0 1px inset);
   background-color: tint($green, 10%);
   border: 1px solid shade($green, 5%);
   color: #fff;
@@ -172,6 +172,10 @@
 
 .#{$moovui-prefix}btn.warning {
   @include btn-warning;
+}
+
+table .#{$moovui-prefix}btn {
+  margin: 0;
 }
 
 @if $moovui-init {
