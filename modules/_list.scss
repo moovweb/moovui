@@ -28,7 +28,7 @@ ol.copy, .copy ol {
 }
 
 @mixin section-list {
-  li {
+  > li {
     margin: 0 0 $sp;
   }
 }

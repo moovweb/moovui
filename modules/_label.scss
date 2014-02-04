@@ -2,5 +2,13 @@
 label {
   display: inline-block;
   margin: 0 0 5px;
+  &.#{$moovui-prefix}inline {
+    margin-right: $sp;
+    text-align: right;
+    min-width: 200px;
+    & + input {
+      display: inline-block;
+    }
+  }
 }
 }

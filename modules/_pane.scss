@@ -1,8 +1,9 @@
 @mixin pane {
   @include border-radius(5px);
-  @include box-shadow(rgba(#000, 0.1) 0 1px 2px 1px);
+  @include box-shadow(rgba(#000, 0.1) 0 1px 1px);
   @include clearfix;
   background: #fafbfb;
+  border: 1px solid #eaeaea;
   margin: 0 0 $sp2;
   padding: $sp2;
 }

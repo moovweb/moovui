@@ -37,6 +37,7 @@ select, .chosen-single {
   font-size: 12px;
   margin: 0 0 $sp2;
   position: relative;
+  text-align: left;
   vertical-align: middle;
 }
 .chosen-container-active .chosen-single {
@@ -45,6 +46,10 @@ select, .chosen-single {
 .chosen-container-single-nosearch .chosen-search {
   position: absolute;
   left: -9999px;
+}
+
+table .chosen-container {
+  margin-bottom: 0;
 }
 
 .chosen-single {
