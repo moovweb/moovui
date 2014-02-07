@@ -22,10 +22,10 @@
   }
   input[type="radio"] {
     @include appearance(none);
-    margin: 0;
+    margin: 0 -100px 0 0;
     opacity: 0;
     outline: none;
-    position: absolute;
+    position: relative;
     min-width: 100px;
     height: 30px;
     z-index: 1;
