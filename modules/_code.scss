@@ -53,3 +53,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   }
 }
 }
+
+pre.#{$moovui-prefix}inline {
+  background: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}

@@ -11,28 +11,21 @@
       height: 0;
     }
   }
-  .active [data-section-title]:not(:hover) {
+  .active [data-section-title] {
     color: inherit;
+    font-weight: bold;
   }
   [data-section-title] {
-    padding: 5px $sp3 5px $sp;
+    border: 1px solid #c7c7c7;
+    font-size: 13px;
+    padding: 5px $sp;
     position: absolute;
     top: 0;
     left: 0;
+    text-align: center;
     width: 20%;
-    &:before {
-      @include icon-pencil;
-      color: $lightgray;
-      float: right;
-      margin-right: -20px;
-    }
     &:hover {
-      @include radius;
-      background: $lightgray;
-      color: #fff;
-      &:before {
-        color: #fff;
-      }
+      background: #f8f8f8;
     }
   }
   [data-section-content] {

@@ -182,4 +182,9 @@ table .#{$moovui-prefix}btn {
 input[type="submit"], input[type="button"], button {
   @include btn;
 }
+table {
+  input[type="submit"], input[type="button"], button {
+    margin-bottom: 0;
+  }
+}
 }

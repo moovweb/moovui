@@ -48,7 +48,7 @@ select, .chosen-single {
   left: -9999px;
 }
 
-table .chosen-container {
+table select, table .chosen-container {
   margin-bottom: 0;
 }
 
@@ -102,6 +102,7 @@ table .chosen-container {
   li {
     color: #666;
     display: none;
+    letter-spacing: 0.5px;
     padding: 1px 21px 1px 16px;
     white-space: nowrap;
   }

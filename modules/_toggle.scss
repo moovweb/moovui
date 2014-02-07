@@ -1,5 +1,6 @@
 @mixin toggle {
   @include border-radius(3px);
+  background: #fff;
   border: 1px solid #d4d4d4;
   display: inline-block;
   font-size: 0;
@@ -48,6 +49,10 @@
       @include box-shadow(rgba(#fff, 0.8) 0 1px 1px 1px inset, rgba(#000, 0.1) 1px 0 2px);
       margin: -1px 0 -1px -1px;
     }
+    &:disabled ~ span {
+      color: #999;
+      opacity: 0.5;
+    }
   }
   
   input[type="radio"] {
@@ -91,6 +96,10 @@
     &:last-of-type:not(:checked) ~ span:last-child {
       @include box-shadow(rgba(#fff, 0.8) 0 1px 1px 1px inset, rgba(#000, 0.1) -1px 0 2px);
       margin: -1px -1px -1px 0;
+    }
+    &:disabled ~ span {
+      color: #999;
+      opacity: 0.5;
     }
   }
   
