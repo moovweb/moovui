@@ -67,20 +67,20 @@
     &:checked {
       display: none;
     }
-    &:not(:checked) + span, &:last-of-type:checked ~ span:last-child {
+    &:checked + span {
       @include box-shadow(rgba(#000, 0.1) 0 1px 1px inset);
       @include box-sizing(content-box);
       padding: 0 1px;
     }
-    &:last-of-type:not(:checked) + span {
+    &:first-of-type:checked + span {
       background: #d9f2ce;
       margin-right: -1px;
     }
-    &:last-of-type:checked ~ span:last-child {
+    &:last-of-type:checked + span {
       background: #ddd;
       margin-left: -1px;
     }
-    &:checked + span, &:last-of-type:not(:checked) ~ span:last-child {
+    &:not(:checked) + span {
       @include btn;
       @include border-radius(3px);
       @include box-shadow(rgba(#000, 0.05) 0 1px, rgba(#fff, 0.8) 0 1px 1px 1px inset);
@@ -89,15 +89,15 @@
       font-size: 0;
       min-width: 0 !important;
     }
-    &:checked + span {
+    &:first-of-type:not(:checked) + span {
       @include box-shadow(rgba(#fff, 0.8) 0 1px 1px 1px inset, rgba(#000, 0.1) 1px 0 2px);
       margin: -1px 0 -1px -1px;
     }
-    &:last-of-type:not(:checked) ~ span:last-child {
+    &:last-of-type:not(:checked) + span {
       @include box-shadow(rgba(#fff, 0.8) 0 1px 1px 1px inset, rgba(#000, 0.1) -1px 0 2px);
       margin: -1px -1px -1px 0;
     }
-    &:disabled ~ span {
+    &:disabled + span {
       color: #999;
       opacity: 0.5;
     }

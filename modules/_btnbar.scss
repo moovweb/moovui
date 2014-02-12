@@ -29,7 +29,7 @@
     min-width: 100px;
     height: 30px;
     z-index: 1;
-    &:checked + * {
+    &:active + *, &:checked + * {
       @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
       @include background-image(linear-gradient(tint(#f9f9f9, 20%) 1px, tint(#eaeaea, 20%)));
       border-color: shade(#ccc, 10%) shade(#ccc, 10%) shade(#ccc, 5%);

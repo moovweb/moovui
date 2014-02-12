@@ -1033,9 +1033,9 @@
         </div>
         <br><br>
         <div class="toggle">
-          <input type="radio" name="radio">
-          <input type="radio" name="radio">
+          <input type="radio" name="r" checked>
           <span>Yes</span>
+          <input type="radio" name="r">
           <span>No</span>
         </div>
         <pre data-lang="html">
@@ -1045,9 +1045,9 @@
             <span>Off</span>
           </div>
           <div class="toggle">
-            <input type="radio" name="radio">
-            <input type="radio" name="radio">
+            <input type="radio" name="radio" checked>
             <span>Yes</span>
+            <input type="radio" name="radio">
             <span>No</span>
           </div>
         </pre>
@@ -1061,8 +1061,11 @@
           <input type="checkbox"> Checkbox
         </label>
         <br>
-        <label for="input1">Label</label>
+        <label class="inline" for="input1">Label</label>
         <input id="input1" type="text" placeholder="Placeholder">
+        <br>
+        <label for="input2">Label</label>
+        <input id="input2" type="text" placeholder="Placeholder">
         <input class="error" type="text" placeholder="Placeholder">
         <input class="code" type="text" value="<code>">
         <textarea>Text area</textarea>
@@ -1072,7 +1075,12 @@
           </label>
           <br>
           <label for="input1">Label</label>
+          <br>
+          <label class="inline" for="input1">Label</label>
           <input id="input1" type="text" placeholder="Placeholder">
+          <br>
+          <label for="input2">Label</label>
+          <input id="input2" type="text" placeholder="Placeholder">
           <input class="error" type="text" placeholder="Placeholder">
           <input class="code" type="text" value="<code>">
           <textarea>Text area</textarea>
@@ -1131,6 +1139,28 @@
         <pre data-lang="html">
           <div class="callout info">Callout info (default)</div>
           <div class="callout warning">Callout warning<br>with second line</div>
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Stretch</h1>
+        </div>
+        <input type="text" class="stretch">
+        <pre data-lang="html">
+          <input type="text" class="stretch">
+        </pre>
+      </div>
+      <div class="example">
+        <div class="example-head">
+          <h1>Disabled</h1>
+        </div>
+        <div class="pane disabled">
+          Disabled Content
+        </div>
+        <pre data-lang="html">
+          <div class="pane disabled">
+            Disabled Content
+          </div>
         </pre>
       </div>
       <div class="example">
