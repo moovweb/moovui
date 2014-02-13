@@ -1,14 +1,33 @@
 @if $moovui-init {
 label {
   display: inline-block;
-  margin: 0 0 5px;
+}
+}
+
+label {
   &.#{$moovui-prefix}inline {
-    margin-right: $sp;
+    margin: 0 $sp $sp2 0;
     text-align: right;
     min-width: 200px;
+    vertical-align: middle;
     & + input {
       display: inline-block;
+      margin-top: 0;
+      vertical-align: middle;
+    }
+    & + select {
+      display: inline-block;
+      vertical-align: middle;
+      & + .chosen-container {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
-}
+  &:not(.#{$moovui-prefix}inline) + select {
+    margin-top: 5px;
+    & + .chosen-container {
+      margin-top: 5px;
+    }
+  }
 }

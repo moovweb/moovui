@@ -36,6 +36,9 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
     @include box-shadow($red 0 0 0 1px);
     border-color: $red;
   }
+  label + & {
+    margin-top: 5px;
+  }
 }
 
 // hide 'X' in IE10

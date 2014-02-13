@@ -124,13 +124,13 @@
   @include box-shadow(none);
   border: 0;
   padding: 0 10px;
-  min-width: 0;
+  min-width: 0 !important;
   height: 24px;
 }
 
 @mixin btn-small {
   padding: 0 10px;
-  min-width: 0;
+  min-width: 0 !important;
   height: 26px;
  &[class*="icon-"]:before {
     font-size: 15px;
