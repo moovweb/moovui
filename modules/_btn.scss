@@ -119,6 +119,10 @@
   }
 }
 
+@mixin btn-active {
+  color: $green;
+}
+
 @mixin btn-pill {
   @include background-image(linear-gradient(#f9f9f9, #eaeaea));
   @include box-shadow(none);
@@ -172,6 +176,10 @@
 
 .#{$moovui-prefix}btn.warning {
   @include btn-warning;
+}
+
+.#{$moovui-prefix}btn.active {
+  @include btn-active;
 }
 
 table .#{$moovui-prefix}btn {

@@ -1,13 +1,14 @@
 @if $moovui-init {
 table {
   @include border-radius(0);
+  background: #fff;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0 0 $sp2;
   width: 100%;
   &.no-borders {
-    margin: 0;
     background: none;
+    margin: 0;
     tr {
       background: none !important;
     }

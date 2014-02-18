@@ -7,7 +7,7 @@
   min-width: $min-page-width;
   width: 100%;
   height: $nav-height;
-  z-index: 2;
+  z-index: 101;
   &.affix {
     position: fixed;
   }

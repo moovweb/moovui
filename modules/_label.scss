@@ -7,8 +7,7 @@ label {
 label {
   &.#{$moovui-prefix}inline {
     margin: 0 $sp $sp2 0;
-    text-align: right;
-    min-width: 200px;
+    min-width: 120px;
     vertical-align: middle;
     & + input {
       display: inline-block;
@@ -22,6 +21,9 @@ label {
         display: inline-block;
         vertical-align: middle;
       }
+    }
+    &.#{$moovui-prefix}text-right {
+      min-width: 200px;
     }
   }
   &:not(.#{$moovui-prefix}inline) + select {
