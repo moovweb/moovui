@@ -1,3 +1,9 @@
+@mixin btn-pressed {
+  @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
+  @include background-image(linear-gradient(tint(#f9f9f9, 20%) 1px, tint(#eaeaea, 20%)));
+  border-color: shade(#ccc, 10%) shade(#ccc, 10%) shade(#ccc, 5%);
+}
+
 @mixin btn {
   @include appearance(none);
   @include background(linear-gradient(#f9f9f9, #eaeaea));
@@ -23,16 +29,17 @@
     min-width: 100px;
   }
   &:active {
-    @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
-    @include background-image(linear-gradient(tint(#f9f9f9, 20%) 1px, tint(#eaeaea, 20%)));
-    border-color: shade(#ccc, 10%) shade(#ccc, 10%) shade(#ccc, 5%);
+    @include btn-pressed;
     outline: 0;
   }
-  &:disabled {
+  &:disabled, &.disabled {
     @include background-image(linear-gradient(#fcfcfc, #f4f4f4));
     @include box-shadow(rgba(#000, 0.1) 0 1px 1px, #fff 0 1px inset);
     border-color: #e0e0e0;
     color: #b9b9b9;
+  }
+  &.disabled {
+    opacity: 1;
   }
   &[class*="icon-"]:before {
     font-size: 18px;
@@ -176,6 +183,10 @@
 
 .#{$moovui-prefix}btn.warning {
   @include btn-warning;
+}
+
+.#{$moovui-prefix}btn.pressed {
+  @include btn-pressed;
 }
 
 .#{$moovui-prefix}btn.active {
