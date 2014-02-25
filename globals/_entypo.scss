@@ -20,6 +20,7 @@
   font-size: 15px;
   font-style: normal;
   font-weight: normal;
+  line-height: $line-height;
   vertical-align: bottom; // use bottom so negative margin-bottom can be used
   @if $icon {
     content: $icon;

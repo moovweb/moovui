@@ -91,20 +91,20 @@
 [data-alert] {
   @include alert;
 }
+}
 
-.callout {
+.#{$moovui-prefix}callout {
   @include callout;
 }
 
-.text-success {
+.#{$moovui-prefix}text-success {
   color: $green;
 }
 
-.text-error {
+.#{$moovui-prefix}text-error {
   color: $red;
 }
 
-.text-warning {
+.#{$moovui-prefix}text-warning {
   color: mix($orange, $yellow);
-}
 }

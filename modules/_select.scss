@@ -8,6 +8,7 @@ select {
   // hide dropdown arrow in Firefox
   text-indent: 0.1px;
   text-overflow: "";
+  max-width: 100%;
   min-height: 30px;
   @media (-moz-device-pixel-ratio) {
     padding-right: 26px;
