@@ -561,119 +561,99 @@
           <h1>Nested Accordions</h1>
           <p>You can add a <code>doc-sidebar</code> class to the wrapper for the example style.
         </div>
-        <ul class="doc-sidebar">
-          <li data-section="accordion">
+        <div class="doc-sidebar" data-section="accordion">
+          <section>
+            <div data-section-title>Head 1</div>
+            <ul data-section-content data-section="accordion">
+              <section>
+                <div data-section-title>Subhead 1</div>
+                <ul data-section-content>
+                  <li><a>Item 1</a></li>
+                  <li><a target="_blank">Item 2</a></li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </section>
+              <section>
+                <div data-section-title>Subhead 2</div>
+                <ul data-section-content>
+                  <li><a>Item 4</a></li>
+                  <li><a>Item 5</a></li>
+                  <li><a>Item 6</a></li>
+                </ul>
+              </section>
+              <li><a>Top Link</a></li>
+            </ul>
+          </section>
+          <section>
+            <div data-section-title>Head 2</div>
+            <ul data-section-content data-section="accordion">
+              <section>
+                <div data-section-title>Subhead 3</div>
+                <ul data-section-content>
+                  <li><a>Item 7</a></li>
+                  <li><a>Item 8</a></li>
+                  <li><a>Item 9</a></li>
+                  <li><a>Item 10</a></li>
+                </ul>
+              </section>
+              <section>
+                <div data-section-title>Subhead 4</div>
+                <ul data-section-content>
+                  <li><a>Item 11</a></li>
+                  <li><a>Item 12</a></li>
+                  <li><a>Item 13</a></li>
+                </ul>
+              </section>
+            </ul>
+          </section>
+        </div>
+        <pre data-lang="html">
+          <div class="doc-sidebar" data-section="accordion">
             <section>
               <div data-section-title>Head 1</div>
-              <ul data-section-content>
-                <li data-section="accordion">
-                  <section>
-                    <div data-section-title>Subhead 1</div>
-                    <ul data-section-content>
-                      <li><a>Item 1</a></li>
-                      <li><a target="_blank">Item 2</a></li>
-                      <li><a>Item 3</a></li>
-                    </ul>
-                  </section>
-                </li>
-                <li data-section="accordion">
-                  <section>
-                    <div data-section-title>Subhead 2</div>
-                    <ul data-section-content>
-                      <li><a>Item 4</a></li>
-                      <li><a>Item 5</a></li>
-                      <li><a>Item 6</a></li>
-                    </ul>
-                  </section>
-                </li>
+              <ul data-section-content data-section="accordion">
+                <section>
+                  <div data-section-title>Subhead 1</div>
+                  <ul data-section-content>
+                    <li><a>Item 1</a></li>
+                    <li><a target="_blank">Item 2</a></li>
+                    <li><a>Item 3</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <div data-section-title>Subhead 2</div>
+                  <ul data-section-content>
+                    <li><a>Item 4</a></li>
+                    <li><a>Item 5</a></li>
+                    <li><a>Item 6</a></li>
+                  </ul>
+                </section>
                 <li><a>Top Link</a></li>
               </ul>
             </section>
             <section>
               <div data-section-title>Head 2</div>
-              <ul data-section-content>
-                <li data-section="accordion">
-                  <section>
-                    <div data-section-title>Subhead 3</div>
-                    <ul data-section-content>
-                      <li><a>Item 7</a></li>
-                      <li><a>Item 8</a></li>
-                      <li><a>Item 9</a></li>
-                      <li><a>Item 10</a></li>
-                    </ul>
-                  </section>
-                </li>
-                <li data-section="accordion">
-                  <section>
-                    <div data-section-title>Subhead 4</div>
-                    <ul data-section-content>
-                      <li><a>Item 11</a></li>
-                      <li><a>Item 12</a></li>
-                      <li><a>Item 13</a></li>
-                    </ul>
-                  </section>
-                </li>
+              <ul data-section-content data-section="accordion">
+                <section>
+                  <div data-section-title>Subhead 3</div>
+                  <ul data-section-content>
+                    <li><a>Item 7</a></li>
+                    <li><a>Item 8</a></li>
+                    <li><a>Item 9</a></li>
+                    <li><a>Item 10</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <div data-section-title>Subhead 4</div>
+                  <ul data-section-content>
+                    <li><a>Item 11</a></li>
+                    <li><a>Item 12</a></li>
+                    <li><a>Item 13</a></li>
+                  </ul>
+                </section>
               </ul>
             </section>
-          </li>
-        </ul>
-        <pre data-lang="html">
-          <ul class="doc-sidebar">
-            <li data-section="accordion">
-              <section>
-                <div data-section-title>Head 1</div>
-                <ul data-section-content>
-                  <li data-section="accordion">
-                    <section>
-                      <div data-section-title>Subhead 1</div>
-                      <ul data-section-content>
-                        <li><a>Item 1</a></li>
-                        <li><a target="_blank">Item 2</a></li>
-                        <li><a>Item 3</a></li>
-                      </ul>
-                    </section>
-                  </li>
-                  <li data-section="accordion">
-                    <section>
-                      <div data-section-title>Subhead 2</div>
-                      <ul data-section-content>
-                        <li><a>Item 4</a></li>
-                        <li><a>Item 5</a></li>
-                        <li><a>Item 6</a></li>
-                      </ul>
-                    </section>
-                  </li>
-                  <li><a>Top Link</a></li>
-                </ul>
-              </section>
-              <section>
-                <div data-section-title>Head 2</div>
-                <ul data-section-content>
-                  <li data-section="accordion">
-                    <section>
-                      <div data-section-title>Subhead 3</div>
-                      <ul data-section-content>
-                        <li><a>Item 7</a></li>
-                        <li><a>Item 8</a></li>
-                        <li><a>Item 9</a></li>
-                        <li><a>Item 10</a></li>
-                      </ul>
-                    </section>
-                  </li>
-                  <li data-section="accordion">
-                    <section>
-                      <div data-section-title>Subhead 4</div>
-                      <ul data-section-content>
-                        <li><a>Item 11</a></li>
-                        <li><a>Item 12</a></li>
-                        <li><a>Item 13</a></li>
-                      </ul>
-                    </section>
-                  </li>
-                </ul>
-              </section>
-            </li>
-          </ul>
+          </div>
         </pre>
       </div>
       <div class="example">
