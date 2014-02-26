@@ -63,17 +63,17 @@
   .active > [data-section-title]:after {
     @extend .icon-minus:before;
   }
-  > li {
-    > * > [data-section-title] {
+  > section {
+    > [data-section-title] {
       background: #bdc4cb;
       font-weight: bold;
     }
-    > .active > [data-section-title] {
+    &.active > [data-section-title] {
       background: #7c8899;
       color: #fff;
     }
   }
-  > li > * > ul > li > a, ul [data-section-title] {
+  > section > ul > li > a, ul [data-section-title] {
     background: #eff0f0;
     font-weight: bold;
     padding: 5px $sp 5px 28px;
