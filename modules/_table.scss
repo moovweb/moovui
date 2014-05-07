@@ -8,8 +8,6 @@ table {
 }
 
 thead {
-  @include box-shadow(rgba(#000, 0.3) 0 1px 2px);
-  border-top: 1px solid #c9c9c9;
   color: #666;
   font-size: 12px;
   letter-spacing: 0.5px;
@@ -43,18 +41,6 @@ td {
 }
 }
 
-table.#{$moovui-prefix}no-borders {
- background: none;
- margin: 0;
- tr {
-   background: none;
- }
- th, td {
-   border: 0;
-   padding: 0;
- }
-}
-
 thead + tbody tr:first-child {
   &.#{$moovui-prefix}disabled td, td.#{$moovui-prefix}disabled,
   &.#{$moovui-prefix}idle td, td.#{$moovui-prefix}idle {
@@ -68,4 +54,59 @@ tr.#{$moovui-prefix}disabled td, tr.#{$moovui-prefix}idle td {
 
 td.#{$moovui-prefix}disabled, td.#{$moovui-prefix}idle {
   border-color: #a0a4a6;
+}
+
+table.#{$moovui-prefix}no-borders {
+ background: none;
+ margin: 0;
+ tr {
+   background: none;
+ }
+ th, td {
+   border: 0;
+   padding: 0;
+ }
+}
+
+table.#{$moovui-prefix}round {
+  @include border-radius(5px);
+  border: 1px solid $lightgray;
+  thead + tbody tr:first-child td {
+    @include box-shadow(none);
+  }
+  thead {
+    th, td {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: normal;
+      padding: 5px $sp;
+    }
+  }
+  th {
+    border-top: 0;
+    &:first-child {
+      border-top-left-radius: 5px;
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+    }
+  }
+  tr {
+    background: $palegray;
+  }
+  tr:last-child td {
+    border: 0;
+    &:first-child {
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 5px;
+    }
+  }
+  th:first-child, td:first-child {
+    padding-left: $sp - 1px;
+  }
+  th:last-child, td:Last-child {
+    padding-right : $sp - 1px;
+  }
 }

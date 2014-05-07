@@ -64,7 +64,7 @@
   border-width: 1px 1px 1px 0;
   font-weight: normal;
   margin: 0 0 $sp2;
-  padding: $sp $sp $sp $sp6;
+  padding: ($sp - 1px) ($sp - 1px) ($sp - 1px) $sp6;
   position: relative;
   &:before {
     @include border-radius(4px 0 0 4px);

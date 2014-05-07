@@ -61,11 +61,11 @@
       <div class="content">
         <a href="#" class="pull-right" data-dropdown="menu" style="background: #eee; padding: 0 24px; height: 48px"></a>
         <ul id="menu" data-dropdown-content>
-          <li><a>Link 1</a></li>
-          <li><a>Link 2</a></li>
-          <li><a>Link 3</a></li>
-          <li><a>Link 4</a></li>
-          <li><a>Link 5</a></li>
+          <li><a href="javascript://">Link 1</a></li>
+          <li><a href="javascript://">Link 2</a></li>
+          <li><a href="javascript://">Link 3</a></li>
+          <li><a href="javascript://">Link 4</a></li>
+          <li><a href="javascript://">Link 5</a></li>
         </ul>
         <ul class="header-links">
           <li><a>Link 1</a></li>
@@ -419,7 +419,7 @@
         <pre data-lang="html" data-no-gutter>Highlighted <span>syntax</span> with no line numbers</pre>
         <pre>Non-highlighted miscellaneous</pre>
         <code class="inline">&lt;code&gt; with no styling</code>
-        <pre class="inline">&lt;pre&gt; with no no styling</pre>
+        <pre class="inline">&lt;pre&gt; with no styling</pre>
         <pre data-lang="html">
           <p>Inline <code>code</code>.</p>
           <code class="cmd">Shell line 1</code>
@@ -427,6 +427,8 @@
           <pre data-lang="scss">@include mixin($var);</pre>
           <pre data-lang="html" data-no-gutter>Highlighted &amp;lt;span&amp;gt;syntax&amp;lt;/span&amp;gt;</pre>
           <pre>Non-highlighted miscellaneous</pre>
+          <code class="inline">&amp;lt;code&amp;gt; with no styling</code>
+          <pre class="inline">&amp;lt;pre&amp;gt; with no styling</pre>
         </pre>
       </div>
       <div class="example">
@@ -435,6 +437,30 @@
           <p>You can add a <code>no-borders</code> class to remove the styling.</p>
         </div>
         <table>
+          <thead>
+            <tr>
+              <th>Col 1</th>
+              <th>Col 2</th>
+              <th>Col 3</th>
+              <th>Col 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Column 1</td>
+              <td>Column 2</td>
+              <td>Column 3</td>
+              <td>Column 4</td>
+            </tr>
+            <tr>
+              <td>Column 5</td>
+              <td>Column 6</td>
+              <td>Column 7</td>
+              <td>Column 8</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="round">
           <thead>
             <tr>
               <th>Col 1</th>
@@ -473,6 +499,12 @@
               <td>Column 2</td>
               <td>Column 3</td>
               <td>Column 4</td>
+            </tr>
+            <tr>
+              <td>Column 5</td>
+              <td>Column 6</td>
+              <td>Column 7</td>
+              <td>Column 8</td>
             </tr>
           </tbody>
         </table>
@@ -714,22 +746,31 @@
             <section>
               <a data-section-title href="#">Tab 1</a>
               <div data-section-content>
-                <h3>Title 1</h3>
-                <div class="subpane">Content 1</div>
+                <h2>Title 1</h3>
+                <div class="subpane">
+                  <h3>Subtitle 1</h3>
+                  <div class="subcontent">Content 1</div>
+                </div>
               </div>
             </section>
             <section>
               <a data-section-title href="#">Tab 2</a>
               <div data-section-content>
-                <h3>Title 2</h3>
-                <div class="subpane">Content 2</div>
+                <h2>Title 2</h3>
+                <div class="subpane">
+                  <h3>Subtitle 2</h3>
+                  <div class="subcontent">Content 2</div>
+                </div>
               </div>
             </section>
             <section>
               <a data-section-title href="#">Tab 3</a>
               <div data-section-content>
-                <h3>Title 3</h3>
-                <div class="subpane">Content 3</div>
+                <h2>Title 3</h2>
+                <div class="subpane">
+                  <h3>Subtitle 3</h3>
+                  <div class="subcontent">Content 3</div>
+                </div>
               </div>
             </section>
           </div>
@@ -740,22 +781,31 @@
               <section>
                 <a data-section-title href="#">Tab 1</a>
                 <div data-section-content>
-                  <h3>Title 1</h3>
-                  <div class="subpane">Content 1</div>
+                  <h2>Title 1</h2>
+                  <div class="subpane">
+                    <h3>Subtitle 1</h3>
+                    <div class="subcontent">Content 1</div>
+                  </div>
                 </div>
               </section>
               <section>
                 <a data-section-title href="#">Tab 2</a>
                 <div data-section-content>
-                  <h3>Title 2</h3>
-                  <div class="subpane">Content 2</div>
+                  <h2>Title 2</h2>
+                  <div class="subpane">
+                    <h3>Subtitle 2</h3>
+                    <div class="subcontent">Content 2</div>
+                  </div>
                 </div>
               </section>
               <section>
                 <a data-section-title href="#">Tab 3</a>
                 <div data-section-content>
-                  <h3>Title 3</h3>
-                  <div class="subpane">Content 3</div>
+                  <h2>Title 3</h2>
+                  <div class="subpane">
+                    <h3>Subtitle 3</h3>
+                    <div class="subcontent">Content 3</div>
+                  </div>
                 </div>
               </section>
             </div>
@@ -799,59 +849,6 @@
       </div>
       <div class="example">
         <div class="example-head">
-          <h1>Docs Sections</h1>
-        </div>
-        <div class="doc-section copy">
-          <span class="doc-label">Local</span>
-          <h1>Doc Section Header</h1>
-          <p>Description.</p>
-          <div class="doc-links">
-            <div class="row">
-              <a class="col-4">Link 1</a>
-              <a class="col-4" target="_blank">Link 2</a>
-              <a class="col-4" target="_blank">Link 3</a>
-            </div>
-            <div class="row">
-              <a class="col-4">Link 4</a>
-              <a class="col-4">Link 5</a>
-              <a class="col-4">Link 6</a>
-            </div>
-          </div>
-          <div class="doc-kw">
-            <span>Keywords</span>
-              <a>Link 7</a>
-              <a>Link 8</a>
-              <a>Link 9</a>
-          </div>
-        </div>
-        <pre data-lang="html">
-          <div class="doc-section copy">
-            <span class="doc-label">Local</span>
-            <h1>Doc Section Header</h1>
-            <p>Description.</p>
-            <div class="doc-links">
-              <div class="row">
-                <a class="col-4">Link 1</a>
-                <a class="col-4" target="_blank">Link 2</a>
-                <a class="col-4" target="_blank">Link 3</a>
-              </div>
-              <div class="row">
-                <a class="col-4">Link 4</a>
-                <a class="col-4">Link 5</a>
-                <a class="col-4">Link 6</a>
-              </div>
-            </div>
-            <div class="doc-kw">
-              <span>Keywords</span>
-                <a>Link 7</a>
-                <a>Link 8</a>
-                <a>Link 9</a>
-            </div>
-          </div>
-        </pre>
-      </div>
-      <div class="example">
-        <div class="example-head">
           <h1>Docs panes</h1>
         </div>
         <style>
@@ -861,7 +858,7 @@
             height: 87px;
           }
         </style>
-        <div class="doc-panes row copy">
+        <div class="doc-panes row gutters copy">
           <div class="col-6">
             <div class="doc-pane">
               <span class="doc-label">Local</span>
@@ -880,7 +877,7 @@
           </div>
         </div>
         <pre data-lang="html">
-          <div class="doc-panes row copy">
+          <div class="doc-panes row gutters copy">
             <div class="col-6">
               <div class="doc-pane">
                 <span class="doc-label">Local</span>
@@ -925,6 +922,8 @@
         <a class="btn active" href="javascript://">Active Button (toggled)</a>
         <br>
         <a class="btn action" href="javascript://">Call to Action Button</a>
+        <br>
+        <a class="btn danger" href="javascript://">Danger Button</a>
         <pre data-lang="html">
           <a class="btn pill">Pill Button</a>
           <br>
@@ -940,11 +939,13 @@
           <br>
           <a class="btn warning">Warning Button</a>
           <br>
-          <a class="btn pressed" href="javascript://">Pressed Button </a>
+          <a class="btn pressed">Pressed Button </a>
           <br>
-          <a class="btn active" href="javascript://">Active Button (toggled)</a>
+          <a class="btn active">Active Button (toggled)</a>
           <br>
           <a class="btn action">Call to Action Button</a>
+          <br>
+          <a class="btn danger">Danger Button</a>
         </pre>
       </div>
       <div class="example">

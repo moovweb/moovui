@@ -257,17 +257,17 @@
 
 .#{$moovui-prefix}flex {
   @include display-flex;
-  &.center {
+  &.#{$moovui-prefix}center {
     @include align-items(center);
   }
-  &.gap > :not(:last-child) {
-    margin-right: $sp;
+  &.#{$moovui-prefix}gutters > :not(:last-child) {
+    margin-right: $sp3;
   }
   > * {
     @include flex(1);
     display: block;
   }
-  .no-flex {
+  .#{$moovui-prefix}no-flex {
     @include flex(none);
   }
 }
@@ -281,20 +281,28 @@
   }
 }
 
-.no-flexbox.no-flexboxlegacy .#{$moovui-prefix}flex {
-  display: table;
-  width: 100%;
-  &.center > * {
-    vertical-align: middle;
+.no-flexbox.no-flexboxlegacy {
+  .#{$moovui-prefix}flex {
+    display: table;
+    width: 100%;
+    &.#{$moovui-prefix}gutters {
+      margin-left: -$sp3;
+      > * {
+        padding-left: $sp3;
+      }
+    }
+    &.#{$moovui-prefix}center > * {
+      vertical-align: middle;
+    }
+    > * {
+      display: table-cell;
+    }
   }
-  > * {
-    display: table-cell;
-  }
-}
 
-.no-flexbox.no-flexboxlegacy .#{$moovui-prefix}flex-justify {
-  display: table;
-  > * {
-    display: table-cell;
+  .#{$moovui-prefix}flex-justify {
+    display: table;
+    > * {
+      display: table-cell;
+    }
   }
 }

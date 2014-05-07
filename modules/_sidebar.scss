@@ -13,20 +13,26 @@
   }
   .active [data-section-title] {
     color: inherit;
-    font-weight: bold;
   }
   [data-section-title] {
-    background: #fff;
-    border: 1px solid #c7c7c7;
-    font-size: 13px;
-    padding: 5px $sp;
+    padding: 5px 30px 5px $sp;
     position: absolute;
     top: 0;
     left: 0;
-    text-align: center;
     width: 20%;
+    &:before {
+      @include icon-pencil;
+      color: $lightgray;
+      float: right;
+      margin-right: -20px;
+    }
     &:hover {
-      background: #f8f8f8;
+      @include radius;
+      background: $lightgray;
+      color: #fff;
+      &:before {
+        color: #fff;
+      }
     }
   }
   [data-section-content] {

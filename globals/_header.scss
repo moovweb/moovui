@@ -25,16 +25,10 @@
   }
   [data-dropdown]:before {
     @include icon-triangle-down;
-    color: #fff;
     margin: 13px 0 0 36px;
     position: absolute;
-  }
-  [data-dropdown-content].right {
-    margin: 0 0 0 $sp;
-    &:before {
-      left: auto;
-      right: 19px;
-    }
+    top: 0;
+    right: 0;
   }
 }
 

@@ -52,21 +52,37 @@
   }
 }
 
-@mixin btn-action {
-  @include background(linear-gradient(tint($green, 30%), $green));
+@mixin btn-color($color) {
+  @include background(linear-gradient(tint($color, 30%), $color));
   @include box-shadow(rgba(#000, 0.1) 0 1px 1px, rgba(#fff, 0.4) 0 1px inset);
-  background-color: tint($green, 10%);
-  border: 1px solid shade($green, 5%);
+  background-color: tint($color, 10%);
+  border: 1px solid shade($color, 5%);
   color: #fff;
   text-shadow: none;
   &:hover {
-    background: $green;
+    background: $color;
   }
   &:active {
     @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
-    background: shade($green, 5%);
-    border-color: shade($green, 30%) shade($green, 30%) shade($green, 20%);
+    background: shade($color, 5%);
+    border-color: shade($color, 30%) shade($color, 30%) shade($color, 20%);
   }
+  &:disabled, &.disabled {
+    @include background-image(linear-gradient(mix(tint($color, 30%), #fff), mix($color, #fff)));
+    border-color: mix(shade($color, 5%), #fff);
+  }
+  &.disabled {
+    opacity: 1;
+  }
+}
+
+@mixin btn-action {
+  @include btn-color($green);
+}
+
+
+@mixin btn-danger {
+  @include btn-color($red);
 }
 
 @if $moovui-init {
@@ -177,6 +193,10 @@
 
 .#{$moovui-prefix}btn.#{$moovui-prefix}action {
   @include btn-action;
+}
+
+.#{$moovui-prefix}btn.#{$moovui-prefix}danger {
+  @include btn-danger;
 }
 
 .#{$moovui-prefix}btn.#{$moovui-prefix}confirm {
