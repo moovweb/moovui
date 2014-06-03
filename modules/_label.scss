@@ -20,20 +20,16 @@ label {
     }
     & + select {
       display: inline-block;
+      margin-top: 0;
       vertical-align: middle;
       & + .chosen-container {
         display: inline-block;
+        margin-top: 0;
         vertical-align: middle;
       }
     }
     &.#{$moovui-prefix}text-right {
       min-width: 200px;
-    }
-  }
-  &:not(.#{$moovui-prefix}inline) + select {
-    margin-top: 5px;
-    & + .chosen-container {
-      margin-top: 5px;
     }
   }
 }

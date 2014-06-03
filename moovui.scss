@@ -16,6 +16,7 @@ $moovui-prefix: "" !default;
 @import "globals/footer";
 
 // Modules
+@import "modules/resp";
 @import "modules/accordion";
 @import "modules/actions";
 @import "modules/alert";
@@ -36,7 +37,6 @@ $moovui-prefix: "" !default;
 @import "modules/modal";
 @import "modules/notice";
 @import "modules/pane";
-@import "modules/resp";
 @import "modules/select";
 @import "modules/sidebar";
 @import "modules/syntax-highlighter";

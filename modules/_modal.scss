@@ -24,6 +24,11 @@
   width: 60%;
   height: auto;
   z-index: 1000;
+  @include mobile {
+    margin-left: -140px;
+    width: 280px;
+    left: 50%;
+  }
 }
 
 .modal-header {

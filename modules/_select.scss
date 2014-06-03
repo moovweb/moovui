@@ -17,6 +17,12 @@ select {
   &::-ms-expand {
     display: none;
   }
+  label + & {
+    margin-top: 5px;
+    & + .chosen-container {
+      margin-top: 5px;
+    }
+  }
 }
 
 option {
