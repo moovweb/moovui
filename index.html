@@ -77,8 +77,60 @@
       </div>
     </header>
     
-    <div id="page">
-      <div class="example">
+    <div id="page" style="padding-left: 190px">
+    <ul id="nav" class="pane pull-left section-list" style="margin-left: -190px; width: 170px">
+      <a href="#Foundation">Foundation</a>
+      <a href="#Responsive-Use">Responsive Use</a>
+      <a href="#Entypo-Icon-Font">Entypo Icon Font</a>
+      <a href="#Containers">Containers</a>
+      <a href="#Sections">Sections</a>
+      <a href="#Header">Header</a>
+      <a href="#Footer">Footer</a>
+      <a href="#Dropdown-Menus">Dropdown Menus</a>
+      <a href="#Alerts">Alerts</a>
+      <a href="#Statuses">Statuses</a>
+      <a href="#Headers">Headers</a>
+      <a href="#Headers-copy">Headers (copy)</a>
+      <a href="#Lists">Lists</a>
+      <a href="#Definition-Lists">Definition Lists</a>
+      <a href="#Text">Text (copy)</a>
+      <a href="#Code">Code</a>
+      <a href="#Tables">Tables</a>
+      <a href="#Media-Blocks">Media Blocks</a>
+      <a href="#Accordions">Accordions</a>
+      <a href="#Nested-Accordions">Nested Accordions</a>
+      <a href="#Tabs">Tabs</a>
+      <a href="#Tabbed-Panes">Tabbed Panes</a>
+      <a href="#Panels">Panels</a>
+      <a href="#Docs-Panes">Docs Panes</a>
+      <a href="#Buttons">Buttons</a>
+      <a href="#Button-Groups">Button Groups</a>
+      <a href="#Button-Bars">Button Bars</a>
+      <a href="#Selects">Selects (dropdown)</a>
+      <a href="#Toggles">Toggles (checkbox)</a>
+      <a href="#Inputs">Inputs</a>
+      <a href="#Modals">Modals</a>
+      <a href="#Tooltips">Tooltips</a>
+      <a href="#Callouts">Callouts</a>
+      <a href="#Disabled">Disabled</a>
+      <a href="#Basic-12-Grid">Basic 12 Grid</a>
+      <a href="#Flex">Flex</a>
+      <a href="#Helpers">Helpers</a>
+    </ul>
+      <style>
+        #nav a {
+          display: block;
+        }
+      </style>
+      <script>
+        var off = -$("#header").height() - 10;
+        function adjust(e) {
+          if ($(":target")[0])
+            scrollBy(0, off);
+        }
+        $(window).load(adjust).on("hashchange", adjust);
+      </script>
+      <div id="Foundation" class="example">
         <div class="example-head">
           <h1>Foundation</h1>
         </div>
@@ -88,7 +140,7 @@
           $(document).foundation("alerts dropdown reveal tooltips").foundation("section", {one_up: false});
         </pre>
       </div>
-      <div class="example">
+      <div id="Responsive-Use" class="example">
         <div class="example-head">
           <h1>Responsive Use</h1>
         </div>
@@ -139,9 +191,9 @@
           <div class="desktop-only">Desktop: true</div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Entypo-Icon-Font" class="example">
         <div class="example-head">
-          <h1>Entypo icon font</h1>
+          <h1>Entypo Icon Font</h1>
           <p>Find icon names by mousing over icons in the <a href="http://www.entypo.com/characters/" target="_blank">character map</a>.</p>
         </div>
         <span class="icon-phone"></span>
@@ -159,7 +211,7 @@
           <span class="icon-paper-plane"></span>
         </pre>
       </div>
-      <div class="example">
+      <div id="Containers" class="example">
         <div class="example-head">
           <h1>Containers</h1>
           <p>An element with id <code>page</code> behaves the same and can be a general wrapper for content between the header and footer.</p>
@@ -169,7 +221,7 @@
           <div class="content">This content will have automatic margins to fit in the default 960px.</div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Sections" class="example">
         <div class="example-head">
           <h1>Sections</h1>
         </div>
@@ -180,7 +232,7 @@
           <div class="section">Content with margin</div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Header" class="example">
         <div class="example-head">
           <h1>Header</h1>
           <p>Add the class <code>affix</code> to fix it to the top of the page.</p>
@@ -198,7 +250,7 @@
           </header>
         </pre>
       </div>
-      <div class="example">
+      <div id="Footer" class="example">
         <div class="example-head">
           <h1>Footer</h1>
         </div>
@@ -211,9 +263,9 @@
           </footer>
         </pre>
       </div>
-      <div class="example">
+      <div id="Dropdown-Menus" class="example">
         <div class="example-head">
-          <h1>Dropdown menus</h1>
+          <h1>Dropdown Menus</h1>
         </div>
         You can find the example in the header.
         <pre data-lang="html">
@@ -227,7 +279,7 @@
           </ul>
         </pre>
       </div>
-      <div class="example">
+      <div id="Alerts" class="example">
         <div class="example-head">
           <h1>Alerts</h1>
         </div>
@@ -266,7 +318,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Statuses" class="example">
         <div class="example-head">
           <h1>Statuses</h1>
         </div>
@@ -279,7 +331,7 @@
           <div class="text-error">Error: ...</div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Headers" class="example">
         <div class="example-head">
           <h1>Headers</h1>
         </div>
@@ -296,7 +348,7 @@
           <h5>Header 5</h5>
         </pre>
       </div>
-      <div class="example">
+      <div id="Headers-copy" class="example">
         <div class="example-head">
           <h1>Headers (copy)</h1>
           <p>You can add a <code>copy</code> class to an ancestor or the element itself</p>
@@ -318,7 +370,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Lists" class="example">
         <div class="example-head">
           <h1>Lists</h1>
           <p>You can add a <code>copy</code> class to an ancestor or the element itself. You can add a <code>link-list</code> class for the example style.</p>
@@ -371,7 +423,7 @@
           </ul>
         </pre>
       </div>
-      <div class="example">
+      <div id="Definition-Lists" class="example">
         <div class="example-head">
           <h1>Definition Lists</h1>
         </div>
@@ -394,7 +446,7 @@
           </dl>
         </pre>
       </div>
-      <div class="example">
+      <div id="Text" class="example">
         <div class="example-head">
           <h1>Text (copy)</h1>
           <p>You can add a <code>copy</code> class to an ancestor or the element itself</p>
@@ -408,7 +460,7 @@
           </p>
         </pre>
       </div>
-      <div class="example">
+      <div id="Code" class="example">
         <div class="example-head">
           <h1>Code</h1>
         </div>
@@ -431,7 +483,7 @@
           <pre class="inline">&amp;lt;pre&amp;gt; with no styling</pre>
         </pre>
       </div>
-      <div class="example">
+      <div id="Tables" class="example">
         <div class="example-head">
           <h1>Tables</h1>
           <p>You can add a <code>no-borders</code> class to remove the styling.</p>
@@ -553,9 +605,9 @@
           </table>
         </pre>
       </div>
-      <div class="example">
+      <div id="Media-Blocks" class="example">
         <div class="example-head">
-          <h1>Media blocks</h1>
+          <h1>Media Blocks</h1>
         </div>
         <style>
           img {
@@ -570,7 +622,7 @@
           <img alt="&amp;lt;img&amp;gt; tag" class="media-block">
         </pre>
       </div>
-      <div class="example">
+      <div id="Accordions" class="example">
         <div class="example-head">
           <h1>Accordions</h1>
           <p>You can add a <code>qna</code> class to the wrapper for the example style.
@@ -590,7 +642,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Nested-Accordions" class="example">
         <div class="example-head">
           <h1>Nested Accordions</h1>
           <p>You can add a <code>doc-sidebar</code> class to the wrapper for the example style.
@@ -690,7 +742,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Tabs" class="example">
         <div class="example-head">
           <h1>Tabs</h1>
         </div>
@@ -737,9 +789,9 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Tabbed-Panes" class="example">
         <div class="example-head">
-          <h1>Tabbed panes</h1>
+          <h1>Tabbed Panes</h1>
         </div>
         <div class="pane">
           <div data-section="vertical-tabs">
@@ -812,7 +864,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Panels" class="example">
         <div class="example-head">
           <h1>Panels</h1>
         </div>
@@ -847,9 +899,9 @@
           </ol>
         </pre>
       </div>
-      <div class="example">
+      <div id="Docs-Panes" class="example">
         <div class="example-head">
-          <h1>Docs panes</h1>
+          <h1>Docs Panes</h1>
         </div>
         <style>
           .media {
@@ -897,7 +949,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Buttons" class="example">
         <div class="example-head">
           <h1>Buttons</h1>
         </div>
@@ -948,9 +1000,9 @@
           <a class="btn danger">Danger Button</a>
         </pre>
       </div>
-      <div class="example">
+      <div id="Button-Groups" class="example">
         <div class="example-head">
-          <h1>Button groups</h1>
+          <h1>Button Groups</h1>
         </div>
         <div class="btngroup">
           <a class="btn" href="javascript://">Button 1</a>
@@ -965,9 +1017,9 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Button-Bars" class="example">
         <div class="example-head">
-          <h1>Button bars</h1>
+          <h1>Button Bars</h1>
         </div>
         <div class="btnbar">
           <a class="btn" href="javascript://">Button 1</a>
@@ -998,17 +1050,20 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Selects" class="example">
         <div class="example-head">
           <h1>Selects (dropdown)</h1>
         </div>
-        <select>
+        <select style="float: left; margin-right: 20px">
           <option>Native Option 1</option>
           <option>Native Option 2</option>
           <option>Native Option 3</option>
           <option>Native Option 4</option>
           <option>Native Option 5</option>
           <option>Native Option 6</option>
+        </select>
+        <select class="error">
+          <option>Native Option 1</option>
         </select>
         <p>MoovUI can use the <a href="http://harvesthq.github.io/chosen/" target="_blank">Chosen</a> plugin. Remember to initialize Chosen:</p>
         <pre data-lang="js">
@@ -1030,7 +1085,7 @@
           <option>Autocomplete Option 6</option>
         </select>
         <script>
-          $("select:nth-of-type(2)").chosen({disable_search_threshold: Infinity});
+          $("select:nth-of-type(3)").chosen({disable_search_threshold: Infinity});
           $("select.autocomplete").chosen();
         </script>
         <pre data-lang="html">
@@ -1041,6 +1096,9 @@
             <option>Native Option 4</option>
             <option>Native Option 5</option>
             <option>Native Option 6</option>
+          </select>
+          <select class="error">
+            <option>Native Option 1</option>
           </select>
           <select>
             <option>Chosen Option 1</option>
@@ -1060,7 +1118,7 @@
           </select>
         </pre>
       </div>
-      <div class="example">
+      <div id="Toggles" class="example">
         <div class="example-head">
           <h1>Toggles (checkbox)</h1>
         </div>
@@ -1090,7 +1148,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Inputs" class="example">
         <div class="example-head">
           <h1>Inputs</h1>
           <p>Add the class <code>code</code> for a code input.</p>
@@ -1122,7 +1180,7 @@
           <textarea>Text area</textarea>
         </pre>
       </div>
-      <div class="example">
+      <div id="Modals" class="example">
         <div class="example-head">
           <h1>Modals</h1>
         </div>
@@ -1153,7 +1211,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Tooltips" class="example">
         <div class="example-head">
           <h1>Tooltips</h1>
         </div>
@@ -1168,7 +1226,7 @@
           <span class="tip-right" data-tooltip title="tooltip text">Hover over me</span>
         </pre>
       </div>
-      <div class="example">
+      <div id="Callouts" class="example">
         <div class="example-head">
           <h1>Callouts</h1>
         </div>
@@ -1179,7 +1237,7 @@
           <div class="callout warning">Callout warning<br>with second line</div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Disabled" class="example">
         <div class="example-head">
           <h1>Disabled</h1>
         </div>
@@ -1204,7 +1262,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Basic-12-Grid" class="example">
         <div class="example-head">
           <h1>Basic 12 Grid</h1>
           <p>Add the class <code>gutters</code> to add some spacing between columns.</p>
@@ -1313,7 +1371,7 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Flex" class="example">
         <div class="example-head">
           <h1>Flex</h1>
           <p>For now, use with caution if supporting IE versions &lt; 10. Add the class <code>center</code> to vertically align elements.</p>
@@ -1390,16 +1448,18 @@
           </div>
         </pre>
       </div>
-      <div class="example">
+      <div id="Helpers" class="example">
         <div class="example-head">
           <h1>Helpers</h1>
         </div>
+        <div class="stretch" style="outline: 1px solid #aaa">stretch</div>
         <div class="pull-left">float left</div>
         <div class="pull-right">float right</div>
         <div class="text-center">center</div>
         <div class="text-left">left</div>
         <div class="text-right">right</div>
         <pre data-lang="html">
+          <div class="stretch">stretch</div>
           <div class="pull-left">float left</div>
           <div class="pull-right">float right</div>
           <div class="text-center">center</div>
@@ -1434,7 +1494,11 @@
     <script src="foundation.section.js"></script>
     <script src="foundation.tooltips.custom.js"></script>
     <script>
-      $(document).foundation("alerts dropdown tooltips").foundation("reveal", {animation: "fade", animationSpeed: 200}).foundation("section", {one_up: false});
+      $(document).foundation("alerts dropdown tooltips").foundation("reveal", {animation: "fade", animationSpeed: 200});
+      // wait for font face to load to calculate accurate widths
+      $(window).load(function() {
+        $(document).foundation("section", {one_up: false});
+      });
     </script>
   </body>
 </html>

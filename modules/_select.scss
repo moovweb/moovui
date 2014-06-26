@@ -17,6 +17,14 @@ select {
   &::-ms-expand {
     display: none;
   }
+  &.#{$moovui-prefix}error {
+    @include box-shadow($red 0 0 0 1px);
+    border-color: $red;
+    & + .chosen-container .chosen-single {
+      @include box-shadow($red 0 0 0 1px);
+      border-color: $red;
+    }
+  }
   label + & {
     margin-top: 5px;
     & + .chosen-container {
@@ -35,6 +43,11 @@ select, .chosen-single {
   @include background($img no-repeat 100% 50%, linear-gradient(#fff 1px, #f9f9f9 1px, #eaeaea));
   @include border-radius(2px);
   @include box-shadow(rgba(#000, 0.1) 0 1px 1px);
+  @include transition(0.3s);
+  // ugly but bourbon mixin doesn't convert box-shadow into prefixed
+  -webkit-transition-property: -webkit-box-shadow, box-shadow, border-color;
+  -moz-transition-property: box-shadow, border-color;
+  transition-property: box-shadow, border-color;
   border: 1px solid #ccc;
   color: #777;
   letter-spacing: 0.5px;
