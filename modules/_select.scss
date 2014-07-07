@@ -85,8 +85,12 @@ table select, table .chosen-container {
   display: block;
   font-weight: normal;
   line-height: $line-height;
-  padding: 2px 10px;
+  padding: 2px 44px 2px 10px;
   position: relative;
+  span {
+    @include ellipsis;
+    display: block;
+  }
   div {
     display: none;
   }

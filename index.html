@@ -1085,8 +1085,10 @@
           <option>Autocomplete Option 6</option>
         </select>
         <script>
-          $("select:nth-of-type(3)").chosen({disable_search_threshold: Infinity});
-          $("select.autocomplete").chosen();
+          $(window).load(function() {
+            $("select:nth-of-type(3)").chosen({disable_search_threshold: Infinity});
+            $("select.autocomplete").chosen();
+          });
         </script>
         <pre data-lang="html">
           <select>
