@@ -147,4 +147,11 @@ table select, table .chosen-container {
     color: #fff;
   }
 }
+
+// IE doesn't respect letter-spacing on select
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  select, .chosen-single, .chosen-results li {
+    letter-spacing: 0;
+  }
+}
 }
