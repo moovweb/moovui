@@ -66,6 +66,7 @@
 		var r = SyntaxHighlighter.regexLib;
 		
 		this.regexList = [
+			{ regex: /\(data:[-\/;=\w]*?;base64,[+\/\w]+?=?=?\)/g,		css: 'plain' },		// PATCH to prevent base64 data parsed as comment
 			{ regex: r.multiLineCComments,								css: 'comments' },		// multiline comments
 			{ regex: r.singleLineCComments,								css: 'comments' },		// singleline comments
 			{ regex: r.doubleQuotedString,								css: 'string' },		// double quoted strings

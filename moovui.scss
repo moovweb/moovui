@@ -1,5 +1,10 @@
 $moovui-init: true !default;
 $moovui-prefix: "" !default;
+$entypo-ie-src: url("fonts/entypo.eot") !default;
+$entypo-src: url("fonts/entypo.eot?#iefix") format("embedded-opentype"),
+             url("fonts/entypo.woff") format("woff"),
+             url("fonts/entypo.ttf") format("truetype"),
+             url("fonts/entypo.svg#entypo") format("svg") !default;
 
 @import "bourbon/bourbon";
 @import "globals/normalize";
