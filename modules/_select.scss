@@ -95,6 +95,11 @@ table select, table .chosen-container {
     display: none;
   }
 }
+.chosen-disabled .chosen-single {
+  background-color: #eee;
+  color: #aaa;
+  pointer-events: none;
+}
 
 .chosen-drop {
   @include box-shadow(rgba(#000, 0.1) 0 0 2px 1px);

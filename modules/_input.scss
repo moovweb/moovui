@@ -18,6 +18,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
   margin: 0 0 $sp2;
   padding: 0 $sp 1px;
   min-height: 30px;
+  &:disabled {
+    background: #f3f3f3;
+    border-color: tint(#cbcbcb, 25%) tint(#d5d5d5, 25%) tint(#cfcfcf, 25%);
+  }
   &:focus {
     @include box-shadow(rgba(#000, 0.2) 0 0 3px, rgba(#fff, 0.5) 0 1px);
     border-color: #c8c8c8;
@@ -31,6 +35,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
     color: #ccc;
   }
   &:-ms-input-placeholder {
+    color: #ccc;
+  }
+  &.placeholder {
+    // for < IE 10
     color: #ccc;
   }
   &.#{$moovui-prefix}error {
