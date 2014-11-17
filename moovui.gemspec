@@ -10,10 +10,10 @@ Gem::Specification.new do |spec|
   spec.email         = ["chris.neale@mooveb.com"]
   spec.summary       = %q{Front-end toolkit for Moovweb Applications}
   spec.description   = %q{See http://moovweb.github.io/moovui for interactive examples of applying MoovUI styles and components}
-  spec.homepage      = ""
+  spec.homepage      = "http://moovweb.github.io/moovui"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = Dir["{lib,app}/**/*"] + ["MIT-LICENSE", "README.md"]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.5"
