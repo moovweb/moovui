@@ -1,4 +1,4 @@
-Copyright (c) 2014 Chris Neale
+Copyright (c) 2014 Moov Corporation
 
 MIT License
 

@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://moovweb.github.io/moovui"
   spec.license       = "MIT"
 
-  spec.files         = Dir["{lib,app}/**/*"] + ["MIT-LICENSE", "README.md"]
+  spec.files         = Dir["{lib,app}/**/*"] + ["LICENSE.txt", "README.md"]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.5"
