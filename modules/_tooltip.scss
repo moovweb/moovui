@@ -1,8 +1,9 @@
-// copy :focus style
-.#{$moovui-prefix}btn[data-tooltip]:empty:active {
-  @include box-shadow(rgba(#000, 0.1) 0 1px);
-  background: tint($darkgray, 15%);
-  border-color: transparent;
+// copy normal style
+.#{$moovui-prefix}btn[data-tooltip]:not(a):empty:active {
+  @include background(linear-gradient(#f9f9f9, #eaeaea));
+  @include box-shadow(rgba(#000, 0.1) 0 1px 1px, #fff 0 1px inset);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
 }
 
 @if $moovui-init {
@@ -11,25 +12,16 @@
   background: rgba(#000, 0.7);
   color: #fff;
   display: none;
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 0.25px;
   line-height: 20px;
   padding: 6px $sp;
   position: absolute;
   left: 50%;
   max-width: 85%;
   width: 100%;
+  min-height: 32px;
   z-index: 999;
-  > .nub {
-    border: solid 5px;
-    border-color: transparent transparent #000 transparent;
-    display: block;
-    opacity: 0.7;
-    position: absolute;
-    top: -10px;
-    left: 5px;
-    width: 0;
-    height: 0;
-  }
   &.tip-top > .nub {
     border-color: #000 transparent transparent transparent;
     top: auto;
@@ -49,11 +41,36 @@
     right: auto;
     left: -10px;
   }
+  > .nub, &.tip-override > .nub {
+    border: solid 5px;
+    border-color: transparent transparent #000 transparent;
+    display: block;
+    margin: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 0;
+    height: 0;
+  }
+  .tap-to-close {
+    @include hide-text;
+    position: absolute;
+    top: -3px;
+    right: 5px;
+    &:before {
+      @include icon-cross;
+      font-size: 12px;
+    }
+  }
   a {
     color: tint($link-color, 25%);
   }
   pre, code {
     font-size: 12px;
   }
+}
+html.touch .tooltip {
+  padding-right: 18px;
 }
 }

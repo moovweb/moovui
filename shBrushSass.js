@@ -32,14 +32,14 @@
 		};
 
 		var keywords =	'ascent azimuth background-attachment background-color background-image background-position ' +
-						'background-repeat background baseline bbox border-collapse border-color border-spacing border-style border-top ' +
+						'background-repeat background baseline bbox border-collapse border-color border-radius border-spacing border-style border-top ' +
 						'border-right border-bottom border-left border-top-color border-right-color border-bottom-color border-left-color ' +
 						'border-top-style border-right-style border-bottom-style border-left-style border-top-width border-right-width ' +
-						'border-bottom-width border-left-width border-width border bottom cap-height caption-side centerline clear clip color ' +
+						'border-bottom-width border-left-width border-width border bottom box-sizing cap-height caption-side centerline clear clip color ' +
 						'content counter-increment counter-reset cue-after cue-before cue cursor definition-src descent direction display ' +
 						'elevation empty-cells float font-size-adjust font-family font-size font-stretch font-style font-variant font-weight font ' +
 						'height left letter-spacing line-height list-style-image list-style-position list-style-type list-style margin-top ' +
-						'margin-right margin-bottom margin-left margin marker-offset marks mathline max-height max-width min-height min-width orphans ' +
+						'margin-right margin-bottom margin-left margin marker-offset marks mathline max-height max-width min-height min-width opacity orphans ' +
 						'outline-color outline-style outline-width outline overflow padding-top padding-right padding-bottom padding-left padding page ' +
 						'page-break-after page-break-before page-break-inside pause pause-after pause-before pitch pitch-range play-during position ' +
 						'quotes right richness size slope src speak-header speak-numeral speak-punctuation speak speech-rate stemh stemv stress ' +
@@ -66,6 +66,7 @@
 		var r = SyntaxHighlighter.regexLib;
 		
 		this.regexList = [
+			{ regex: /\(data:[-\/;=\w]*?;base64,[+\/\w]+?=?=?\)/g,		css: 'plain' },		// PATCH to prevent base64 data parsed as comment
 			{ regex: r.multiLineCComments,								css: 'comments' },		// multiline comments
 			{ regex: r.singleLineCComments,								css: 'comments' },		// singleline comments
 			{ regex: r.doubleQuotedString,								css: 'string' },		// double quoted strings

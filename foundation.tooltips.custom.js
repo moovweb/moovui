@@ -59,9 +59,16 @@
                 self.showOrCreateTip($this);
               } else if (e.type === 'mouseout' || e.type === 'mouseleave') {
                 // PATCH to hover over actual tooltip
-                self.getTip($this).data("timeout", setTimeout(function() {
+                var tip = self.getTip($this);
+                if (tip.has("a")[0]) {
+                  clearTimeout(tip.data("_timeout"));
+                  tip.data("_timeout", setTimeout(function() {
+                    self.hide($this);
+                    tip.removeData("_timeout");
+                  }, 100));
+                }
+                else
                   self.hide($this);
-                }, 100));
               }
             });
         }
@@ -114,7 +121,7 @@
       var self = this;
       $tip.on('mouseenter.fndtn.tooltip mouseleave.fndtn.tooltip', function (e) {
         if (/enter|over/i.test(e.type))
-          clearTimeout($tip.data("timeout"));
+          clearTimeout($tip.data("_timeout"));
         else if (e.type === 'mouseout' || e.type === 'mouseleave')
           self.hide($(this));
       });

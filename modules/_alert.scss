@@ -1,15 +1,14 @@
-@mixin notice {
+@mixin alert {
   @include radius;
   background: #98c17b;
   color: #fff;
   margin: 0 auto $sp;
-  padding: $sp 14px $sp 68px;
+  padding: $sp 40px $sp 68px;
   position: relative;
   max-width: $page-width - $sp2;
   min-height: 60px;
   &:before {
-    @include entypo-icon;
-    @extend .icon-circled-info:before;
+    @include icon-circled-info;
     color: #fff;
     font-size: 40px;
     margin: -12px 0 0;
@@ -18,18 +17,18 @@
     left: 15px;
   }
   &.success:before {
-    @extend .icon-thumbs-up:before;
+    content: $icon-thumbs-up;
   }
   &.error {
     background: #e46c67;
     &:before {
-      @extend .icon-warning:before;
+      content: $icon-warning;
     }
   }
   &.warning {
     background: #e4cb5d;
     &:before {
-      @extend .icon-warning:before;
+      content: $icon-warning;
     }
   }
   .close {
@@ -38,6 +37,7 @@
     font-size: 20px;
     font-weight: bold;
     line-height: 22px;
+    margin: 0 -26px 0 0;
     opacity: 0.2;
     text-decoration: none;
     &:hover, &:focus {
@@ -60,28 +60,38 @@
 @mixin callout {
   @include radius;
   background: #eff2f3;
-  border: 1px solid #bdc4cb;
-  border-left-width: 50px;
+  border: solid #bdc4cb;
+  border-width: 1px 1px 1px 0;
   font-weight: normal;
   margin: 0 0 $sp2;
-  padding: $sp;
+  padding: ($sp - 1px) ($sp - 1px) ($sp - 1px) $sp6;
   position: relative;
   &:before {
-    @include entypo-icon;
-    @extend .icon-info:before;
+    @include border-radius(4px 0 0 4px);
+    background: #bdc4cb;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+  }
+  &:after {
+    @include icon-circled-info;
     color: #fff;
     font-size: 20px;
-    margin: -13px 0 0 -60px;
+    margin: -13px 0 0;
     position: absolute;
     top: 50%;
+    left: 0;
     text-align: center;
     width: 50px;
   }
-  &.warning:before {
-    @extend .icon-warning:before;
+  &.warning:after {
+    content: $icon-warning;
   }
   p, ol {
-    font: inherit;
+    font: inherit !important;
   }
   > p:last-child {
     margin: 0;
@@ -90,22 +100,22 @@
 
 @if $moovui-init {
 [data-alert] {
-  @include notice;
+  @include alert;
+}
 }
 
-.callout {
+.#{$moovui-prefix}callout {
   @include callout;
 }
 
-.text-success {
+.#{$moovui-prefix}text-success {
   color: $green;
 }
 
-.text-error {
+.#{$moovui-prefix}text-error {
   color: $red;
 }
 
-.text-warning {
+.#{$moovui-prefix}text-warning {
   color: mix($orange, $yellow);
-}
 }

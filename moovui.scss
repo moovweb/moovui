@@ -1,5 +1,10 @@
 $moovui-init: true !default;
 $moovui-prefix: "" !default;
+$entypo-ie-src: url("fonts/entypo.eot") !default;
+$entypo-src: url("fonts/entypo.eot?#iefix") format("embedded-opentype"),
+             url("fonts/entypo.woff") format("woff"),
+             url("fonts/entypo.ttf") format("truetype"),
+             url("fonts/entypo.svg#entypo") format("svg") !default;
 
 @import "bourbon/bourbon";
 @import "globals/normalize";
@@ -16,13 +21,17 @@ $moovui-prefix: "" !default;
 @import "globals/footer";
 
 // Modules
+@import "modules/resp";
 @import "modules/accordion";
+@import "modules/actions";
+@import "modules/alert";
 @import "modules/btn";
 @import "modules/btnbar";
 @import "modules/code";
 @import "modules/copy";
-@import "modules/docs";
 @import "modules/definition";
+@import "modules/disabled";
+@import "modules/docs";
 @import "modules/dropdown";
 @import "modules/flex";
 @import "modules/grid";
@@ -31,13 +40,13 @@ $moovui-prefix: "" !default;
 @import "modules/list";
 @import "modules/media";
 @import "modules/modal";
-@import "modules/notice";
 @import "modules/pane";
-@import "modules/resp";
 @import "modules/select";
 @import "modules/sidebar";
 @import "modules/syntax-highlighter";
 @import "modules/table";
+@import "modules/tabs";
+@import "modules/toggle";
 @import "modules/tooltip";
 
 $moovui-init: false;

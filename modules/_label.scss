@@ -1,6 +1,34 @@
 @if $moovui-init {
 label {
   display: inline-block;
-  margin: 0 0 5px;
 }
+}
+
+label {
+  &.#{$moovui-prefix}inline {
+    float: left;
+    margin: 0 $sp $sp2 0;
+    padding: 3px 0;
+    min-width: 120px;
+    & + input {
+      display: inline-block;
+      margin-top: 0;
+    }
+    & + textarea {
+      display: inline-block;
+      margin-top: 0;
+    }
+    & + select {
+      display: inline-block;
+      margin-top: 0;
+      vertical-align: middle;
+      & + .chosen-container {
+        display: inline-block;
+        margin-top: 0;
+      }
+    }
+    &.#{$moovui-prefix}text-right {
+      min-width: 200px;
+    }
+  }
 }

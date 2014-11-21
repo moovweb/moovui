@@ -3,8 +3,8 @@
   @include box-shadow(rgba(#000, 0.2) 0 1px 4px);
   background: #f9f9f9;
   position: absolute;
-  top: -9999px;
-  width: 160px;
+  left: -9999px;
+  min-width: 160px;
   z-index: 99;
   &:before {
     border: 6px solid transparent;

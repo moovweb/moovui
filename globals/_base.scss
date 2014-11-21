@@ -9,7 +9,7 @@ html {
 
 body {
   -webkit-text-size-adjust: 100%;
-  background: #ced3d8;
+  background: #fff;
   color: $text-color;
   font: $font-size/#{$line-height} $font;
   margin: 0;
@@ -35,7 +35,8 @@ img {
   padding: $sp $page-margin;
 }
 
-.section + .section {
-  margin: $sp2 0 0;
 }
+
+.#{$moovui-prefix}section + .#{$moovui-prefix}section {
+  margin: $sp2 0 0;
 }

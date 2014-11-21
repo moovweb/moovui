@@ -21,14 +21,21 @@
     font-size: 9px;
     font-weight: bold;
     letter-spacing: 1px;
+    line-height: 16px;
     position: absolute;
-    right: 3px;
+    right: 2px;
     top: 0;
     text-transform: uppercase;
+  }
+  table, tbody, tr, td {
+    display: block;
   }
   table {
     background: none;
     margin: 0;
+  }
+  tr {
+    background: none;
   }
   td {
     border: 0;
@@ -39,9 +46,11 @@
   }
   .container {
     @include border-radius(0 0 $radius 0);
+    display: inline-block;
     padding: $sp;
   }
   .gutter {
+    @include border-radius($radius 0 0 $radius);
     background: #777;
     color: #fff;
     padding: $sp 6px;
@@ -50,6 +59,7 @@
     width: 35px;
   }
   .code {
+    overflow: auto;
     padding: 0;
     width: 100%;
   }
