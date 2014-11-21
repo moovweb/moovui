@@ -11,6 +11,10 @@ a.copy, .copy a {
   font-weight: bold;
 }
 
+h1, h2, h3 {
+  line-height: 30px;
+}
+
 h1, h2 {
   margin: 0 0 $sp2;
 }
@@ -60,7 +64,6 @@ h2.copy, .copy h2 {
 }
 
 h3.copy, .copy h3 {
-  color: #8d9aa9;
   font-size: $h3-copy-size;
   font-weight: normal;
 }

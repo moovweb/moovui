@@ -1,21 +1,3 @@
-@mixin doc-section {
-  @include radius;
-  background: #fff;
-  border: 2px solid #bdc4cb;
-  color: #666;
-  margin: 0 0 $sp8;
-  padding: $sp2 $sp3;
-}
-
-@mixin doc-panes {
-  :first-child .doc-pane {
-    margin-right: $sp;
-  }
-  :last-child .doc-pane {
-    margin-left: $sp;
-  }
-}
-
 @mixin doc-pane {
   @include clearfix;
   @include radius;
@@ -39,6 +21,9 @@
     width: 87px;
     height: 87px;
   }
+  p:first-of-type {
+    overflow: hidden;
+  }
   a {
     float: right;
   }
@@ -57,71 +42,10 @@
   text-transform: uppercase;
 }
 
-@mixin doc-links {
-  a {
-    margin: 0 0 $sp;
-    &:hover:before {
-      opacity: 1;
-    }
-    &:before {
-      @include entypo-icon;
-      @extend .icon-right:before;
-      margin: 0 5px -1px 0;
-      opacity: 0.5;
-    }
-    &[target="_blank"]:after {
-      @include entypo-icon;
-      @extend .icon-popup:before;
-      color: #d1d1d1;
-      margin-left: 5px;
-    }
-  }
-}
-
-@mixin doc-keywords {
-  @include border-radius(0 0 2px 2px);
-  background: #f0f4f7;
-  border: 1px dotted #bdc4cb;
-  border-top: 1px solid #d7d8e0;
-  padding: $sp $sp2;
-  margin: $sp2 (-$sp2) (-$sp7);
-  text-transform: lowercase;
-  span {
-    color: $darkblue;
-    font-size: 10px;
-    font-weight: bold;
-    margin: 0 5px 0 0;
-    text-transform: uppercase;
-  }
-  a {
-    background: #fff;
-    font-size: 11px;
-    font-weight: normal;
-    margin: 0 4px;
-    padding: 3px 5px;
-  }
-}
-
-.#{$moovui-prefix}doc-section {
-  @include doc-section;
-}
-
-.#{$moovui-prefix}doc-panes {
-  @include doc-panes;
-}
-
 .#{$moovui-prefix}doc-pane {
   @include doc-pane;
 }
 
 .#{$moovui-prefix}doc-label {
   @include doc-label;
-}
-
-.#{$moovui-prefix}doc-links {
-  @include doc-links;
-}
-
-.#{$moovui-prefix}doc-kw {
-  @include doc-keywords;
 }

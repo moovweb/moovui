@@ -7,10 +7,7 @@
   min-width: $min-page-width;
   width: 100%;
   height: $nav-height;
-  z-index: 2;
-  &.affix {
-    position: fixed;
-  }
+  z-index: 101;
   > .content {
     position: relative;
   }
@@ -27,18 +24,11 @@
     }
   }
   [data-dropdown]:before {
-    @include entypo-icon;
-    @extend .icon-triangle-down:before;
-    color: #fff;
+    @include icon-triangle-down;
     margin: 13px 0 0 36px;
     position: absolute;
-  }
-  [data-dropdown-content].right {
-    margin: 0 0 0 $sp;
-    &:before {
-      left: auto;
-      right: 19px;
-    }
+    top: 0;
+    right: 0;
   }
 }
 
@@ -61,4 +51,8 @@
     margin: 0 24px 0 0;
   }
 }
+}
+
+#header.#{$moovui-prefix}affix {
+  position: fixed;
 }

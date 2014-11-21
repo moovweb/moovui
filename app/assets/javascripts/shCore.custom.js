@@ -2261,6 +2261,12 @@ sh.Highlighter.prototype = {
 
     // PATCH to allow embedded html
     var tags = [], c = 0;
+
+    // entity fix for Chrome
+    code = code.replace(/(<[^>]*\w+=)(["'])(.*?)\2/g, function(match, p1, p2, p3) {
+      return p1 + p2 + p3.replace(/</g, "&lt;").replace(/>/g, "&gt;") + p2;
+    });
+
     code = code.replace(/<(.*?)>/mg, function(m, p1) {
       tags[c] = p1;
       return String.fromCharCode(c++ + 5000);

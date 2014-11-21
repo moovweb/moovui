@@ -1,9 +1,6 @@
 @mixin btnbar {
   @include clearfix;
   font-size: 0;
-  li {
-    display: inline;
-  }
   input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
     @include border-radius(0);
     border-right-width: 0;
@@ -14,17 +11,24 @@
       @include border-radius(0 $radius $radius 0);
       border-right-width: 1px;
     }
-  }
-  .active {
-    input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
-      @include box-shadow(rgba(#000, 0.2) 0 0 4px inset);
-      background: $darkgray;
-      border-color: shade($gray, 30%) shade($gray, 30%) shade($gray, 20%);
+    &:pressed + *, &.pressed + * {
+      border-left-color: shade(#ccc, 10%);
     }
   }
-  .active + * {
-    input[type="submit"], input[type="button"], button, .#{$moovui-prefix}btn {
-      border-left-color: shade($gray, 30%);
+  input[type="radio"] {
+    @include appearance(none);
+    margin: 0 -100px 0 0;
+    opacity: 0;
+    outline: none;
+    position: relative;
+    min-width: 100px;
+    height: 30px;
+    z-index: 1;
+    &:active + *, &:checked + * {
+      @include btn-pressed;
+      & + * + * {
+        border-left-color: shade(#ccc, 10%);
+      }
     }
   }
 }

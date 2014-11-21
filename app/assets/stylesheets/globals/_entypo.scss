@@ -3,23 +3,21 @@
 @if $moovui-init {
 @font-face {
   font-family: "Entypo";
-  src: url("fonts/entypo.eot");
-  src: url("fonts/entypo.eot?#iefix") format("embedded-opentype"),
-       url("fonts/entypo.woff") format("woff"),
-       url("fonts/entypo.ttf") format("truetype"),
-       url("fonts/entypo.svg#entypo") format("svg");
+  src: $entypo-ie-src;
+  src: $entypo-src;
   font-weight: normal;
   font-style: normal;
 }
 }
 
 @mixin entypo-icon($icon: null) {
-  -webkit-font-smoothing: antialiased;
+  @include antialiased;
   display: inline-block;
   font-family: "Entypo";
   font-size: 15px;
   font-style: normal;
   font-weight: normal;
+  line-height: $line-height;
   vertical-align: bottom; // use bottom so negative margin-bottom can be used
   @if $icon {
     content: $icon;
