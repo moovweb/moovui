@@ -224,16 +224,16 @@
   }
 }
 
-table .#{$moovui-prefix}btn {
-  margin-bottom: 0;
+th, td {
+  > .#{$moovui-prefix}btn {
+    margin-bottom: 0;
+  }
 }
 
 @if $moovui-init {
 input[type="submit"], input[type="button"], button {
   @include btn;
-}
-table {
-  input[type="submit"], input[type="button"], button {
+  th > &, td > & {
     margin-bottom: 0;
   }
 }

@@ -464,6 +464,7 @@
       <div id="Code" class="example">
         <div class="example-head">
           <h1>Code</h1>
+          <p>MoovUI uses the <a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank">SyntaxHighlighter</a> library.</p>
         </div>
         <p>Inline <code>code</code>.</p>
         <code class="cmd">Shell line 1</code>
@@ -513,7 +514,7 @@
             </tr>
           </tbody>
         </table>
-        <table class="round">
+        <table class="alt">
           <thead>
             <tr>
               <th>Col 1</th>
@@ -586,6 +587,30 @@
               </tr>
             </tbody>
           </table>
+          <table class="alt">
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+                <th>Col 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Column 1</td>
+                <td>Column 2</td>
+                <td>Column 3</td>
+                <td>Column 4</td>
+              </tr>
+              <tr>
+                <td>Column 5</td>
+                <td>Column 6</td>
+                <td>Column 7</td>
+                <td>Column 8</td>
+              </tr>
+            </tbody>
+          </table>
           <table class="no-borders">
             <thead>
               <tr>
@@ -601,6 +626,12 @@
                 <td>Column 2</td>
                 <td>Column 3</td>
                 <td>Column 4</td>
+              </tr>
+              <tr>
+                <td>Column 5</td>
+                <td>Column 6</td>
+                <td>Column 7</td>
+                <td>Column 8</td>
               </tr>
             </tbody>
           </table>
@@ -1068,7 +1099,7 @@
         </select>
         <p>MoovUI can use the <a href="http://harvesthq.github.io/chosen/" target="_blank">Chosen</a> plugin. Remember to initialize Chosen:</p>
         <pre data-lang="js">
-          $("select:not(.autocomplete)").chosen({disable_search_threshold: Infinity});
+          $("select:not(.autocomplete)").chosen({disable_search: true});
           $("select.autocomplete").chosen();
         </pre>
         <select>
@@ -1087,7 +1118,7 @@
         </select>
         <script>
           $(window).load(function() {
-            $("select:nth-of-type(3)").chosen({disable_search_threshold: Infinity});
+            $("select:nth-of-type(3)").chosen({disable_search: true});
             $("select.autocomplete").chosen();
           });
         </script>
@@ -1243,6 +1274,7 @@
       <div id="Disabled" class="example">
         <div class="example-head">
           <h1>Disabled</h1>
+          <p>Note: IE &lt; 11 does not support <code>pointer-events: none</code></p>
         </div>
         <div class="pane disabled">
           <button>Disabled Content</button>
@@ -1489,6 +1521,10 @@
         this.innerHTML = html.replace(/=""/g, "").replace(/</g, "&lt;").replace(/>/g, "&gt;");
       });
     </script>
+    <script src="jquery.placeholder.js"></script>
+    <script>
+      $("input, textarea").placeholder();
+    </script>
     <script src="custom.modernizr.js"></script>
     <script src="foundation.js"></script>
     <script src="foundation.alerts.js"></script>
@@ -1497,7 +1533,7 @@
     <script src="foundation.section.js"></script>
     <script src="foundation.tooltips.custom.js"></script>
     <script>
-      $(document).foundation("alerts dropdown tooltips").foundation("reveal", {animation: "fade", animationSpeed: 200});
+      $(document).foundation("alerts dropdown reveal tooltips");
       // wait for font face to load to calculate accurate widths
       $(window).load(function() {
         $(document).foundation("section", {one_up: false});

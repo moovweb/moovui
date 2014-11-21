@@ -3,6 +3,7 @@
   position: relative;
   margin-bottom: $sp2;
   > section {
+    padding-top: 29px;
     &.active > [data-section-title] {
       background: #fff;
       border-bottom: 0;
@@ -21,7 +22,7 @@
     > [data-section-title] {
       @include border-radius(3px 3px 0 0);
       background: #eee;
-      border: 1px solid #bbb;
+      border: 1px solid #ccc;
       color: inherit;
       font-size: 12px;
       font-weight: bold;
@@ -36,12 +37,18 @@
         display: inline-block;
         white-space: nowrap;
       }
+      &:not([style]) {
+        visibility: hidden;
+      }
+      &:focus {
+        z-index: 1;
+      }
     }
     > [data-section-content] {
       @include border-radius(0 0 3px 3px);
       @include clearfix;
       background: #fff;
-      border: 1px solid #bbb;
+      border: 1px solid #ccc;
       padding: $sp4 - 1px;
     }
   }

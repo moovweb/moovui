@@ -24,6 +24,10 @@
   width: 60%;
   height: auto;
   z-index: 1000;
+  @include mobile {
+    left: 5%;
+    width: 90%;
+  }
 }
 
 .modal-header {
@@ -35,20 +39,21 @@
     @include border-radius(8px);
     background: #a2a2a2;
     line-height: 14px;
-    padding: 0 0 0 4px;
     position: absolute;
-    top: 16px;
+    top: 17px;
     right: 16px;
+    text-align: center;
     width: 16px;
     height: 16px;
     &:before {
       content: "\00d7";
       color: #fff;
-      font-size: 14px;
+      font-size: 15px;
     }
   }
   h3 {
-    margin: 0;
+    @include ellipsis;
+    margin: 0 30px 0 0;
     text-shadow: #fff 0 1px;
   }
 }

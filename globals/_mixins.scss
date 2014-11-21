@@ -48,12 +48,18 @@
   width: 100%;
 }
 
+@mixin antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @mixin hide-text {
   // trying out Bootstrap's method over older HTML5 Boilerplate { text-indent: 100%; white-space: nowrap; overflow: hidden; }
   background-color: transparent;
   border: 0;
-  //color: transparent;
+  // color: transparent;
   font: 0/0 a;
+  letter-spacing: 0;
   text-shadow: none;
 }
 

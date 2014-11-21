@@ -11,7 +11,7 @@
 }
 
 @mixin entypo-icon($icon: null) {
-  -webkit-font-smoothing: antialiased;
+  @include antialiased;
   display: inline-block;
   font-family: "Entypo";
   font-size: 15px;
