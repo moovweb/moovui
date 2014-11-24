@@ -38,7 +38,7 @@
     background: none;
   }
   td {
-    border: 0;
+    border: 0 !important;
   }
   a {
     color: inherit;
@@ -50,7 +50,7 @@
     padding: $sp;
   }
   .gutter {
-    @include border-radius($radius 0 0 $radius);
+    @include border-radius($radius 0 0 $radius !important);
     background: #777;
     color: #fff;
     padding: $sp 6px;
