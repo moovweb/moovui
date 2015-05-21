@@ -1,8 +1,10 @@
 require "moovui/version"
 
 module Moovui
-  module Rails
-    class Engine < ::Rails::Engine
+  if defined?(Rails)
+    module Rails
+      class Engine < ::Rails::Engine
+      end
     end
   end
 end
